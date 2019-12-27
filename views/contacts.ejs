@@ -1,0 +1,61 @@
+<%- include('header.ejs')%>
+<div class="kick_me">
+    <div class="container1">
+        <div class="wrap-container see" style="color:#404040;  font-family: 'Montserrat', sans-serif ">
+             <div class="breadcrumps">
+                 <span><a href="/">Главная</a></span>
+                 <span><a href="/contacts">Контакты </a></span>
+             </div>
+             <div id="service_price" >
+                  <div id="category_price toto" style="flex-direction: column;">
+                       <div class="inner-left" >
+                           <h1 style="font-size: 2.3rem;">Наши Контакты: </h1>
+                           <div class="line"><img src="/public/Line.svg" alt="..."></div>
+                       </div>
+                       <div class="contact_info">
+                          <div class="contact-info__item">
+                              <div class="img-wrap">
+                                  <img class="wow fadeInLeftBig animated" alt="phone" src="/public/email.svg" >
+                              </div>
+                              <div class="detail"> 
+                                  <span class="wow fadeInRightBig label animated">Почта
+                                  </span> 
+                                  <a class="wow fadeInRightBig value animated" ><span itemprop="telephone"> led2017l@gmail.com</span></a>
+                             </div>
+                           </div>
+
+                          <div class="contact-info__item">
+                            <div class="img-wrap">
+                                <img class="wow fadeInLeftBig animated" alt="phone" src="/public/work.svg" >
+                            </div>
+                            <div class="detail"> 
+                                <span class="wow fadeInRightBig label animated">График работы
+                                </span> 
+                                <a class="wow fadeInRightBig value animated" ><span itemprop="telephone">Пн - Вс. | 10:00 - 22:00</span></a>
+                           </div>
+                          </div>
+                       </div>
+                        <div style="display:flex;justify-content: center;align-items: center;margin-top:60px"><img src="/public/contacts-bg.svg" style="height:100%;width:100%;object-fit: cover; max-height: 400px;"></div> 
+                  </div>
+             </div>
+        </div>
+    </div>
+    <section class="section blue white">
+        <div class="container">
+             <div class="wrap-container">
+                 <%-include('contact.ejs')%>
+             </div>
+        </div>
+    </section> 
+    <footer  class="one11" id="footer" >
+        <div class="copyright">
+            <p>2015-2019 © All rights are reserved</p>
+            <a href="#footerancor" class="footerup flex1" style="justify-content: center;">Up</a>
+        </div>
+    </footer>  
+</div>     
+  <script type="text/javascript">
+          document.body.style.minHeight=" 200.5vh";
+  </script>        
+</body>
+</html>

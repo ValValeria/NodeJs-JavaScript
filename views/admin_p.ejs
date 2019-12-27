@@ -1,0 +1,41 @@
+<%-include('header.ejs')%>
+<div class="connected_users">
+    <div class="container">
+        <div>
+            <h1>Вам хотять написать</h1>
+            <ul id='ulik1' class="fulik">
+                <li class=" la" style="display:none;background-color: darkgrey;">
+                    <div>Admin</div>
+                    Здравствуйте. 
+                    У вас возникли вопросы? Мы с удовольствием ответим!
+                </li>
+            </ul>
+        </div>
+
+        <div>
+            <% 
+            let counter=0;
+            if(field!=false && field!=undefined && Array.isArray(field)) {
+                let obj=[]
+                 for(let i of field){
+                    obj.push(i.sender);
+                 }
+                 let array=new Set(obj);
+                 console.log(array)
+                %>
+            <hr>
+            <h1>Вам написали</h1>
+            <ul id='ulik1' class="fulik">
+            <% array.forEach( (elem,index)=>{
+                counter++;
+            %>
+                <li class=" la" style="background-color: darkgrey;">
+                    <div> <a href="http://localhost:3000/admin/<%= elem %>"><%=counter%> . User with id : <%= elem.substr(0,5)%></a></div>
+                </li>
+            <% })%>
+            </ul>
+             <%}%>
+        </div>
+    </div>
+</div>
+<%-include('footer.ejs')%>

@@ -1,0 +1,40 @@
+
+<!DOCTYPE html> 
+   <html>
+       <head>
+         <meta name="viewport" content="width=device-width, initial-scale=1">
+         <meta charset="utf8">
+         <script src="/socket.io/socket.io.js"></script>
+         <link rel="stylesheet" href='/public/style.css'>
+         <% if(admin ){%>
+          <script src='/admin/admin.js'  type="module"></script>
+         <%}else if(!com){%>
+         <script src="/public/main_page.js" type="module"></script>
+         <%}%>
+         <% if(css){%>
+          <link  href="/public/ad.css" type="text/css">
+          <%}%>
+       </head>
+       <body>
+           <div id="footerancor"></div>
+           <%- include('message.ejs') %>     
+           <div class='sec'>
+              <div class='container'>
+                <div class='row'>
+                    <div class='brand_name'>My portfolio</div>
+                    <ul class='ul'>
+                      <li><a  href="/" class="active">Главная</a></li>
+                      <li><a href="/services">Услуги</a></li>
+                      <li><a href="/contacts">Контакты</a></li>
+                      <li><a>Примеры работ</a></li>
+                    </ul>
+                </div>
+              </div>
+              <div class="menu " id="kick" data-open="false">
+                <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect x="12" y="16" width="24" height="2" rx="1" fill="white"/>
+                <rect x="12" y="23" width="24" height="2" rx="1" fill="white"/>
+                <rect x="12" y="30" width="24" height="2" rx="1" fill="white"/>
+                </svg>
+              </div>
+           </div>

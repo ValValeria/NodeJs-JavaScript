@@ -1,0 +1,75 @@
+
+<div class="write_mes">
+    <div class="headline">
+       <div id="k"><svg width="18" height="14" viewBox="0 0 18 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+         <path d="M16.3921 13.9998C16.7967 13.9998 17.1473 13.8676 17.4453 13.6064L12.3458 8.558C12.2235 8.64473 12.1049 8.72907 11.9928 8.80927C11.6112 9.08761 11.3015 9.30481 11.0637 9.46045C10.8258 9.61644 10.5094 9.77544 10.1145 9.93778C9.71927 10.1003 9.35108 10.1813 9.00952 10.1813H8.99952H8.98952C8.64793 10.1813 8.27973 10.1003 7.88454 9.93778C7.48936 9.77544 7.17296 9.61644 6.93538 9.46045C6.69758 9.30481 6.38801 9.08764 6.00619 8.80927C5.89979 8.73205 5.78179 8.64732 5.65421 8.55664L0.553711 13.6064C0.85171 13.8676 1.20252 13.9998 1.60708 13.9998H16.3921Z" fill="url(#paint0_linear)"/>
+         <path d="M1.01458 5.37958C0.632991 5.12774 0.294601 4.8393 0 4.5144V12.1952L4.49469 7.74569C3.5955 7.12424 2.43693 6.33644 1.01458 5.37958Z" fill="url(#paint1_linear)"/>
+         <path d="M16.9949 5.37958C15.6268 6.29626 14.4641 7.08542 13.5065 7.74747L17.9994 12.1954V4.5144C17.7113 4.83276 17.3765 5.12101 16.9949 5.37958Z" fill="url(#paint2_linear)"/>
+         <path d="M16.3928 0H1.60784C1.09204 0 0.695478 0.172428 0.417674 0.516927C0.139642 0.861588 0.000854492 1.29262 0.000854492 1.80955C0.000854492 2.2271 0.185033 2.67952 0.553227 3.16694C0.92142 3.65417 1.31321 4.03688 1.72839 4.31525C1.956 4.47445 2.64239 4.94683 3.78756 5.73223C4.40575 6.15631 4.94335 6.52595 5.40533 6.84492C5.79911 7.11654 6.13871 7.35176 6.4191 7.54696C6.45128 7.56931 6.5019 7.60516 6.56909 7.65271C6.64148 7.70418 6.73308 7.7695 6.84608 7.85028C7.06369 8.00608 7.24447 8.13202 7.38845 8.22823C7.53224 8.32447 7.70645 8.43197 7.91082 8.55134C8.11504 8.67055 8.30764 8.7602 8.48842 8.81982C8.66924 8.87941 8.83662 8.9093 8.9906 8.9093H9.0006H9.0106C9.16455 8.9093 9.33197 8.87941 9.51281 8.81982C9.69356 8.7602 9.886 8.67075 10.0904 8.55134C10.2946 8.43197 10.4685 8.32424 10.6128 8.22823C10.7568 8.13202 10.9375 8.00611 11.1552 7.85028C11.268 7.7695 11.3596 7.70415 11.4319 7.65288C11.4992 7.60513 11.5498 7.56951 11.5821 7.54696C11.8006 7.3965 12.141 7.16225 12.5986 6.84767C13.4313 6.27491 14.6577 5.43189 16.2829 4.31525C16.7717 3.97729 17.18 3.56945 17.5082 3.09231C17.8358 2.61517 18.0001 2.11468 18.0001 1.59099C18.0001 1.15345 17.8408 0.779062 17.523 0.467237C17.2048 0.1558 16.8281 0 16.3928 0Z" fill="url(#paint3_linear)"/>
+         <defs>
+         <linearGradient id="paint0_linear" x1="0.553711" y1="13.9998" x2="17.604" y2="9.10995" gradientUnits="userSpaceOnUse">
+         <stop stop-color="#4AD4FF"/>
+         <stop offset="1" stop-color="#00A0FB"/>
+         </linearGradient>
+         <linearGradient id="paint1_linear" x1="6.69762e-08" y1="12.1952" x2="4.89576" y2="11.9304" gradientUnits="userSpaceOnUse">
+         <stop stop-color="#4AD4FF"/>
+         <stop offset="1" stop-color="#00A0FB"/>
+         </linearGradient>
+         <linearGradient id="paint2_linear" x1="13.5065" y1="12.1954" x2="18.4003" y2="11.9308" gradientUnits="userSpaceOnUse">
+         <stop stop-color="#4AD4FF"/>
+         <stop offset="1" stop-color="#00A0FB"/>
+         </linearGradient>
+         <linearGradient id="paint3_linear" x1="0.00085476" y1="8.9093" x2="19.0011" y2="5.36185" gradientUnits="userSpaceOnUse">
+         <stop stop-color="#4AD4FF"/>
+         <stop offset="1" stop-color="#00A0FB"/>
+         </linearGradient>
+         </defs>
+         </svg>
+         </div>
+         <div><h1 id='h1'>Отправьте нам сообщение</h1></div>
+         
+    </div>
+     <div class="message_area" style="display:none">
+           <div class="messages"> 
+                <ul id='ulik'>
+                    <li class="mes">
+                        <div>Admin</div>
+                        Здравствуйте. 
+                        У вас возникли вопросы? Мы с удовольствием ответим!
+                    </li>
+                    <% if(field){
+                        field.forEach(elem=>{
+                    %>
+                    <% if(elem.sender=='admin'){%>
+                    <li class="mes" data-role="admin">
+                     <%}else{%> 
+                     <li class="mes" data-role="user">
+                     <%}%>     
+                        <div>User</div>
+                        <%= elem.message%>
+                    </li>
+                    <%})}%>
+                </ul>
+           </div>
+           <div class='form'>
+            <div class='ffs'>
+                <textarea id="call" rows="3" cols='20'  placeholder="Введите ваше сообщение" >
+                </textarea>
+                <svg class=" strelka"width="34" height="34" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><circle fill="#12a730" cx="17" cy="17" r="17"/><g transform="translate(10 9)" fill="#FFF"><rect x="6" y="2" width="2" height="14" rx="1"/><rect transform="rotate(-45 9.879 4.879)" x="8.879" y="-.121" width="2" height="10" rx="1"/><rect transform="scale(-1 1) rotate(-45 0 15.243)" x="3.293" y="-.121" width="2" height="10" rx="1"/></g></g></svg>
+            </div>
+           </div>
+           <div class="krest" >
+            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28">
+                <g fill="none" fill-rule="evenodd" transform="translate(2 2)">
+                    <circle cx="12" cy="12" r="12" fill="#FFF" opacity="1"/>
+                    <circle cx="12" cy="12" r="12.75" stroke="#222D38" stroke-width="1.5" opacity="1"/>
+                    <g fill="#222D38" opacity="1" transform="translate(6 6)">
+                        <rect width="1.611" height="13.9" x="5.435" y="-.941" rx=".806" transform="rotate(45 6.24 6.01)"/>
+                        <rect width="1.611" height="13.9" x="5.435" y="-.941" rx=".806" transform="scale(-1 1) rotate(45 0 -9.058)"/>
+                    </g>
+                </g>
+            </svg>
+           </div>
+     </div>
+   
+ </div>

@@ -1,0 +1,40 @@
+<%-include('header.ejs')%>
+
+<script type="module">
+import{ready,clone,el,get_cookie} from "/public/some.js";
+
+
+document.cookie="admin=true";
+
+let socket=process1();
+
+
+window.onload=function(){
+    ready(function(){
+        clone('admin');
+        socket.emit('start_of',el('#call').value,get_cookie().id_of_user,'admin');
+    });
+    el(".write_mes")[0].classList.add('tt1');
+    el('.message_area')[0].style.display='block';
+    el('#h1').innerHTML="Ваш чат"
+    el('#k').style.display="none";
+    el('.krest')[0].style.display='none';
+}
+
+
+function process1(){/// when admin decide to write something
+        var socket = io.connect('http://localhost:3000')
+
+        socket.emit('exchange_of_id_admin',get_cookie().id_of_user);
+        socket.on('new_message',(data)=>{
+          clone('user',data);
+          
+        })
+        socket.on('dis_connected',()=>{
+            clone('Message','User покинул чат','error');
+        })
+        return socket;
+}
+
+</script>
+<%-include('footer.ejs')%>
