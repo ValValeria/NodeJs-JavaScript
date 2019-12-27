@@ -2,10 +2,13 @@
 const express= require('express');
 const app= express();
 const http=require('https').Server(app);
+
 const io = require('socket.io')(http);
 const cookieParser1 = require("cookie-parser");
 const fs=require('fs');
-const port= process.env.PORT || 3000;
+
+var port= process.env.PORT || 3000;
+
 const bodyParser = require("body-parser");
 const urlencodedParser = bodyParser.urlencoded({extended: false});
 
@@ -249,4 +252,5 @@ io.on('connection', function (socket){
        return obj;
 }
 app.use('/public',express.static(__dirname+'/public'));
-http.listen(port);
+
+http.listen(port,()=>console.log('hello'));
