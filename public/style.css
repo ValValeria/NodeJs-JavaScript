@@ -364,7 +364,7 @@ textarea{
 }
 .two{
      background-color: rgb(245, 245, 245);
-     transform: translateX(-2.2%);
+    /* transform: translateX(-2.2%);*/
      width:100vw;
 }
 .sec{
@@ -553,7 +553,7 @@ footer>.copyright{
 }
 .blue{
     background: linear-gradient(82.83deg,#00112c 0%,#00245b 39.44%,#006ebd 100%);
-    transform: translate(-2.2%,-55px);
+    transform: translate(0,-55px);
     width:100vw;
     line-height:1.5;
     padding-bottom: 20px;
