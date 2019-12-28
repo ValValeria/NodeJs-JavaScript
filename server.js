@@ -139,32 +139,17 @@ app.get('/services',(req,res)=>{
        res.render('uslugi',options);
 
 })
-app.get('/services/site_pod_kluch',(req,res)=>{
+app.get('/services/:file/',(req,res)=>{
        options=new Object();
+       let array=['site_pod_kluch','shops','landing'];
        options.admin=false;
        options.com=false;
        options.css=false;
        options.field=false;
-       res.render('sozdanie_site',options);
+       if(array.includes(req.params.file)){
+            res.render(req.params.file,options);
+       }
 })
-app.get('/services/shops',(req,res)=>{
-       options=new Object();
-       options.admin=false;
-       options.com=false;
-       options.css=false;
-       options.field=false;
-       res.render('shops',options);
-})
-
-app.get('/services/landing',(req,res)=>{
-       options=new Object();
-       options.admin=false;
-       options.com=false;
-       options.css=false;
-       options.field=false;
-       res.render('landing',options);
-})
-
 app.get('/contacts',(req,res)=>{
        options=new Object();
        options.admin=false;
@@ -177,6 +162,16 @@ app.post('/',urlencodedParser,(request,response)=>{
    if(!request.body) return response.sendStatus(400);
    database.insert_all('admin',request.body.email,request.body.message,request.ip);
    response.redirect(301,"/" );
+})
+
+/**If nothing was found */
+app.use('/',(req,res)=>{
+       let options=new Object();
+       options.admin=false;
+       options.com=false;
+       options.css=false;
+       options.field=false;
+       res.render('404',options)
 })
 
 io.on('connection', function (socket){
