@@ -158,10 +158,13 @@ app.get('/contacts',(req,res)=>{
        options.field=false;
        res.render('contacts',options);
 })
+
 app.post('/',urlencodedParser,(request,response)=>{
-   if(!request.body) return response.sendStatus(400);
-   database.insert_all('admin',request.body.email,request.body.message,request.ip);
-   response.redirect(301,"/" );
+
+   if(request.body && request.body.message>10 && request.body.message<200) {
+       database.insert_all('admin',request.body.email,request.body.message,request.ip);
+       response.redirect(request.originalUrl);
+   }
 })
 
 /**If nothing was found */
@@ -175,8 +178,8 @@ io.on('connection', function (socket){
                      if(obj[prop].handshake.headers.cookie.includes('admin=true;')&& (obj[prop].request.connection.remoteAddress=="::ffff:127.0.0.1"
                      || obj[prop].request.connection.remoteAddress=="::1")){
                             obj[prop].send(socket.id);///посылаем  id юзера
-                     }else socket.emit('not_found')
-              }else socket.emit('not_found');
+                     }else {socket.emit('not_found')}
+              }
         }
       }
       socket.on('get_users',()=>{
