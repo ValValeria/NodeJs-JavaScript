@@ -323,7 +323,6 @@ textarea{
     height:70vh;
 }
 .section {
-    margin-top:50px;
     min-height:100vh;
     width:100vw;
     font-size: 16px;
@@ -457,7 +456,6 @@ footer{
     display:flex;
     align-items: center;
     justify-content: center;
-    transform:translate(-20px,-55px);
 }
 footer>.copyright{
     text-align: center;
@@ -686,7 +684,6 @@ footer>.copyright{
      position: absolute;
      bottom:0;
      left:0;
-     transform: translate(-10px,80px);
  }
 
 @media screen and (max-width:845px){
@@ -697,9 +694,7 @@ footer>.copyright{
         width:100vw;
         left: -8px;
     }
-    footer{
-        transform: translate(-7px,80px);
-     }
+    
      .buttons{
          flex-direction: column;
      }
@@ -919,14 +914,15 @@ padding-left: 10px;
     .ul{
         flex-direction: column;
         margin-left:0;
-        width:100%;
         display: none;
+        min-width: 100%;
     }
     .buttons{
         width:100%;
     }
     .gg{
         width:100%;
+        margin-top:50px;
     }
     .ul>li{
         padding-top:10px;
