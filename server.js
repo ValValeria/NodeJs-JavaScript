@@ -165,14 +165,7 @@ app.post('/',urlencodedParser,(request,response)=>{
 })
 
 /**If nothing was found */
-app.use('/',(req,res)=>{
-       let options=new Object();
-       options.admin=false;
-       options.com=false;
-       options.css=false;
-       options.field=false;
-       res.render('404',options)
-})
+
 
 io.on('connection', function (socket){
       function new_user(){
