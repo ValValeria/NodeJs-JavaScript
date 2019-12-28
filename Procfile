@@ -1,1 +1,2 @@
-web:node hello.js
+web:node server.js
+
