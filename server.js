@@ -163,7 +163,7 @@ app.post('/',urlencodedParser,(request,response)=>{
 
    if(request.body && request.body.message>10 && request.body.message<200) {
        database.insert_all('admin',request.body.email,request.body.message,request.ip);
-       response.redirect(request.originalUrl);
+       response.redirect(request.url);
    }
 })
 

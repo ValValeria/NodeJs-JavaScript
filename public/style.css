@@ -1152,4 +1152,7 @@ padding-left: 10px;
     /* transform: translateX(-5%); */
     font-size: 1.5rem;
 }
+.kick_me{
+    transform: translateX(10px);
+}
 }
