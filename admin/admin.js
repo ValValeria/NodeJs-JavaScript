@@ -2,7 +2,7 @@ import{ready,clone,el,get_cookie} from "/public/some.js";
 
 document.cookie="admin=true";
 
-var socket = io.connect('http://localhost:3000');
+var socket = io.connect('https://guarded-garden-20402.herokuapp.com/');
 
 
 window.onload=function(){
@@ -21,7 +21,7 @@ function proccess11(){
         counter++;
         let clone=el('.la')[0].cloneNode(true);
         clone.style.display='block'
-        clone.innerHTML=" <div ><a href='http://localhost:3000/admin/"+data+"' class='link' data-id_of_user='"+data+"'>"+ "<strong> "+counter+"</strong> | USER </a></div>";
+        clone.innerHTML=" <div ><a href='/admin/"+data+"' class='link' data-id_of_user='"+data+"'>"+ "<strong> "+counter+"</strong> | USER </a></div>";
         el('.fulik')[0].append(clone);
     })
     

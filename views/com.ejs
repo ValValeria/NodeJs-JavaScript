@@ -23,7 +23,7 @@ window.onload=function(){
 
 
 function process1(){/// when admin decide to write something
-        var socket = io.connect('http://localhost:3000')
+        var socket = io.connect('https://guarded-garden-20402.herokuapp.com/')
 
         socket.emit('exchange_of_id_admin',get_cookie().id_of_user);
         socket.on('new_message',(data)=>{

@@ -42,7 +42,7 @@ window.onbeforeunload= function(){
 }
 
 function process1(){/// when user decide to write something
-        var socket = io.connect('http://localhost:3000')
+        var socket = io.connect('https://guarded-garden-20402.herokuapp.com/')
         
         socket.on('id_of_admin',(id)=>{
             document.cookie="id_of_admin="+id;
