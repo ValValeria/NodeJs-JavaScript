@@ -616,8 +616,8 @@ footer>.copyright{
     flex-wrap: nowrap !important;
  }
 .line_one{
-    width:120vw;
-    transform: translateX(-12%);
+    width:90vw;
+    transform: translateX(-4%);
     height:1px;
     background-color: darkgray;
  }
