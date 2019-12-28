@@ -948,10 +948,6 @@ padding-left: 10px;
      .mod:nth-child(even), .mod:nth-child(odd){
          flex-basis: 50%;
      }
-
-     .clients{
-        transform: translateX(0);
-     }
 }
 @media(max-width:846px){
     #footer{
@@ -1074,7 +1070,6 @@ padding-left: 10px;
 @media(max-width:500px){
     footer>.copyright{
         width:90%;
-        transform: translate(-7%,-30%);
     }
     .footerup{
         margin-left: 0px;
@@ -1092,9 +1087,9 @@ padding-left: 10px;
     }   
     footer>.copyright{
         flex-direction: column;
-        transform: translate(1,-30%)
     }
 }
+
 @media(max-width:400px){
     .service_price>h1{
         font-size: 2rem !important;
@@ -1133,7 +1128,6 @@ padding-left: 10px;
     }
     .footer>.copyright {
         flex-direction: column;
-        transform: translate(1,-30%);
         display: inline-block;
         width: 60%;
         margin: auto;
