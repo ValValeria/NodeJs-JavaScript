@@ -1,51 +1,46 @@
 <%- include('header.ejs')%>
 <div class="kick_me">
+    <!--
+        Landing page, site , shops
+    -->
     <div class="container1">
         <div class="wrap-container see" style="color:#404040;  font-family: 'Montserrat', sans-serif ">
              <div class="breadcrumps">
                  <span><a href="/">Главная</a></span>
                  <span><a href="/services">Услуги </a></span>
-                 <span><a href="/services/shops"> Интернет-магазин</a></span>
+                 <span><a href="<%=url %>"> <%=name%></a></span>
              </div>
              <div id="service_price">
                   <div id="category_price">
                        <div class="inner-left" >
-                           <h1>Landing Page</h1>
+                           <h1><%= name%></h1>
                            <div class="line"><img src="/public/Line.svg" alt="..."></div>
-                           <p>Создание Landing Page (лендинга) — одно из самых популярных направлений нашей студии. А всё потому, что именно такие страницы помогают превращать посетителей в покупателей.
-
-                            Landing Page — это своего рода сайт-визитка, но с полноценной маркетинговой составляющей. Он даёт посетителю ответ: что вы предлагаете и в чём преимущества вашего предложения. Сегодня это самый действенный инструмент для мотивации посетителя совершить действие: оставить контакты, отправить заявку, сделать заказ.</p>
-                           <p><strong>Почему вам стоит заказать лендинг? </strong></p>
-                           <p>Всё просто — потому что он работает! А если вам нужно больше аргументов, вот они:</p>
+                           <p><%=p1%></p>
+                           <p><strong><%=p2 %></strong></p>
+                           <p><%=p3%></p>
                               <div class="list">
                                 <ul>
-                                    <li>Landing Page максимально информативен: содержит всё, что нужно знать читателю о конкретной услуге или товаре, без лишних отступлений.</li>
-                                    <li>Структура такой страницы разрабатывается в стиле инфографики, удобной для получения необходимой информации.</li>
-                                    <li>Всё, что есть на странице, постепенно подводит посетителя к действию. Оно может быть любым: оставить контакт, оформить заказ или запросить обратный звонок.</li>
+                                    <% ul.forEach( elem=>{%>  
+                                    <li><%=elem %></li>
+                                  <%})%>
                                 </ul>
                               </div>
-                              <div class="price"> <span class="price__title">Цена: </span> <span class="price__cost">От 700 [grn.]</span></div> 
+                              <div class="price"> <span class="price__title">Цена: </span> <span class="price__cost">От <%=price %> [grn.]</span></div> 
                        </div>
-                   <div class="inner_right" > <img src="/public/right-side.svg" alt="hello"></div>
+                   <div class="inner_right" > <img src="<%=img%>" alt="hello"></div>
 
                   </div>
              </div>
         </div>
     </div>
-    <section class="section blue white">
-        <div class="container">
-             <div class="wrap-container">
-                 <%-include('contact.ejs')%>
-             </div>
-        </div>
-    </section> 
-    <footer  class="one11" id="footer" >
-        <div class="copyright">
-            <p>2015-2019 © All rights are reserved</p>
-            <a href="#footerancor" class="footerup flex1" style="justify-content: center;">Up</a>
-        </div>
-    </footer>  
+    
 </div>     
-          
-</body>
-</html>
+   
+<section class="section blue white">
+    <div class="container">
+         <div class="wrap-container">
+             <%-include('contact.ejs')%>
+         </div>
+    </div>
+</section> 
+<%-include('footer.ejs')%>

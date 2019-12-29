@@ -12,13 +12,13 @@ const fs=require('fs');
 var port= process.env.PORT || 3000;
 
 const bodyParser = require("body-parser");
+
 const urlencodedParser = bodyParser.urlencoded({extended: false});
+const json=bodyParser.json();
 
 const database=require('./functions.js').con;
 
 app.use(cookieParser1());
-
-
 
 app.set("view engine", "ejs");
 
@@ -147,7 +147,15 @@ app.get('/services/:file/',(req,res)=>{
        options.css=false;
        options.field=false;
        if(array.includes(req.params.file)){
-            res.render(req.params.file,options);
+            fs.readFile(__dirname+'/pages.json','utf8',(error,data)=>{
+                   if(error !=null) res.statusCode('403');
+                   const json= JSON.parse(data)[req.params.file];
+                   for (let prop in json){
+                          options[prop]=json[prop];
+                   }
+                   options.url=req.url;
+                   res.render("landing",options);
+            })   
        }
 })
 app.get('/contacts',(req,res)=>{
@@ -159,12 +167,9 @@ app.get('/contacts',(req,res)=>{
        res.render('contacts',options);
 })
 
-app.post('/',urlencodedParser,(request,response)=>{
-
-   if(request.body && request.body.message>10 && request.body.message<200) {
+app.post('/',json,(request,response)=>{
        database.insert_all('admin',request.body.email,request.body.message,request.ip);
-       response.redirect(request.url);
-   }
+       response.send();
 })
 
 /**If nothing was found */
