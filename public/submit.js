@@ -5,7 +5,8 @@ function ready(){
             email: document.getElementById('email').value,
             message: document.getElementById('message').value
         }
-        let promise= await fetch('https://guarded-garden-20402.herokuapp.com/',{
+        /**https://guarded-garden-20402.herokuapp.com/ */
+        let promise= await fetch('https://guarded-garden-20402.herokuapp.com',{
             "method":'POST',
             "headers":{
                 'Content-Type':"application/json;charset=utf-8"

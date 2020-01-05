@@ -29,7 +29,7 @@ app.use('/admin',(req,res,next)=>{
        if(req.cookies.__proto__== null){
               req.cookies=new Object;
        }
-       if((req.ip=="::1" || req.ips=="::1")  &&  req.cookies.hasOwnProperty('admin') && req.cookies.admin=='true') {
+       if((req.ip=="::1" || req.ips=="::1" || req.ip=="::ffff:127.0.0.1" )  &&  req.cookies.hasOwnProperty('admin') && req.cookies.admin=='true') {
               next();
        }else{
               res.status(403).send('Forbidden');
@@ -40,7 +40,6 @@ app.use('/admin',(req,res,next)=>{
 })
 app.get('/admin',(req,res)=>{
        res.clearCookie('id_of_user');
-       res.cookie('admin','true', { maxAge: 9000000, httpOnly: true });
        options=new Object();
        options.com=false;
        options.css=false;
@@ -183,10 +182,11 @@ io.on('connection', function (socket){
                      if(obj[prop].handshake.headers.cookie.includes('admin=true;')&& (obj[prop].request.connection.remoteAddress=="::ffff:127.0.0.1"
                      || obj[prop].request.connection.remoteAddress=="::1")){
                             obj[prop].send(socket.id);///посылаем  id юзера
-                     }else {socket.emit('not_found')}
-              }
+                     }else{ socket.emit('not_found')}
+              }else socket.emit('not_found');
         }
       }
+      
       socket.on('get_users',()=>{
           if(!socket.handshake.headers.cookie.includes('admin=true;')) return;
           io.clients((error,clients)=>{

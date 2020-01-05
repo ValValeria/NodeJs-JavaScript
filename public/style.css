@@ -231,6 +231,9 @@ body{
 .line2{
     display:none;
 }
+a>.flex1{
+    margin-top:-30px;
+}
 .messages>ul>li{
     margin-bottom: 10px;
     list-style: none;
@@ -367,6 +370,10 @@ textarea{
 .about_h1{
     font-weight: 400;
     font-size: 3rem;
+    margin-bottom: 15px;
+}
+.about_us>svg{
+    margin-bottom: 5px;
 }
 .about_p{
     font-family: 'Nunito', sans-serif;
@@ -1029,6 +1036,7 @@ padding-left: 10px;
     .small_container{
         width:100%;
     }
+
     .back-map #form label {
         width: 120%;
     }
@@ -1054,7 +1062,10 @@ padding-left: 10px;
         width: 100vw;
     }
     .points_block{
-        height:370px;
+        height:320px;
+    }
+    .points_block p{
+        margin-top:8px;
     }
     
     .greeting{
@@ -1066,7 +1077,22 @@ padding-left: 10px;
     
 }
 @media(max-width:650px){
-    
+    footer>.copyright{
+        width:auto;
+        flex-direction: column-reverse;
+    }
+    .footerup{
+        margin-bottom: 10px;
+    }
+    .flex1>svg {
+        transform: translateX(-20%) !important;
+    }
+    .greeting>h1{
+        padding-bottom:5px;
+    }
+    .cards>a{
+        margin-left:0 !important;
+    }
     .inner-left{
         margin-right: 0;
     }
@@ -1121,6 +1147,9 @@ padding-left: 10px;
     footer>.copyright{
         width:90%;
     }
+    .write_mes{
+        right:0;
+    }
     .footerup{
         margin-left: 0px;
         margin-right:5px;
@@ -1151,9 +1180,22 @@ padding-left: 10px;
         font-size: 2.2rem !important;
         padding-bottom: 0; 
     }    
+    .know{
+        width:100%;
+    }
 }
 
 @media(max-width:410px){
+    .footerup{
+        margin-top:10px !important;
+    }
+    .menu{
+        top:20px;
+        right:15px;
+    }
+    .blue{
+        padding-bottom: 80px;
+    }
      .wrap-container{
          background-image: url('//if-studio.ru/wp-content/themes/if-studio/css/../img/form-icons/map.svg)');
          padding: 40px 20px;
@@ -1168,7 +1210,7 @@ padding-left: 10px;
     .contact_form {
         padding: 0;
     }
-
+    
     .contact_form>p{
     width: 80%;
     margin: auto;
@@ -1187,12 +1229,16 @@ padding-left: 10px;
         margin: auto;
         align-items: center;
     }
+    .small_container{
+        margin-top:70px;
+    }
     .back-map{
     width: 100%;
     margin: auto;
     min-height: 360px;
-    transform: translateX(-8%);
     position: relative;
+    padding:0 ;
+    margin-top:10px;   /** ?????*/
     }
     .back-map>#form{
         width: 70%;
@@ -1221,8 +1267,28 @@ padding-left: 10px;
 
 }
 @media(max-width:362px){
+    .sec{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .back-map>#form{
+        padding:0;
+        padding-top:10px;
+        width:100% !important;
+    }
+    .back-map #form label{
+        width:90% !important;
+    }
+    #form>.buttons>.links_b{
+        width:80%;
+        margin-bottom: 10px;
+    }
+   .know{
+       width:80%;
+   }
     .menu{
-        top: 5px;
+        top: 13px;
         right: 10px;
     }
     .sec{
@@ -1245,6 +1311,23 @@ padding-left: 10px;
         padding-top: 20px;
     }
     .servicess>h6 {
-        margin-bottom:25px;
+        margin-bottom:0;
     }   
+    .cards>a{
+       min-width: 250px;
+    }
+    .sec>.container{
+        margin:20px auto;
+    }
+    .contact_form>p{
+        width:auto;
+        padding-right: 0px;
+    }
+    .blue>.container{
+      width:100%;
+      padding:0;
+    }
+    .points_block{
+        height:350px !important;
+    }
 }
