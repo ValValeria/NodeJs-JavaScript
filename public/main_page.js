@@ -16,6 +16,13 @@ localStorage.setItem('value','[]');
 window.onload=function(){
     let counter=0;
     let obj1=JSON.parse(localStorage.getItem('value'));
+    document.querySelector("#ord").addEventListener('click',()=>{
+        console.log('he')
+
+        window.open('/#orderme',"_self")
+    }
+    )
+
     ready(function(){
         counter++;
         clone('user');

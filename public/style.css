@@ -27,7 +27,7 @@ body{
     display: flex;
     flex-direction: column;
     align-items: center;
-    overflow-x:hidden;
+    overflow-x:hidden ;
     position: relative;
 
 }
@@ -117,11 +117,12 @@ body{
 .banner{
     padding-top:5%;
     background-color:  rgba(52, 73, 94,0.2) ;
-    background-image: url('/public/image1.jpg');
+    background: linear-gradient(82.83deg,#00112c 0%,#00245b 39.44%,#006ebd 100%);
     background-size: cover;
     width:100vw;
     min-height:100vh;
     position: relative;
+    overflow-x: hidden;
     top:0;
     left:0;
     z-index:-1;
@@ -131,6 +132,17 @@ body{
     text-align: center;
     color:white;
 }
+#to{
+position: absolute;
+top:80px;
+right:-15%;
+width:40%;
+z-index:-1;
+}
+#to>img{
+    object-fit: contain;
+}
+
 .small_container{
     width:80%;
     display: flex;
@@ -186,7 +198,7 @@ body{
 }
 #one{
 
-    background: rgb(3, 49, 106);
+    background: rgb(0, 29, 109);
 }
 .write_mes{
     position: fixed;
@@ -349,7 +361,6 @@ textarea{
     height:70vh;
 }
 .section {
-    min-height:100vh;
     width:100vw;
     font-size: 16px;
     line-height: 26px;
@@ -378,6 +389,7 @@ textarea{
 .about_p{
     font-family: 'Nunito', sans-serif;
     font-size:1.3rem;
+    font-weight: 200;
 }
 .imagel{
     flex:1 1 50%;
@@ -780,6 +792,7 @@ footer>.copyright{
     justify-content: center;
     align-items: center;
 }
+
 .kick_me{
     background: #F5F5F5; 
     color:#3d3a3a !important;
@@ -918,6 +931,9 @@ padding-left: 10px;
     }
 }
 @media(max-width:1000px){
+    .buttons{
+        width: 80%;
+    }
     .inner_fon{
         transform: translate(-20px, -1px);
     }
@@ -1009,6 +1025,11 @@ padding-left: 10px;
    } 
     
 }
+@media screen and (max-width:770px){
+    .greeting>p{
+        font-weight: 800;
+    }
+}
 @media screen and (max-width:700px){
     .line2{
         display:block;
@@ -1077,6 +1098,7 @@ padding-left: 10px;
     
 }
 @media(max-width:650px){
+
     footer>.copyright{
         width:auto;
         flex-direction: column-reverse;
@@ -1185,7 +1207,7 @@ padding-left: 10px;
     }
 }
 
-@media(max-width:410px){
+@media(max-width:470px){
     .footerup{
         margin-top:10px !important;
     }
@@ -1241,9 +1263,13 @@ padding-left: 10px;
     margin-top:10px;   /** ?????*/
     }
     .back-map>#form{
-        width: 70%;
+        width: 100%;
         position: absolute;
-        left: 0;
+        padding:0;
+        padding-top:10px !important;
+    }
+    .back-map #form label{
+        width:90%;
     }
     .footer>.copyright {
         flex-direction: column;
@@ -1336,5 +1362,8 @@ padding-left: 10px;
     }
     .points_block{
         height:350px !important;
+    }
+    .menu{
+        right:20px;
     }
 }

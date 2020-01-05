@@ -4,9 +4,7 @@ export function el(data){
     else if(data.startsWith('#')) return document.querySelector(data);
     else if(document.body.dataset.hasOwnProperty(data)) return document.querySelectorAll("["+data+"="+document.body.dataset.data+"]")
     else  {
-         elem=document.getElementsByTagName(data);
-         if(elem.length==0) throw new Error();
-         return elem;
+           return undefined;
     }
   }
 export function ready(process){

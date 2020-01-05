@@ -14,7 +14,8 @@ function ready(){
             "body": JSON.stringify(obj)
         });
         if(promise.ok){
-            document.getElementsByClassName('know')[0].style.display="block"
+            document.getElementsByClassName('blue')[0].style.paddingBottom="120px";
+            document.getElementsByClassName('know')[0].style.display="block";
             document.getElementsByClassName('know')[0].innerHTML="<strong> Ваше сообщение отправлено </strong>"
         }
 
