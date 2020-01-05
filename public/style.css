@@ -197,7 +197,7 @@ body{
 .krest{
     position: absolute;
     top:4px;
-    left:7px;
+    left:15px;
 }
 .headline{
     color:white;
@@ -760,7 +760,7 @@ footer>.copyright{
 }
 .service_wrap{
     display:flex;
-    padding: 50px 0 80px;
+    padding: 50px 0 0px;
     flex-wrap: wrap;
     justify-content: center;
 }
@@ -1194,7 +1194,7 @@ padding-left: 10px;
         right:15px;
     }
     .blue{
-        padding-bottom: 80px;
+        padding-bottom: 60px;
     }
      .wrap-container{
          background-image: url('//if-studio.ru/wp-content/themes/if-studio/css/../img/form-icons/map.svg)');
@@ -1263,8 +1263,15 @@ padding-left: 10px;
 .info{
     font-size:20px;
 }
-
-
+.wrap-container{
+    padding:0 20px;
+}
+.container1{
+    padding-bottom: 0;
+}
+.breadcrumps{
+    width:120%;
+}
 }
 @media(max-width:362px){
     .sec{
