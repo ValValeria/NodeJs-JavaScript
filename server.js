@@ -183,7 +183,7 @@ io.on('connection', function (socket){
                      || obj[prop].request.connection.remoteAddress=="::1")){
                             obj[prop].send(socket.id);///посылаем  id юзера
                      }else{ socket.emit('not_found')}
-              }else socket.emit('not_found');
+              }
         }
       }
       
