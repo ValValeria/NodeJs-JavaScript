@@ -7,7 +7,7 @@ export function el(data){
            return undefined;
     }
   }
-export function ready(process){
+export function ready(process=()=>{},opt=true){
       let i=el('#kick');
      i.addEventListener('click',()=>{
            let is_open=i.dataset.open;
@@ -24,22 +24,21 @@ export function ready(process){
       })
   
       document.body.onresize=()=>{
-         if(document.body.clientWidth>917){
+         if(document.body.clientWidth>926){
             el('.ul')[0].style.display='inherit';
-            console.log('hello');
          }else{
           el('.ul')[0].style.display='none';
          }
       }
-      el('.strelka')[0].addEventListener('click',process);
 
-      el('.headline')[0].addEventListener('click',function(){
+      if(opt){
+         el('.headline')[0].addEventListener('click',function(){
          el('.message_area')[0].style.display='block';
          el('.krest')[0].addEventListener('click',()=>{
             el('.message_area')[0].style.display='none';
 
          })
-      })
+      })}
   }
 
 export function clone(role,value=el('#call').value,css){

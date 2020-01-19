@@ -5,5 +5,36 @@
     </div>
 </footer>
 
+<%- include('message.ejs') %>     
+
+<script>
+
+     if(location.pathname.indexOf("/portfolio")!=-1){
+        let header=document.querySelectorAll('.sec')[0];
+        header.id="head_portfolio";
+        let footer=document.querySelector('footer');
+        footer.id="head_portfolio";
+        let elem=document.querySelectorAll(".row>.ul>li>a");
+       
+        for (let item of elem){
+            item.classList.add('bord');
+        }
+         
+        document.querySelector('.see').style.marginTop=header.clientHeight+"px";
+        
+
+        let rem=()=>{
+        if(window.innerWidth<394){
+           document.querySelector('._col-1').classList.add('none');
+        }else{
+            document.querySelector('._col-1').classList.remove('none');
+        }
+        }
+
+        rem();
+
+        window.addEventListener('resize',rem);
+    }
+</script>   
 </body>
 </html>

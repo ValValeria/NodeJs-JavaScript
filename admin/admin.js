@@ -2,28 +2,32 @@ import{ready,clone,el,get_cookie} from "/public/some.js";
 
 document.cookie="admin=true";
 
-var socket = io.connect('https://guarded-garden-20402.herokuapp.com/');
+var socket = io.connect('http://localhost:3000');
 
 
 window.onload=function(){
-   ready(function(){
-        clone('admin');
-    });
-    el('.write_mes')[0].style.display='none';
     proccess11();
 };
 
 function proccess11(){
-    let counter=0;
-    socket.emit('get_users');
-    socket.on('message',function(data){// id of every connected user
-        if(data==get_cookie().io) return;
-        counter++;
-        let clone=el('.la')[0].cloneNode(true);
-        clone.style.display='block'
-        clone.innerHTML=" <div ><a href='/admin/"+data+"' class='link' data-id_of_user='"+data+"'>"+ "<strong> "+counter+"</strong> | USER </a></div>";
-        el('.fulik')[0].append(clone);
+    socket.emit('getusers');
+    socket.on('list_of_users',(json)=>{
+          for(let elem of json){
+              if(elem.status=="online")    cl(elem.area,".fulik1");
+              else cl(elem.area,".fulik12");
+            
+          }
+         console.log(json)
+    })
+    socket.on('new_message',function( _mes,area){// id of every connected user
+        cl(area,".fulik1")
     })
     
 }
 
+function cl(what,where){
+    let clone=el('.la')[0].cloneNode(true);
+    clone.style.display='block';
+    clone.innerHTML=" <div ><a href='/admin/"+what+"' class='link' "+what+"'>"+ "  USER |"+what+"   </a></div>";
+    el(where)[0].append(clone);
+}

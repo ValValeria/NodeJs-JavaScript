@@ -16,7 +16,7 @@
                 </div>
                 <div class='buttons'>
                     <a href="#orderme" class="links_b" target="_self" id="ord">Заказать Проект</a>
-                    <a class="links_b" id='one' title="Эта страницы временна недоступна">Портфолио</a>
+                    <a href="/portfolio" class="links_b" id='one' >Портфолио</a>
                  </div>
            </div>
          </div>
@@ -436,7 +436,7 @@
                          <p>Получение готового продукта</p>
                       </div>
                   </div>
-                  <div class="buttons" style="transform: translate(0%,-25%);">
+                  <div class="buttons" >
                     <a href="#forms" class="links_b">Оставить заявку</a>
                   </div>
               </div>
@@ -453,8 +453,7 @@
     </div>
 </footer>
 
-<script>
-        document.body.style.minHeight=" 250vh";
-</script>
+<%- include('message.ejs') %>     
+
 </body>
 </html>

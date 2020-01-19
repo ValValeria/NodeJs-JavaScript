@@ -6,7 +6,7 @@
          <link rel="stylesheet" media="screen and (max-width: 600px)" href="/public/media.css">
          <meta charset="utf8">
          <script src="/socket.io/socket.io.js"></script>
-         <script src="/public/submit.js"></script>
+         <script src="/public/submit.js" type="module"></script>
          <link rel="stylesheet" href='/public/style.css'>
          <% if(admin ){%>
           <script src='/admin/admin.js'  type="module"></script>
@@ -19,16 +19,21 @@
        </head>
        <body>
            <div id="footerancor"></div>
-           <%- include('message.ejs') %>     
+
            <div class='sec'>
               <div class='container'>
                 <div class='row'>
-                    <div class='brand_name'><a href="/" style="text-decoration: none;">My portfolio</a></div>
+                    <div class='brand_name'>
+                       <a href="/" style="text-decoration: none; display:flex;align-items: center;justify-content: flex-start;">
+                           <img src="/public/send.svg">
+                           <h1 style="display:inline-block;margin-left:9px;">MyPortfolio</h1>
+                       </a> 
+                    </div>
                     <ul class='ul'>
                       <li><a  href="/" class="active">Главная</a></li>
                       <li><a href="/services">Услуги</a></li>
                       <li><a href="/contacts">Контакты</a></li>
-                      <li><a>Примеры работ</a></li>
+                      <li ><a href="/portfolio">Примеры работ</a></li>
                     </ul>
                 </div>
               </div>

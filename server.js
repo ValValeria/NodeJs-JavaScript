@@ -33,7 +33,6 @@ app.use('/admin',(req,res,next)=>{
               next();
        }else{
               res.status(403).send('Forbidden');
-              console.log()
               return;   
        }   
        
@@ -43,28 +42,30 @@ app.get('/admin',(req,res)=>{
        options=new Object();
        options.com=false;
        options.css=false;
+       options.field=false;
        if(req.cookies.__proto__== null){
               req.cookies=new Object;
               options.admin=false;
        }else if(req.cookies.hasOwnProperty('admin')){
               options.admin=true;
-       }
+       } 
 
-
-       /*Need to get fields of mysql */
        database.get_field();////write something into file
         
        /**Read file */
        const readonly = fs.createReadStream('fields.json','utf8');
-       let fields="";
+       let fields ="";
        readonly.on('data',(chunks)=>{
               fields+=chunks;
        }) 
        readonly.on('end',()=>{
-              if(fields.length==0) options.field=false
-              else  options.field=JSON.parse(fields);
-              res.render('admin_p',options);
+               let json= fields.length>0 ? fields:false;
+               options.area1=JSON.parse(json);
+               res.render('admin_p',options);
+
        })
+       
+       
        /*Need to get fields of mysql */
 
 })
@@ -83,60 +84,86 @@ app.get('/admin/:file',function(req,res,next){
               }
        })
       },function (req,res){
-             res.clearCookie('id_of_user');
+             /** name of area */
+             /** */
 
              let options={
               admin:false,
               com:true,
-              css:true
+              css:true,
              }
              /** */
+
              database.get_field_spec(req.params.file);
+
              const readonl = fs.createReadStream('coversation.json','utf8');
+
              let fields1="";
+
              readonl.on('data',(chunks)=>{
                 fields1+=chunks;
              }) 
+
              readonl.on('end',()=>{
-                if(fields1.length==0) options.field=false
-                else  options.field=JSON.parse(fields1);
+                if(fields1.length==0)  options.field=[];
+                else options.field=JSON.parse(fields1);  
                 res.render('com',options);
              })
-            /*Need to get fields of mysql */
-             /** */
-             res.cookie('id_of_user',req.params.file);
-           
+            
+             res.cookie('number',req.params.file,{path:req.url})
       }
 )
 
 
  /**/
 
-app.get('/',(req,res)=>{
-       res.clearCookie('id_of_user');
-       res.clearCookie('id_of_admin');
+ function get (req,res,page,opt){
+           
+       database.get_field_spec("com"+req.cookies.number);
 
-       res.sendFile('/node_modules/socket.io/socket.io.js');
+       const readonl = fs.createReadStream('coversation.json','utf8');
+
+       let fields1="";
+
+       readonl.on('data',(chunks)=>{
+          fields1+=chunks;
+       }) 
+
+       readonl.on('end',()=>{
+          if(fields1.length==0)  options.field=false;
+          
+          else options.field=JSON.parse(fields1);  
+
+          options.admin=false;
+          options.com=false;
+          options.css=false;
+          res.render(page,options);
+       })
+ }
+app.get('/',(req,res)=>{
+       /** */
+       /** */
+      
+       app.set('trusty proxy ',true);
+
        options=new Object();
+      
+       
        if(req.cookies.__proto__== null){
               req.cookies=new Object;
        }
 
-       options.admin=false;
-       options.com=false;
-       options.css=false;
-       options.field=false;
-       res.render('main',options);
+       if(req.cookies.number==undefined)  {
+              res.cookie('number',getRandomInt(1,50000000),{expires:"Fri, 31 Dec 9999 23:59:59 GMT", maxAge: 9000000})
+       }
+       get(req,res,"main");
 });
 
 app.get('/services',(req,res)=>{
-       options=new Object();
-       options.admin=false;
-       options.com=false;
-       options.css=false;
-       options.field=false;
-       res.render('uslugi',options);
-
+       get(req,res,'uslugi')
+})
+app.get('/portfolio',(req,res)=>{
+       get(req,res,'portfolio')
 })
 app.get('/services/:file/',(req,res)=>{
        options=new Object();
@@ -144,7 +171,6 @@ app.get('/services/:file/',(req,res)=>{
        options.admin=false;
        options.com=false;
        options.css=false;
-       options.field=false;
        if(array.includes(req.params.file)){
             fs.readFile(__dirname+'/pages.json','utf8',(error,data)=>{
                    if(error !=null) res.statusCode('403');
@@ -152,8 +178,15 @@ app.get('/services/:file/',(req,res)=>{
                    for (let prop in json){
                           options[prop]=json[prop];
                    }
-                   options.url=req.url;
-                   res.render("landing",options);
+
+                   database.get_field_spec("com"+req.cookies.number);
+
+                   fs.readFile('coversation.json',"utf8",(err,d)=>{
+                     options.url=req.url;
+                     options.field=JSON.parse(d);
+                     res.render("landing",options);
+                   })
+                  
             })   
        }
 })
@@ -167,7 +200,7 @@ app.get('/contacts',(req,res)=>{
 })
 
 app.post('/',json,(request,response)=>{
-       database.insert_all('admin',request.body.email,request.body.message,request.ip);
+       database.insert_all('admin',request.body.email,request.body.message,request.ip,"com"+request.cookies.number);
        response.send();
 })
 
@@ -175,80 +208,116 @@ app.post('/',json,(request,response)=>{
 
 
 io.on('connection', function (socket){
-      function new_user(){
-       for( let prop in io.sockets.sockets){
-              obj=io.sockets.sockets;
-              if(obj[prop].handshake.headers.cookie!=undefined && obj[prop].id!=socket.id){//если это не сам админ
-                     if(obj[prop].handshake.headers.cookie.includes('admin=true;')&& (obj[prop].request.connection.remoteAddress=="::ffff:127.0.0.1"
-                     || obj[prop].request.connection.remoteAddress=="::1")){
-                            obj[prop].send(socket.id);///посылаем  id юзера
-                     }else{ socket.emit('not_found')}
-              }
-        }
-      }
-      
-      socket.on('get_users',()=>{
-          if(!socket.handshake.headers.cookie.includes('admin=true;')) return;
-          io.clients((error,clients)=>{
-                 for(let id of clients){
-                        if(socket.id !== id) {
-                        socket.send(id);
-                        console.log("id "+ id +" | "+" admin "+ socket.id);
-                        }
-                 }
-          })
-      });
-       /**
-        * socket.request.connection.remoteAddress=="::ffff:127.0.0.1"|| socket.request.connection.remoteAddress=="::1"
-        * socket_admin.handshake.headers.cookie.
-        * param id- id of userr
-        * param id_s-id  of admin
-        */
-      
+    /**::ffff:127.0.0.1    ::1  */  
 
-       socket.on('start_of',(text,id,admin)=>{
-           if(id!=undefined && io.sockets.sockets[id]!=undefined)
-           io.sockets.sockets[id].emit('new_message',text);
-           if(typeof admin==null || typeof admin==undefined) {
-              database.insert_all('admin',socket.id,text,socket.request.connection.remoteAddress);
-           }//написал юзер
-           else {
-              database.insert_all(socket.id,'admin',text,socket.request.connection.remoteAddress);
-           } //написал админ
+      let clientIp=socket.request.connection.remoteAddress;
+
+       socket.on('message_of_user',(message,number)=>{
+
+              database.insert_all('admin',"user"+number,message,clientIp,"com"+number)
+                    
+              find_user(socket,io,number,true,'new_message',message,"com"+number)          
+             
        })
 
-       socket.on('exchange_of_id',()=>{
-              new_user();
-       })
-       socket.on('exchange_of_id_admin',(id_of_user)=>{
-             console.log('id_of_user '+id_of_user)
-             if(id_of_user!=undefined && io.sockets.sockets[id_of_user]!=undefined)
-             io.sockets.sockets[id_of_user].emit('id_of_admin',socket.id);
+       socket.on("exchange_of_id_admin",(number,message)=>{//когда админ хочет написать пользователю
 
+             if(number==undefined) return;
+             my_num=number.substr(number.indexOf('com')+3);
+
+             database.insert_all("user"+my_num,"admin",message,clientIp,number);
+
+             find_user(socket,io,my_num,false,'message_from_admin',message);
        })
-       socket.on('disconnect',()=>{
-               if(socket.request.headers.cookie!=null || socket.request.headers.cookie!=undefined){
-                      let cook=get_cookie(socket.request.headers.cookie);
-                      let id=cook.id_of_admin;
-                      if(id!=undefined && io.sockets.sockets[id]!=undefined){
-                            io.sockets.sockets[id].emit('dis_connected');
-                      }
-               }
-       })
-       socket.on('n_end_of',(message)=>{//add to database the comment of the user
-             database.connect(socket.id,message,socket.request.connection.remoteAddress);
-             console.log('hello')
+
+       socket.on('getusers',()=>{
+              fs.readFile('fields.json',"utf8",(error,data)=>{
+                  if(error!=null)  return; 
+
+                  let array=JSON.parse(data);
+                  let json=[];
+                  let promise=new Promise((res,rej)=>{
+
+                     array.forEach((elem,index)=>{
+
+                            let com_id=elem.sender=="admin"? elem.receiver:elem.sender;
+                            let  id1=com_id.substr(com_id.indexOf('user')+4);
+                            
+                            let k=find_user(socket,io,id1,false);
+
+                            if(k==false){
+                                stat="ofline";
+                            }else stat="online";
+                         
+                            let line={area:elem.area,status:stat};
+                            
+                                
+                            if(json.findIndex(el=>el.area==elem.area)==-1){
+                                   json.push(line);
+                            }
+
+                            if(index+1==array.length){
+                                   res(json)
+                            }
+                     })
+                  })
+                  promise
+                   .then(json=>{
+                          socket.emit("list_of_users",json)
+                    })
+                   .catch(error=>console.log(error))
+              })
        })
 })
- function get_cookie(cookies_string){
-       let cookies=cookies_string.split(";");
-       let obj= new Object();
-       for (let elem of cookies ){
-           let ar=elem.trim().split('=');
-           obj[ar[0]]=ar[1];
-       }
-       return obj;
-}
+
+
 app.use('/public',express.static(__dirname+'/public'));
 
+
+function getRandomInt(min, max) {
+       min = Math.ceil(min);
+       max = Math.floor(max);
+       return Math.floor(Math.random() * (max - min)) + min; //Включно з мінімальним та виключаючи максимальне значення 
+}
+
+
+
+
+function find_user(socket,io ,number,admin=false,event,...options){
+   let obj=io.sockets.sockets;   
+   let id=socket.id;   
+   ///socket,io,my_num,false,'message_from_admin',message,number
+   if(admin){
+     for(let elem in obj){
+       let soc=io.sockets.sockets[elem];
+       if((soc.request.headers.cookie!==undefined) && (soc.request.connection.remoteAddress=="::ffff:127.0.0.1" ||
+       soc.request.connection.remoteAddress=="::1" )){
+              if(soc.request.headers.cookie.includes("admin=true;")){
+                     if(typeof event !="undefined") {
+                            io.sockets.sockets[soc.id].emit(event,...options);
+                     }       
+                     socket.emit("admin_found");
+
+              }
+       }
+     }
+   }else{
+       for (let prop in obj){
+              let arr=[];
+              if(obj[prop].id!=id){
+                  if(obj[prop].request.headers.cookie.includes("number="+number)) {
+                     if(typeof event !="undefined") io.sockets.sockets[obj[prop].id].emit(event,...options);  
+                     arr.push(obj[prop].id);
+                   }
+              }
+
+              if(arr.length>0) {return true;}
+              else {return false;}
+       }
+       
+   }
+
+  
+  
+}
 http.listen(port,()=>console.log('hello'));

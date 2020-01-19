@@ -1,40 +1,68 @@
 <%-include('header.ejs')%>
 
 <script type="module">
-import{ready,clone,el,get_cookie} from "/public/some.js";
 
+import {ready,el,clone,get_cookie} from "/public/some.js";
 
-document.cookie="admin=true";
+document.addEventListener('DOMContentLoaded',loaded);
 
-let socket=process1();
+let socket=io();
 
+function loaded(){
+    ready(undefined,false);
 
-window.onload=function(){
-    ready(function(){
+    document.querySelector('.strelka').onclick=()=>{
+
         clone('admin');
-        socket.emit('start_of',el('#call').value,get_cookie().id_of_user,'admin');
-    });
-    el(".write_mes")[0].classList.add('tt1');
-    el('.message_area')[0].style.display='block';
-    el('#h1').innerHTML="Ваш чат"
-    el('#k').style.display="none";
-    el('.krest')[0].style.display='none';
-}
 
-
-function process1(){/// when admin decide to write something
-        var socket = io.connect('https://guarded-garden-20402.herokuapp.com/')
-
-        socket.emit('exchange_of_id_admin',get_cookie().id_of_user);
-        socket.on('new_message',(data)=>{
+        socket.emit('exchange_of_id_admin',get_cookie().number,el("#call").value);
+           
+    }
+    socket.on('new_message',(data)=>{
           clone('user',data);
-          
+          console.log(data)
         })
-        socket.on('dis_connected',()=>{
+
+    socket.on('dis_connected',()=>{
             clone('Message','User покинул чат','error');
-        })
-        return socket;
+    })
+    
 }
 
 </script>
-<%-include('footer.ejs')%>
+
+     <div class="message_area"  style="position: absolute; top :100px;width:80vw;margin:auto">
+           <div class="messages"> 
+                <ul id='ulik'>
+                    <li class="mes">
+                        <div>Admin</div>
+                        Здравствуйте. 
+                        У вас возникли вопросы? Мы с удовольствием ответим!
+                    </li>
+                    <% if(field){
+                        field.forEach(elem=>{
+                    %>
+                    <% if(elem.sender=='admin'){%>
+                     <li class="mes" data-role="admin">
+                     <%}else{%> 
+                     <li class="mes" data-role="user">
+                     <%}%>     
+                        <div><%= elem.sender %></div>
+                        <%= elem.message%>
+                    </li>
+                    <%})}%>
+                </ul>
+           </div>
+           <div class='form'>
+            <div class='ffs'>
+                <textarea id="call" rows="3" cols='20'  placeholder="Введите ваше сообщение" >
+                </textarea>
+                <svg class=" strelka"width="34" height="34" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><circle fill="#12a730" cx="17" cy="17" r="17"/><g transform="translate(10 9)" fill="#FFF"><rect x="6" y="2" width="2" height="14" rx="1"/><rect transform="rotate(-45 9.879 4.879)" x="8.879" y="-.121" width="2" height="10" rx="1"/><rect transform="scale(-1 1) rotate(-45 0 15.243)" x="3.293" y="-.121" width="2" height="10" rx="1"/></g></g></svg>
+            </div>
+           </div>
+          
+           </div>
+ </div>
+
+</body>
+</html>
