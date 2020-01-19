@@ -10,7 +10,7 @@ function gsx(){
             message: document.getElementById('message').value
         }
         /**https://guarded-garden-20402.herokuapp.com/ */
-        let promise= await fetch('http://localhost:3000',{
+        let promise= await fetch('https://guarded-garden-20402.herokuapp.com/',{
             "method":'POST',
             "headers":{
                 'Content-Type':"application/json;charset=utf-8"
