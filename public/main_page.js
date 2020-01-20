@@ -2,7 +2,6 @@ import {el,clone,get_cookie} from "/public/some.js";
 
 document.addEventListener('DOMContentLoaded',loaded);
 
-localStorage.clear();
 localStorage.setItem('counter',0);
 let socket=io();
 

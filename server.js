@@ -124,7 +124,7 @@ app.get('/admin/:file',function(req,res,next){
        const readonl = fs.createReadStream('coversation.json','utf8');
 
        let fields1="";
-
+       let options=new Object();
        readonl.on('data',(chunks)=>{
           fields1+=chunks;
        }) 

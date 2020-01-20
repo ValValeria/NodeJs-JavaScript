@@ -48,39 +48,96 @@
                       <div class="projects">
                           <h1>ПРОЕКТЫ</h1>
                       </div>
-                      <div class="grid-gap">
-                        <div class="service_wrap" style="flex-wrap: wrap;">
-                            <div class="service_wrap_item hov" style="  background-color: rgba(177, 179, 177, 0.4);  background-image:  url('/public/case-kava.webp'); background-size: cover;
-                            ">
-                                    
-                                    <div>
-                                           <div class="info"><h4> MYKAVA</h4></div>
-                                    </div>
-                                   
-                                    <p> 
-                                        <a href="#">
-                                             РАЗРАБОТКА САЙТА ДЛЯ ВСЕУКРАИНСКОГО КЛУБА АКТИВНОГО ОТДЫХА KAVA
-                                       </a>
-                                   </p>
-                                    <div class="gradients"></div>
-                             </div>
-                            
-                             <div class="service_wrap_item hov" style="background: url('/public/comp.jpg');background-size: cover;"> 
-                              
-                                <div>
-                                       <div class="info"><h4> TIK-TIK</h4></div>
-                                </div>
-                               
-                                <p>
-                                     <a href="#">
-                                    РАЗРАБОТКА ИНТЕРНЕТ-МАГАЗИНА БЫТОВОЙ ТЕХНИКИ TIK-TIK
-                                     </a>
-                                </p>
-                                <div class="gradients" ></div>
+
+                      <div id="ban">
+                        <a class="service_wrap_item hove mine none_imp wrap" >
+                            <div class="qoutes">	
+                                <div>&#8411;</div>
                             </div>
-                            
-                            
-                      </div >
+
+                            <div class="shadow love ">
+                                   <div class="info not_column space-around sgx">
+                                       <h4> 
+                                           
+                                           <div class="name">Имя проекта</div >
+                                           <div class="service_wrap_item  smalltext space-around opisanie">
+                                               Описание проекта 
+                                           </div>
+                                           <div class="price ogo">
+                                                <span class="price__title">Цена: </span> 
+                                                <span class="price__cost">От 700[grn.]</span>
+                                           </div> 
+                                        </h4>
+                                       <div class="dr">
+                                           <img src="/public/first.png" class="menu_icon" alt="...">
+                                       </div>
+                                   </div>
+                            </div>                   
+                        </a> 
+                      </div>
+
+
+                      <div class="service_wrap wrap" style="padding-top:0;">
+                        <a class="service_wrap_item hove"  data-id="1" style=" background-image: url('/public/te1.png'); background-size: cover; background-position: center;">
+                            <div class="qoutes">	
+                                <small>&#8411;</small>
+                            </div>
+
+                            <div class="shadow">
+                                   <div class="info">
+                                       <h4> Virtual Zona</h4>
+                                       <div>
+                                              <div href="#"class="watch">Посмотреть</div>
+                                       </div>
+                                </div>
+                            </div>                   
+                        </a> 
+                        <a class="service_wrap_item hove "  data-id="2" style=" background-image: url('/public/81.png'); background-size: cover; background-position: center;">
+                            <div class="qoutes">	
+                                <small>&#8411;</small>
+                            </div>
+
+                            <div class='shadow'>
+                                   <div class="info">
+                                       <h4> ТОГРОВАЯ ПЛОЩАДКА</h4>
+                                       <div>
+                                          <div href="#"class="watch">Посмотреть</div>
+                                       </div>
+                                   </div>
+                            </div>                   
+                         </a>                                            
+
+                         <a class="service_wrap_item hove"   data-id="3" style=" background-image: url('/public/mythree.png'); background-size: cover; background-position: center;" >
+                            <div class="qoutes">	
+                                <small>&#8411;</small>
+                            </div>
+
+                            <div class="shadow">
+                                   <div class="info ">
+                                       <h4> CS 1.6</h4>
+                                       <div>
+                                           <div href="#"class="watch">Посмотреть</div>
+                                       </div>
+                                    </div>
+                            </div>                                    
+                         </a >
+
+                         <a class="service_wrap_item hove"  data-id="4" style=" background-image: url('/public/te.png'); background-size: cover; background-position: center;" >
+                            <div class="qoutes">	
+                                <small>&#8411;</small>
+                            </div>
+                            <div class="shadow">
+                                   <div class="info ">
+                                       <h4> Personal portfolio </h4>
+                                       <div>
+                                          <div href="#"class="watch">Посмотреть</div>
+                                        </div>
+                                    </div>
+                            </div>
+                                                                 
+                         </a >
+                      </div>   
+
                       </div>
                 </div>
             </div>
@@ -89,5 +146,11 @@
     </div>
 </div>    
 
-
+<section class="section blue white">
+    <div class="container">
+         <div class="wrap-container" style="background-image: none;">
+             <%-include('contact.ejs')%>
+         </div>
+    </div>
+</section> 
 <%-include('footer.ejs')%>
