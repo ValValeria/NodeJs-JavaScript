@@ -11,7 +11,7 @@ export function ready(process=()=>{},opt=true){
       let i=el('#kick');
      i.addEventListener('click',()=>{
            let is_open=i.dataset.open;
-           if(document.documentElement.clientWidth<918){
+           if(document.documentElement.clientWidth<934){
               if(is_open=='false'){//it wasn't open
               i.dataset.open='true';
               el('.ul')[0].style.display='block';
@@ -24,7 +24,7 @@ export function ready(process=()=>{},opt=true){
       })
   
       document.body.onresize=()=>{
-         if(document.body.clientWidth>926){
+         if(document.body.clientWidth>934){
             el('.ul')[0].style.display='inherit';
          }else{
           el('.ul')[0].style.display='none';
