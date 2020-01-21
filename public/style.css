@@ -795,6 +795,7 @@ footer>.copyright{
     color: #000;
     position: relative;
     top: -10px;
+    left:-15px;
     font-size: 18px;
     font-weight: 600;
 }
@@ -1544,8 +1545,8 @@ padding-top:5px;
     }
     
 }
-@media(max-width:650px){
-    
+@media(max-width:640px){
+   
     .link-email{
         font-weight: 800;
     }
@@ -1560,9 +1561,7 @@ padding-top:5px;
     .greeting>h1{
         padding-bottom:5px;
     }
-    .cards>a{
-        margin-left:0 !important;
-    }
+   
     .inner-left{
         margin-right: 0;
     }
@@ -1607,6 +1606,9 @@ padding-top:5px;
     .wrap-container {
         padding: 0 20px;
     }
+
+    
+    
 }
 @media(max-width:520px){
     .title--big{
@@ -1620,7 +1622,6 @@ padding-top:5px;
     }
     .servicess>h6 {
         padding:15px;
-        margin:0;
     }
     .title--section{
         max-width:auto;
