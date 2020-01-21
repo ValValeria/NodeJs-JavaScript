@@ -38,17 +38,19 @@
                         У вас возникли вопросы? Мы с удовольствием ответим!
                     </li>
                     <% if(field){
-                        field.forEach(elem=>{
+                        console.log(field)
+                        for(let f of field){
+                            if(f['is_letter']!=1) {
                     %>
-                    <% if(elem.sender=='admin'){%>
+                    <% if(f.sender=='admin'){%>
                     <li class="mes" data-role="admin">
                      <%}else{%> 
                      <li class="mes" data-role="user">
                      <%}%>     
                         <div>User</div>
-                        <%= elem.message%>
+                        <%= f.message%>
                     </li>
-                    <%})}%>
+                    <%}}}%>
                 </ul>
            </div>
            <div class='form'>

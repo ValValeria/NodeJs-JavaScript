@@ -43,6 +43,7 @@ app.get('/admin',(req,res)=>{
        options.com=false;
        options.css=false;
        options.field=false;
+       options.title="Admin Area";
        if(req.cookies.__proto__== null){
               req.cookies=new Object;
               options.admin=false;
@@ -107,6 +108,7 @@ app.get('/admin/:file',function(req,res,next){
              readonl.on('end',()=>{
                 if(fields1.length==0)  options.field=[];
                 else options.field=JSON.parse(fields1);  
+                options.title="Communication";
                 res.render('com',options);
              })
             
@@ -118,9 +120,17 @@ app.get('/admin/:file',function(req,res,next){
  /**/
 
  function get (req,res,page,opt){
-           
-       database.get_field_spec("com"+req.cookies.number);
 
+       const promise=new Promise((resolve,reject)=>{
+              database.get_field_spec("com"+req.cookies.number,resolve,reject);
+
+       })
+
+       promise.then(()=>{attention(res,page)})
+     
+ }
+
+ function attention(res,page){
        const readonl = fs.createReadStream('coversation.json','utf8');
 
        let fields1="";
@@ -137,6 +147,15 @@ app.get('/admin/:file',function(req,res,next){
           options.admin=false;
           options.com=false;
           options.css=false;
+          if(page=="contacts"){     
+              options.title="Контакты";
+         }else if(page=="main"){
+              options.title="MyPortfolio - Создание сайтов  ";
+         }else if(page=="portfolio"){
+              options.title="Примеры работ";
+         }else if(page=="uslugi"){
+              options.title="Услуги";
+         }
           res.render(page,options);
        })
  }
@@ -146,7 +165,6 @@ app.get('/',(req,res)=>{
       
        app.set('trusty proxy ',true);
 
-       options=new Object();
       
        
        if(req.cookies.__proto__== null){
@@ -171,6 +189,9 @@ app.get('/services/:file/',(req,res)=>{
        options.admin=false;
        options.com=false;
        options.css=false;
+
+       options.title="Наши услуги"
+
        if(array.includes(req.params.file)){
             fs.readFile(__dirname+'/pages.json','utf8',(error,data)=>{
                    if(error !=null) res.statusCode('403');
@@ -196,11 +217,12 @@ app.get('/contacts',(req,res)=>{
        options.com=false;
        options.css=false;
        options.field=false;
+       options.title="Контакты"
        res.render('contacts',options);
 })
 
 app.post('/',json,(request,response)=>{
-       database.insert_all('admin',request.body.email,request.body.message,request.ip,"com"+request.cookies.number);
+       database.insert_all('admin',request.body.email,request.body.message,request.ip,"com"+request.cookies.number,1);
        response.send();
 })
 

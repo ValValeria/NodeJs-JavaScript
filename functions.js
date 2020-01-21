@@ -11,8 +11,8 @@ class  Connect{
     }
    
     insert_all(...command){
-
-      this.pool.query("INSERT INTO my (receiver,sender,message,ip,area) values(?,?,?,?,?)",command)
+      if(command.length==5)  command.push(0);
+      this.pool.query("INSERT INTO my (receiver,sender,message,ip,area,is_letter) values(?,?,?,?,?,?)",command)
    }
     get_field(){
          this.pool.query("SELECT area ,sender, receiver FROM  my ",function(error,result){
@@ -22,13 +22,16 @@ class  Connect{
                })
          })
     }
-    get_field_spec(area){
-      this.pool.query("SELECT * FROM  my  where area=?",[area],function(error,result){
+    get_field_spec(area,resolve,reject){
+      this.pool.query("SELECT * FROM  my  where area=? ORDER BY id",[area],function(error,result){
         if(error!=null) return;
         require('fs').writeFile('coversation.json', JSON.stringify(result),  'utf8', function(err) {
-          if(error) throw new Error();
+          if(err){
+            if(reject!=undefined) reject();
+          }   
+          if(resolve!=undefined) resolve();
         });
-     })
+      })  
     }
 
 }

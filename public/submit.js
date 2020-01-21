@@ -10,7 +10,7 @@ function gsx(){
             message: document.getElementById('message').value
         }
         /**https://guarded-garden-20402.herokuapp.com/ */
-        let promise= await fetch(location.protocol+"//"+location.hostname,{
+        let promise= await fetch(location.protocol+"//"+location.hostname+":"+location.port,{
             "method":'POST',
             "headers":{
                 'Content-Type':"application/json;charset=utf-8"
@@ -23,13 +23,23 @@ function gsx(){
            if(location.href!=location.protocol+"//"+location.hostname){
             document.querySelector('.blue').style.paddingBottom="100px";
            }
-        }
-
-
-
-      
+        }      
     }
+    
+    check();
+}
 
+function check(){
+       let pathname=location.pathname;
 
-   
+       if(pathname.indexOf('/services')!=-1)  pathname="/services";
+       
+        for (let elem of document.querySelectorAll('.ul>li')){
+            if(elem.firstElementChild.dataset.href==pathname){
+                 elem.firstElementChild.classList.add('active')
+                 return;
+            }
+            elem.firstElementChild.classList.remove('active')
+        }
+    
 }
