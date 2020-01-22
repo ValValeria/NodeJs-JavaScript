@@ -8,7 +8,9 @@ let socket=io();
 function loaded(){
 
     document.querySelector('.strelka').onclick=()=>{
-
+        if(el('#call').value.trim()=="" ||  el('#call').value.length>600 ) {
+            return false;
+        }
         if(localStorage.getItem('counter')==0 && localStorage.getItem("id_of_admin")==undefined){
             clone('user');
             clone('Message',"Похоже, что админ офлайн .Укажите  как с вами можно связаться","error")

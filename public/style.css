@@ -511,6 +511,12 @@ z-index:-1;
     padding-top:10px;
     justify-content: space-between;
 }
+#form>.buttons{
+    padding-top:0px;
+}
+#form>.buttons>button{
+    margin-bottom: 0;
+}
 .links_b{
     margin-top: 15px;
     font-family: 'Nunito', sans-serif;
@@ -558,7 +564,7 @@ z-index:-1;
     padding:10px 14%;
 }
 .messages{
-    height:300px;
+    height:55vh;
     font-weight: 400;
     display: flex;
     align-items: center;
@@ -1651,7 +1657,7 @@ padding-top:5px;
         flex-direction: column;
     }
     .back-map{
-        padding-bottom: 0;
+        padding-bottom: 10px;
     }
     .contact_form{
         padding:0;
@@ -1659,6 +1665,7 @@ padding-top:5px;
 
 }
 @media(max-width:490px){
+    
     .greeting>h1 {
         font-size: 2.2rem !important;
         padding-bottom: 0; 
@@ -1787,6 +1794,7 @@ padding-top:5px;
 }
 }
 @media(max-width:394px){
+
     .grid{
         grid-template-rows: 70vh;
     }
@@ -1835,15 +1843,17 @@ padding-top:5px;
         width:100% !important;
     }
     .back-map #form label{
-        width:90% !important;
+        width:100% !important;
     }
     #form>.buttons>.links_b{
         width:80%;
     }
+    #form>.buttons{
+        padding-top:0;
+    }
    .know{
        width:80%;
-   }
-    
+   }   
     .sec{
         padding:0;
     }
@@ -1888,6 +1898,7 @@ padding-top:5px;
 }
 
 @media(max-width:340px){
+
     .section--black{
         padding-top:0 !important;
     }

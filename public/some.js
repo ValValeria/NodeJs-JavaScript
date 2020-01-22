@@ -45,7 +45,8 @@ export function clone(role,value=el('#call').value,css){
    let clone=el('.mes')[0].cloneNode(true);
    clone.setAttribute('data-role',role);
    if(css !=undefined || css !=null )  clone.classList.add(css);
-   clone.innerHTML=" <div >"+role+"</div>"+value;
+   clone.innerHTML=" <div >"+role+"</div>";
+   clone.firstElementChild.insertAdjacentText('afterend',value);
    el('#ulik').append(clone);
 }
 

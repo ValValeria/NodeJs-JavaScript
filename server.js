@@ -25,7 +25,7 @@ app.set("view engine", "ejs");
 
 /** Admin area*/
 app.use('/admin',(req,res,next)=>{
-       res.cookie('admin', 'true', { expires: new Date(Date.now() + 900e0988880), httpOnly: true });
+       res.cookie('admin', 'true', { expires: get_year(), httpOnly: true });
        if(req.cookies.__proto__== null){
               req.cookies=new Object;
        }
@@ -120,7 +120,6 @@ app.get('/admin/:file',function(req,res,next){
  /**/
 
  function get (req,res,page,opt){
-
        const promise=new Promise((resolve,reject)=>{
               database.get_field_spec("com"+req.cookies.number,resolve,reject);
 
@@ -172,7 +171,7 @@ app.get('/',(req,res)=>{
        }
 
        if(req.cookies.number==undefined)  {
-              res.cookie('number',getRandomInt(1,50000000),{expires:"Fri, 31 Dec 9999 23:59:59 GMT", maxAge: 9000000})
+              res.cookie('number',getRandomInt(1,50000000),{expires: get_year(), maxAge: 9000000})
        }
        get(req,res,"main");
 });
@@ -338,8 +337,13 @@ function find_user(socket,io ,number,admin=false,event,...options){
        }
        
    }
+  
+}
 
-  
-  
+
+function get_year(){
+let CookieDate = new Date;
+CookieDate.setFullYear(CookieDate.getFullYear() +10);
+return CookieDate.toUTCString();
 }
 http.listen(port,()=>console.log('hello'));
