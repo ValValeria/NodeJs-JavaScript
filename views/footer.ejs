@@ -12,18 +12,18 @@
         let array=[
               {
                   name:"Virtual Zona",
-                  description:'Используемые технологии: <strong style="font-weight:900;color:#feca57;font-size:1.2rem""> ReactJS,NodeJS,HTML ,CSS,SASS</strong>',
-                  img:"/public/first.png"
+                  description:'Используемые технологии: <strong class="thatfon"style="font-weight:900;color:white;font-size:1.2rem""> ReactJS,NodeJS,HTML ,CSS,SASS</strong>',
+                  img:"/public/first.png",
               },
               {
                   name:"ТОРГОВАЯ ПЛОЩАДКА",
-                  description:'Используемые технологии: <strong style="font-weight:900;color:#feca57;font-size:1.2rem""> Laravel.JavaScript,HTML ,CSS,SASS</strong>',
+                  description:'Используемые технологии: <strong class="thatfon" style="font-weight:900;color:white;font-size:1.2rem""> Laravel.JavaScript,HTML ,CSS,SASS</strong>',
                   img:"/public/8.png"
 
               },
               {
                   name:"CS 1.6",
-                  description:'Используемые технологии: <strong style="font-weight:900;color:#feca57;font-size:1.2rem""> WordPress,HTML ,CSS,SASS,JavaScript</strong>',
+                  description:'Используемые технологии: <strong class="thatfon" style="font-weight:900;color:white;font-size:1.2rem""> WordPress,HTML ,CSS,SASS,JavaScript</strong>',
                   img:"/public/second_i.png"
               }
               
@@ -74,7 +74,7 @@
             let mine=document.querySelector('.mine');
             mine.classList.remove('none_imp');
 
-            let love=mine.lastElementChild.firstElementChild.children;
+            let love=document.querySelector('.gogo').children;
             console.log(love)
             for(let elem of love){
                 if(elem.matches('h4')){

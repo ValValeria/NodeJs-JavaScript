@@ -3,6 +3,7 @@
    <html>
        <head>
          <meta name="viewport" content="width=device-width, initial-scale=1">
+         
          <link rel="stylesheet" media="screen and (max-width: 600px)" href="/public/media.css">
          <meta charset="utf8">
          <title><%= title%></title>
@@ -11,6 +12,8 @@
          <script src="/socket.io/socket.io.js"></script>
          <script src="/public/submit.js" type="module"></script>
          <link rel="stylesheet" href='/public/style.css'>
+         <link rel="stylesheet" href='/public/style2.css'>
+
          <% if(admin ){%>
           <script src='/admin/admin.js'  type="module"></script>
          <%}else if(!com){%>

@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded',gsx)
 function gsx(){
     
     ready();
-    document.getElementsByClassName('submit')[0].onclick= async (e)=>{
+    document.getElementsByClassName('ggg2')[0].onclick= async (e)=>{
         let obj={
             email: document.getElementById('email').value,
             message: document.getElementById('message').value

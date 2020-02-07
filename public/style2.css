@@ -1,0 +1,210 @@
+@import url('https://fonts.googleapis.com/css?family=Acme&display=swap');
+
+.blue{
+    background-image: radial-gradient(circle at 1% 1%,#2e86de,#1644ad);
+    background: linear-gradient(82.83deg,#001d4d 0%,#174a96 39.44%,#006ebd 100%);
+    background-repeat: no-repeat;
+    background-size: auto;
+    background-position: 50%;
+    position: relative;
+    overflow: hidden;
+    
+}
+.clients>h2{
+    margin-left:0 !important;
+}
+.thatfon{
+    font-family: 'Acme', sans-serif !important;
+
+}
+.fb{
+    margin: auto !important;
+}
+.knowyou{
+    height:190px;
+}
+.chick{
+    transform: rotate(-10deg);
+    position: absolute;
+    background-image: url(/public/robot-illustration.svg) ;
+    opacity: .1;
+    width: 470px;
+    height: 620px;
+    right: -100px;
+    pointer-events: none;
+
+    background-position: right;
+    background-size: cover;
+
+    background-repeat: no-repeat;
+    background-position: 100% 0;
+}
+.block1{
+    position: absolute;
+    top:0;
+    left:0;
+    width:100% !important;
+    height:100%;
+    background: linear-gradient(0deg,#8b60ed,#b372bd)
+}
+.smalltext{
+    width:100%;
+}
+ .opisanie{
+     background-color: transparent;
+ }
+.block2{
+    position: absolute;
+    right: 0;
+    /* left: 0; */
+    transform: rotate(-65deg) translate(0, 230px);
+    width: 105% !important;
+    height: 125%;
+    background: rgb(247, 247, 247);
+}
+.ticktick{
+    color:white;
+}
+.ogo{
+    margin-top:30px;
+    margin-bottom: 9px;
+}
+.jj{
+    min-height: 300px !important;
+}
+.mod{
+    flex:1 1 50%;
+}
+.contact_form>h3 {
+color:white;
+font-size:40px;
+}
+.fixic{
+    padding-bottom: 30px !important;
+}
+.chick2{
+    position: absolute;
+    top:0;
+    left:6%;
+    background: url(/public/mic-drop.svg) no-repeat 0 0;
+    background-size: 90px;
+    min-width:90px;
+    min-height:96px;
+    padding-top: 4em;
+}
+.tool{
+    transform: rotate(-10deg);
+    position: absolute;
+    background-image: url(/public/tooling-default.svg) ;
+    opacity: .1;
+    mix-blend-mode: luminosity;
+    min-width: 400px;
+    min-height: 420px;
+    left: -100px;
+    pointer-events: none;
+    bottom:40%;
+    background-position: left center;
+    background-size: cover;
+
+    background-repeat: no-repeat;
+}
+@media (max-width:692px){
+    .mod{
+        margin-left:0 !important;
+        margin-top:0 ;
+    }
+    #gr>h1{
+        width: 80%;
+        margin: auto;
+        font-size:1.8rem!important;
+        text-align: center;
+        padding-left:0;
+    }
+    .contact_form>p{
+        padding: 15px 0;
+
+    }
+    .display_flex{
+        flex-direction: column-reverse;
+        position: absolute;
+        top:0;
+    }
+    .blue{
+        padding-bottom:40px;
+    }
+    .greeting>h1{
+        height:initial;
+    }
+    .imgg2>img{
+        display:none;
+    }
+    .imgg2{
+        min-width:400px;
+        min-height:250px;
+        background-image: url(/public/main-illustration.svg);
+        background-size: cover;
+    }
+    .tw-w-full{
+  
+        mix-blend-mode:normal !important;
+    }    
+    .home-banner{
+        background: #1644ad;
+        min-height:110vh;
+        align-items: flex-start;
+        position: relative;
+        padding-top:20%;
+    }
+    .relative_my{
+        margin:7% auto;
+    }
+    .nike{
+        max-width: initial;
+    }
+    .nike>.links_b{
+        margin-right:0;
+    }
+}
+@media(max-width:600px){
+    
+    #gr>h1 {
+        width: 100%;
+        font-size:1.5rem !important;  
+
+    }    
+    .nike>.links_b{
+      margin:10px 0;
+    }
+    .back-map>#form{
+        width:100%;
+    }
+}
+@media(max-width:509px){
+    .shadow>.info, .smallprice{
+        flex-wrap:wrap;
+    }
+    .gr>#h1{
+         width: 100%;   
+    }
+    .block2{
+        top:50%;
+        left:0;
+        transform: rotate(-30deg);
+        width:200% !important;
+        height:60%;
+    }
+    .jj{
+        min-height:500px !important;
+    }
+    .love>.info{
+        height:auto;
+    }
+    .love>.info>h4{
+        transform: translate(0,35px);
+        margin:auto;
+    }
+    .smalltext{
+        min-height:100px;
+    }
+    
+}
