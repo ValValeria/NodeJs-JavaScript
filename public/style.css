@@ -1427,7 +1427,6 @@ footer>.copyright{
 @media screen and (max-width:845px){
     #gr>h1{
         font-size: 2rem !important;
-        padding-bottom:20px;
     }
     
     .special>.buttons{

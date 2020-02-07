@@ -108,15 +108,33 @@ font-size:40px;
 
     background-repeat: no-repeat;
 }
-@media (max-width:692px){
+@media(max-width:692px){
+    .home-banner{
+        min-height: 100vh;
+    }
     .mod{
         margin-left:0 !important;
         margin-top:0 ;
     }
+    .greeting>h1{
+        padding-bottom: 10px;
+    }
+    
+}
+
+@media(max-width:600px){
+    
+      
+    .nike>.links_b{
+      margin:10px 0;
+    }
+    .back-map>#form{
+        width:100%;
+    }
     #gr>h1{
-        width: 80%;
+        width: 90%;
         margin: auto;
-        font-size:1.8rem!important;
+        font-size:1.4rem!important;
         text-align: center;
         padding-left:0;
     }
@@ -124,6 +142,7 @@ font-size:40px;
         padding: 15px 0;
 
     }
+    
     .display_flex{
         flex-direction: column-reverse;
         position: absolute;
@@ -150,10 +169,10 @@ font-size:40px;
     }    
     .home-banner{
         background: #1644ad;
-        min-height:110vh;
+        min-height:125vh;
         align-items: flex-start;
         position: relative;
-        padding-top:20%;
+        padding-top:15%;
     }
     .relative_my{
         margin:7% auto;
@@ -163,20 +182,7 @@ font-size:40px;
     }
     .nike>.links_b{
         margin-right:0;
-    }
-}
-@media(max-width:600px){
-    
-    #gr>h1 {
-        width: 100%;
-        font-size:1.5rem !important;  
-
-    }    
-    .nike>.links_b{
-      margin:10px 0;
-    }
-    .back-map>#form{
-        width:100%;
+        margin-bottom: 5px;
     }
 }
 @media(max-width:509px){
@@ -207,4 +213,35 @@ font-size:40px;
         min-height:100px;
     }
     
+}
+@media(max-width:400px){
+    .imgg2{
+        min-width:350px;
+        min-height:200px;
+    }
+    .nike>.links_b{
+        max-width:18rem;
+    }
+    .home-banner{
+        padding-top:23%;
+    }
+    .blue>.container{
+        padding-bottom: 20px;
+    }
+    .submit{
+    height: 60px;
+    line-height: 60px;
+    }
+}
+@media(max-width:330px){
+    .nike>.links_b{
+        max-width:16rem;
+    }
+    .home-banner{
+        padding-top:28%;
+    }
+    .contact_form>h3 {
+        color: white;
+        font-size: 34px;
+    }
 }
