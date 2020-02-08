@@ -1793,6 +1793,11 @@ padding-top:5px;
     }
 
 }
+@media(max-width:775px){
+    .letters{
+        display: none !important;
+    }
+}
 @media screen and (max-width:700px){
     
     .line2{
