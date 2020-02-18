@@ -225,6 +225,8 @@ app.post('/',json,(request,response)=>{
        response.send();
 })
 
+
+     
 /**If nothing was found */
 
 
@@ -293,6 +295,17 @@ io.on('connection', function (socket){
 
 
 app.use('/public',express.static(__dirname+'/public'));
+
+
+app.use(function(req, res, next) {
+       options=new Object();
+       options.admin=false;
+       options.com=false;
+       options.css=false;
+       options.field=false;
+       options.title="404";
+       res.status(404).render('404',options);
+});
 
 
 function getRandomInt(min, max) {

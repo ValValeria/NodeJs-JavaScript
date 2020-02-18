@@ -219,7 +219,6 @@ padding-top:20px;
 
 .tw-w-full{
   
-   mix-blend-mode: luminosity;
    position:absolute;
    width:100%;
    height:100%;
@@ -282,6 +281,9 @@ padding-top:20px;
     top:0px;
     transform: translate(0,0);
 }
+.letters{
+    display: none !important;
+}
 .qoutes>small,.qoutes>div{
     transform: translateY(-21.5%);
 }
@@ -329,7 +331,7 @@ padding-top:20px;
     padding-top:30px !important;
 }
 .home-banner-illustration{
-    min-width: 310px;
+    min-width: 500px;
     height:100%;
     width:100%;
     object-fit: cover;
@@ -630,14 +632,16 @@ body>section,body>div:not(.write_mes){
     background-image: none !important;
 }
 .home-banner{
-    padding-top:12%;
+    padding-top:10%;
     width:100vw;
-    min-height:90vh;
+    min-height:100vh;
     overflow: hidden;
     display:flex;
     align-items: center;
     justify-content: center;
     background: url(/public/flow-wall@2x.webp) #3c6cdb no-repeat;
+    background:url('https://ld-wp73.template-help.com/wordpress/prod_8033/v2/wp-content/uploads/2019/07/slider-1.jpg') ;
+    background-position:center;
     background-attachment: fixed;
     background-size: cover;
     background-position: 100% 0;
@@ -650,7 +654,6 @@ body>section,body>div:not(.write_mes){
     background: url(/public/flow-wall@2x.webp) no-repeat;
     background-size: 1390px 471px;
     background-position: 100% 0;
-    mix-blend-mode: luminosity;
     bottom:0;
     top:90px;
     background-attachment: fixed;
@@ -750,7 +753,7 @@ z-index:-1;
     font-size: 20px;
     background: linear-gradient(74.05deg,#dd00ac 0%,#711bff 100%);
 }
-.links_b:hover{
+.links_b:hover(not #fk){
     box-shadow: 0px 4px 90px rgba(173,0,255,.5) !important;
 }
 
@@ -1213,6 +1216,8 @@ footer>.copyright{
 }
 .servicess>h6{
     padding-top:30px;
+    padding-bottom:20px;
+
 }
 
 .blue{
@@ -1426,7 +1431,7 @@ footer>.copyright{
 
 @media screen and (max-width:845px){
     #gr>h1{
-        font-size: 2rem !important;
+        font-size: 2.5rem !important;
     }
     
     .special>.buttons{
@@ -1683,6 +1688,7 @@ padding-top:5px;
     padding-top: 4px !important;
     padding-bottom: 4px !important;
     /*border-bottom: 1px solid #4b7bec;*/
+    font-size:1.2rem;
     }
     .menu{
         display: block !important;
@@ -1742,6 +1748,13 @@ padding-top:5px;
      .banner{
         background: linear-gradient(82.83deg,#00112c 0%,#00245b 39.44%,#006ebd 100%);
     }
+    #gr>h1 {
+        font-size: 2rem !important;
+    }
+    #gr>h2{
+        padding-bottom:10px;
+    }
+
 }
 @media(max-width:846px){
     .tool{
@@ -1752,8 +1765,13 @@ padding-top:5px;
   }
    .small_container{
     width: 90%;
+   }
+   #gr>h2{
+       font-size:70px;
    } 
-  
+  .greeting>h1{
+      font-size:2rem;
+  }
 }
 @media  (max-width:825px){
     .block1{
