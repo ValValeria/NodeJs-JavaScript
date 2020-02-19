@@ -120,13 +120,11 @@ app.get('/admin/:file',function(req,res,next){
  /**/
 
  function get (req,res,page,opt){
-       const promise=new Promise((resolve,reject)=>{
-              database.get_field_spec("com"+req.cookies.number,resolve,reject);
-
-       })
-
-       promise.then(()=>{attention(res,page)})
-     
+        database.get_field_spec("com"+req.cookies.number);
+        
+        setTimeout(()=>{
+              attention(res,page)
+        },0)     
  }
 
  function attention(res,page){
@@ -161,9 +159,6 @@ app.get('/admin/:file',function(req,res,next){
 app.get('/',(req,res)=>{
        /** */
        /** */
-      
-       app.set('trusty proxy ',true);
-
       
        
        if(req.cookies.__proto__== null){

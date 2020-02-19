@@ -1,0 +1,16 @@
+<svg width="580" height="400" xmlns="http://www.w3.org/2000/svg" style="vector-effect: non-scaling-stroke;" stroke="null">
+ <!-- Created with SVG Editor - http://github.com/mzalive/SVG Editor/ -->
+ <g stroke="null">
+  <title stroke="null">background</title>
+  <rect stroke="null" fill="#57606f" id="canvas_background" height="402" width="582" y="-1" x="-1"/>
+  <g style="vector-effect: non-scaling-stroke;" stroke="null" display="none" overflow="visible" y="0" x="0" height="100%" width="100%" id="canvasGrid">
+   <rect fill="url(#gridpattern)" stroke-width="0" y="0" x="0" height="100%" width="100%"/>
+  </g>
+ </g>
+ <g stroke="null">
+  <title stroke="null">Layer 1</title>
+  <polyline stroke="#000" stroke-linecap="round" id="svg_4" points="340.5,276 340.5,276 " stroke-opacity="null" stroke-width="1.5" fill="none"/>
+  <polyline transform="rotate(2 375.5000000000008,223.00000000000014) " stroke="#000" stroke-linecap="round" id="svg_5" points="375.5,223 375.5,223 " fill-opacity="null" stroke-opacity="null" stroke-width="1.5" fill="none"/>
+  <path stroke="#ffffff" id="svg_8" d="m596.544802,82.016338c5.134556,319.983672 5.134556,319.983672 4.278796,319.983672c0.855759,0 -284.967846,-2.734903 -285.823606,-2.734903c0.855759,0 276.410253,-637.232442 281.544809,-317.248769z" fill-opacity="null" stroke-opacity="null" stroke-width="1.5" fill="#ffffff"/>
+ </g>
+</svg>

@@ -218,12 +218,8 @@ padding-top:20px;
 }
 
 .tw-w-full{
-  
-   position:absolute;
    width:100%;
    height:100%;
-   top:0;
-   left:0;
 }
 .wrap{
     flex-wrap: wrap;
@@ -390,7 +386,6 @@ padding-top:20px;
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: rgba(134, 133, 133, 0.5);
 }
 .shadow>.info>h4{
     color:white;
@@ -634,17 +629,15 @@ body>section,body>div:not(.write_mes){
 .home-banner{
     padding-top:10%;
     width:100vw;
-    min-height:100vh;
     overflow: hidden;
-    display:flex;
-    align-items: center;
-    justify-content: center;
     background: url(/public/flow-wall@2x.webp) #3c6cdb no-repeat;
     background:url('https://ld-wp73.template-help.com/wordpress/prod_8033/v2/wp-content/uploads/2019/07/slider-1.jpg') ;
     background-position:center;
     background-attachment: fixed;
     background-size: cover;
     background-position: 100% 0;
+    display:flex;
+    align-items: center;
 }
 .home-inner{   
     padding-top:70px;
@@ -962,7 +955,6 @@ footer>.copyright{
 }
 .section {
     font-size: 16px;
-    line-height: 26px;
     color: #404040;
     font-family: 'Montserrat', sans-serif;
     /*font-family: 'Nunito', sans-serif;*/
@@ -1009,7 +1001,7 @@ footer>.copyright{
     height: 100%;
 }
 .flex1>svg{
-    transform: translateX(50%);
+    margin:0 auto;
 }
 .write_mes{
     z-index:10000000;
@@ -1017,9 +1009,14 @@ footer>.copyright{
 .two{
      background-color: rgb(245, 245, 245);
      width:100vw;
+     padding-bottom:3rem;
 }
 .sec{
     z-index:2000000;
+}
+.flex1>svg{
+    margin: 0 auto !important;
+     transform: translateX(0) !important;
 }
 .flex-column{
     display:flex;
@@ -1027,15 +1024,13 @@ footer>.copyright{
     justify-content: center;
     align-items: center;
     text-align: center;
+    width:100%;
 }
 .cards>a{
     max-width: 394px;
     min-width: 300px;
-    border-radius: 20px;
     margin-bottom: 30px;
     cursor: pointer;
-    text-align: center;
-    min-height: 255px;
     background-color: #fff;
     color: #000;
     position: relative;
@@ -1043,20 +1038,18 @@ footer>.copyright{
     left:-15px;
     font-size: 18px;
     font-weight: 600;
+
+    box-shadow: 0px 15px 32px 5px rgba(0,0,0,0.05);
+    border-radius: 50px;
+    padding: 50px 25px 50px;
+    text-align: center;
+    min-height: 400px;
 }
 .inner_right{
     margin-top: 80px;
 }
 
-.gradient {
-    background: linear-gradient(176.68deg,#ebe20a 13.84%,#62c500 77.87%);
-    border-radius: 0 0 20px 20px;
-    position: absolute;
-    bottom:0;
-    width:100%;
-    z-index:20000;
-    height:30px;
-}
+
 .servicess{
     font-size: 40px;
     text-align: center;
@@ -1072,7 +1065,7 @@ footer>.copyright{
 }
 .cards>a{
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     flex-direction: column;
 }
 .fon{
@@ -1081,18 +1074,10 @@ footer>.copyright{
     margin: 10px auto;
     position: relative !important;
 }
-a:nth-child(1) .fon {
-    background: url(//if-studio.ru/wp-content/themes/if-studio/css/../img/main/icons/1/fon.svg) no-repeat center;
+a .fon {
+    background-image: url(http://webitkurigram.com/wpv/agencya/wp-content/themes/agencya/assets/images/shape.svg);
 }
-a:nth-child(2) .fon {
-    background: url(https://if-studio.ru/wp-content/themes/if-studio/img/main/icons/3/fon.svg) no-repeat center;
-}
-a:nth-child(3) .fon {
-    background: url(https://if-studio.ru/wp-content/themes/if-studio/img/main/icons/4/fon.svg) no-repeat center;
-}
-a:nth-child(4) .fon {
-    background: url(https://if-studio.ru/wp-content/themes/if-studio/img/main/icons/6/fon.svg) no-repeat center;
-}
+
 .inner_fon {
     width: 118px;
     height: 120px;
@@ -1215,9 +1200,8 @@ footer>.copyright{
     right: 22px;
 }
 .servicess>h6{
-    padding-top:30px;
-    padding-bottom:20px;
-
+    padding: 3rem 0;
+    font-size:2.3rem;
 }
 
 .blue{
@@ -1912,9 +1896,7 @@ padding-top:5px;
     .footerup{
         margin-bottom: 10px;
     }
-    .flex1>svg {
-        transform: translateX(-20%) !important;
-    }
+    
     .greeting>h1{
         padding-bottom:5px;
     }
