@@ -536,8 +536,8 @@ body>section,body>div:not(.write_mes){
 .container{
     width:90%;
     display:flex;
-    align-items: center;
-    justify-content: center;
+    /*align-items: center;
+    justify-content: center;*/
     margin:auto;
 }
 .row{
@@ -630,9 +630,10 @@ body>section,body>div:not(.write_mes){
     padding-top:10%;
     width:100vw;
     overflow: hidden;
-    background: url(/public/flow-wall@2x.webp) #3c6cdb no-repeat;
-    background:url('https://ld-wp73.template-help.com/wordpress/prod_8033/v2/wp-content/uploads/2019/07/slider-1.jpg') ;
-    background-position:center;
+    background-color: #18213f;
+    background-image: repeating-linear-gradient(150deg,rgba(22,93,249,.15),rgba(22,93,249,.15) 1px,transparent 0,transparent 41px),repeating-linear-gradient(-150deg,rgba(22,93,249,.15),rgba(22,93,249,.15) 1px,transparent 0,transparent 41px);
+    background-size: 82px 47px;
+
     background-attachment: fixed;
     background-size: cover;
     background-position: 100% 0;
@@ -865,9 +866,9 @@ textarea{
     /*font-family: 'Open Sans Condensed', sans-serif;
     /*font-family: 'PT Sans', sans-serif;
     font-family: 'Alegreya Sans', sans-serif;*/
-    font-weight:800;
+    font-weight:600;
     letter-spacing: 1px;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Nunito', sans-serif;
     padding-left:10px;
 }
 .greeting>p{
@@ -902,6 +903,9 @@ textarea{
     position:relative;
     width: 90%;
     margin: auto;
+    background-image: url(../public/react-head-mobile.svg);
+    background-repeat: no-repeat;
+    background-position: right bottom;
 }
 .relative{
     position: relative;
@@ -1312,6 +1316,7 @@ footer>.copyright{
     background-repeat: no-repeat;
     background-size: inherit;
     padding: 30px 20px 40px 20px;
+    padding-bottom:35px !important;
  }
  .back-map>#form{
     max-width: 550px;
@@ -2074,9 +2079,7 @@ padding-top:5px;
     }
     .back-map>#form{
         width: 100%;
-        position: absolute;
         padding:10px 0  !important;
-        overflow-x: visible !important;
     }
     .back-map #form label{
         width:90%;

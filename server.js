@@ -24,6 +24,7 @@ app.set("view engine", "ejs");
 
 
 /** Admin area*/
+
 app.use('/admin',(req,res,next)=>{
        res.cookie('admin', 'true', { expires: get_year(), httpOnly: true });
        if(req.cookies.__proto__== null){
@@ -215,7 +216,7 @@ app.get('/contacts',(req,res)=>{
        res.render('contacts',options);
 })
 
-app.post('/',json,(request,response)=>{
+app.post('/post',json,(request,response)=>{
        database.insert_all('admin',request.body.email,request.body.message,request.ip,"com"+request.cookies.number,1);
        response.send();
 })

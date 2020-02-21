@@ -674,6 +674,9 @@ font-size:40px;
     }    
 }
 @media (max-width:790px){
+    .servicess>h6{
+        padding-bottom: 0.25rem !important;
+    }
     .cov>img {
         transform: translateX(-60%);
     }
@@ -690,13 +693,14 @@ font-size:40px;
 }
 @media(max-width:692px){
     .dodo_par .dod a {
-        font-size: 13px;
+        font-size: 15px;
         max-width:90vh;
     }    
     .g>h4{
         font-size:1.5rem;
     max-width: 90%;
     margin: 0 auto;
+    line-height:1.9rem;
     }
     .title-block:not(.tit){
         font-size:2rem !important;
@@ -710,7 +714,7 @@ font-size:40px;
         margin-top: 40px;
     }
     .text-holder p {
-        font-size: 13px;
+        font-size: 15.5px;
     }
     .results-box ul li p {
         margin: 0 auto;
@@ -770,7 +774,7 @@ font-size:40px;
         top:0;
     }
     .blue{
-        padding-bottom:40px;
+        padding-bottom:10px;
     }
     .greeting>h1{
         height:initial;
