@@ -905,6 +905,13 @@ font-size:40px;
     }
 }
 @media(max-width:400px){
+    .nike>.links_b{
+    height: 60px;
+    line-height: 60px;
+    }
+    .about_h1{
+        font-size:2.5rem;
+    }
     .servicess>h6 {
         padding: 0;
         padding-top:1.7rem;
@@ -940,7 +947,12 @@ font-size:40px;
         min-height: 350px;
 
     }
-
+    .pos1{
+        margin-left: 0 !important;
+    }
+    .line{
+        margin-left:0;
+    }
 }
 @media(max-width:380px){
       
