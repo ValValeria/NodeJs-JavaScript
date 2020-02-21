@@ -901,6 +901,23 @@ font-size:40px;
     }
 }
 @media(max-width:400px){
+    .servicess>h6 {
+        padding: 0;
+        padding-top:1.7rem;
+        font-size: 1.5rem;
+    }
+    .notes-text {
+        font-size: 15px;
+    }
+    .title-block:not(.tit) {
+        font-size: 1.8rem !important;
+    }
+    .notes-text{
+        margin-top: 10px;
+    }  
+    .about_p {
+        font-size: 16px;
+    }      
     .nike>.links_b{
         max-width:16rem;
     }
@@ -912,6 +929,13 @@ font-size:40px;
     .text-holder p {
         padding-right: 10px;
     }   
+    .cards a{
+        max-width: 300px;
+        position: static;
+        margin-left: 0 !important;
+        min-height: 350px;
+
+    }
 
 }
 @media(max-width:380px){
