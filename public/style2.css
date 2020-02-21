@@ -27,6 +27,10 @@
     cursor: pointer;
     outline: 0;
 }
+.contact_form>p{
+    padding: 15px 30px;
+
+}
 .active1{
     color: #7b7b7b;
     position:relative;
@@ -81,6 +85,13 @@
 }
 .home-banner{
     min-height:100vh;
+}
+.two_column{
+    display:grid;
+    grid-template-columns: repeat(6,1fr);
+}
+#orderme{
+    grid-column: 3/-1;
 }
 .section_two{
     color: #b8bcbf;
@@ -301,6 +312,10 @@ padding: 3rem 0;
     padding-top:0;
     text-align:left;
 }
+.pshik{
+    background:#18213f !important ;
+    padding-top:30px;
+}
 .text-holder ul li.item-1:after {
     content: '';
     position: absolute;
@@ -501,7 +516,7 @@ width:100%;
     position: absolute;
     background-image: url(/public/robot-illustration.svg) ;
     opacity: .1;
-    width: 470px;
+    width: 550px;
     height: 620px;
     right: -100px;
     pointer-events: none;
@@ -577,7 +592,7 @@ width:100%;
 .mod{
     flex:1 1 50%;
 }
-.contact_form>h3 {
+.contact_form>h3 ,.page-body__container{
 color:white;
 font-size:40px;
 }
@@ -631,7 +646,17 @@ font-size:40px;
 
     background-repeat: no-repeat;
 }
-
+/**/
+.formo{
+    background-color:white;
+}
+.input{
+    background-color: #fff;
+    border: 0;
+    border-bottom: 1px solid #d8d8d8;
+    padding: 0;
+}
+/**/
 
 @media(max-width:1200px){
     .cov>img{
@@ -674,6 +699,9 @@ font-size:40px;
     }    
 }
 @media (max-width:790px){
+    .feedback-title {
+        font-size: 37px;
+    }    
     .servicess>h6{
         padding-bottom: 0.25rem !important;
     }
@@ -752,7 +780,10 @@ font-size:40px;
     }    
 }
 
-@media(max-width:600px){
+@media(max-width:617px){
+    .feedback-title {
+        font-size: 33px;
+    }
     .cov>img {
         transform: translateX(-75%);
     }   
@@ -764,10 +795,7 @@ font-size:40px;
         width:100%;
     }
     
-    .contact_form>p{
-        padding: 15px 0;
-
-    }
+    
     
     .display_flex{
         flex-direction: column-reverse;
@@ -820,7 +848,10 @@ font-size:40px;
        color:#ffeaa7;
    }
 }
-@media(max-width:545px){
+@media(max-width:555px){
+    .feedback-title {
+        font-size: 28px;
+    }
     .results-box ul li{
         flex:1 1 100%;
     }
@@ -864,6 +895,7 @@ font-size:40px;
   
 }
 @media(max-width:490px){
+
     .relative_my{
         margin-top:0;
     }
@@ -879,10 +911,17 @@ font-size:40px;
     .g>h4{
         padding-top: 6rem;
     }
+    .contact_form>p {
+        padding: 15px 0px;
+        width:100%;
+
+    }
 }
-@media(max-width:435px){
+@media(max-width:445px){
    
-   
+    .feedback-title {
+        font-size: 24px;
+    }
     .imgg2{
         min-width:350px;
         min-height:200px;
@@ -933,7 +972,7 @@ font-size:40px;
         max-width:16rem;
     }
    
-    .contact_form>h3 {
+    .contact_form>h3 ,.page-body__container{
         color: white;
         font-size: 34px;
     }
