@@ -5,6 +5,9 @@
 .imagel>svg{
     max-height:500px;
 }
+#h1{
+    font-family:'Nunito';
+}
 .orange:hover{
     background-color: transparent;
     border-color:#f8de15;
