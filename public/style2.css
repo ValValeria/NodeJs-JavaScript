@@ -152,6 +152,37 @@
     align-items: center;
     height:33%;
 }
+.white_c{
+    color: #404040 !important;
+}
+.ogo{
+    font-size: 40px;
+    line-height: 66px;
+    font-weight: 900;
+    text-transform: uppercase;
+    display: block;
+    margin-bottom: 30px;
+    max-width: 1200px;
+    margin-top:0 !important;
+    padding-top:0 !important;
+}
+.doo{
+    align-items: center !important;
+}
+.gu{
+    display:flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+.ogo1{
+    font-size:16px;
+    padding:10px;
+    padding-bottom:50px;
+}
+.im{
+    flex:1 1 55%;
+}
 .notes-text {
     position: relative;
     font-size: 20px;
@@ -162,7 +193,7 @@
     text-align: center;
     color:rgb(65, 63, 63);
     margin: 50px auto;
-    font-weight:600;
+    font-weight: 500;
 }
 
 .bl source{
@@ -213,6 +244,11 @@ padding: 3rem 0;
     width:100%;
     height:100%;
     object-fit: cover;
+}
+.bab{
+    flex-direction: column;
+    width:100%;
+    align-items: center;
 }
 .section{
     width:100vw !important;
@@ -381,7 +417,7 @@ width:100%;
     margin: -6px 0 0 -4px;
 }
 .showreel-box__title {
-    font-size: 40px;
+    font-size:35px;
     line-height: 42px;
     font-weight: 700;
     text-transform: uppercase;
@@ -398,7 +434,7 @@ width:100%;
     justify-content: space-around;
     flex-wrap:wrap;
     max-width:1000px;
-    margin:0 auto;
+    margin:auto;
 }
 .results-box ul li.item-1 {
     background: url(../public/ico-steps-1.png) no-repeat 50% 0;
@@ -489,9 +525,18 @@ width:100%;
 .lightgray{
     background-color: rgba(99, 110, 114,0.4);
 }
+#lol{
+    background: radial-gradient(ellipse at center,#585858 0,#232323 100%);
+    background-color: #343434;
+    padding: 70px 0px;
+}
+.messages>ul>li{
+    background-color: white;
+}
 .opisanie{
     background-color:#2d3436 !important;
     color:white;
+    padding: 20px;
 }
 #gr>h1{
     max-width:900px;
@@ -614,6 +659,9 @@ font-size:40px;
     border-radius: 50px;
 
 }
+.txt_center{
+    text-align: center;
+}
 .chick2{
     position: absolute;
     top:0;
@@ -665,9 +713,15 @@ font-size:40px;
     .cov>img{
         transform: translateX(-43%);
     }    
-
 }
-
+@media(max-width:1070px){
+    .ogo1{
+        padding: 10px;
+    }
+    .doo{
+        flex-direction: column-reverse;
+    }
+}
 @media (max-width:880px){
     .cov>img {
         transform: translateX(-50%);
@@ -723,6 +777,13 @@ font-size:40px;
     }
 }
 @media(max-width:692px){
+    .ogo{
+        font-size: 30px;
+    }
+    .ogo{
+        padding-right:0 !important;
+    }
+
     .dodo_par .dod a {
         font-size: 15px;
         max-width:90vh;
@@ -898,6 +959,17 @@ font-size:40px;
   
 }
 @media(max-width:490px){
+    .showreel-box__title {
+        font-size: 30px;
+    }    
+    .ogo {
+        font-size: 26px;
+        margin-bottom: 5px !important;
+        padding-bottom: 0 !important;
+    }
+    .im{
+        padding-top:20px;
+    }
     .tool {
      display: block;
     }   
@@ -933,7 +1005,7 @@ font-size:40px;
      }    
 }
 @media(max-width:445px){
-   
+    
     .feedback-title {
         font-size: 24px;
     }
@@ -965,6 +1037,13 @@ font-size:40px;
     }
     .about_h1{
         font-size:2.5rem;
+    }
+    .ogo {
+        font-size: 25px;
+        line-height: 40px;
+    }    
+    .gu{
+        margin-left:0 !important;
     }
     .servicess>h6 {
         padding: 0;
@@ -1011,16 +1090,22 @@ font-size:40px;
 @media(max-width:380px){
       
     .showreel-box__title {
-        font-size: 30px;
-    }    
+        font-size: 22px;
+    }  
     .showreel-box{
-        margin-bottom:20px;
+        margin: 2rem 0;
     }
     #gr>h2 {
         font-size: 2.5rem !important;
     }
     #gr>h1 {
         font-size: 16px !important;
+    }
+    .feedback-title{
+        line-height: 40px;
+    }
+    .contact_form>p {
+        padding: 15px 0;
     }
 }
 
