@@ -786,7 +786,6 @@ z-index:-1;
 .write_mes{
     position: fixed;
     bottom:0;
-    right:30px;
     width:361px;
     max-width:100vw;
 }
@@ -844,6 +843,9 @@ a>.flex1{
     min-width: 100px;
     min-height:30px;
     font-family: 'Didact Gothic', sans-serif;
+
+    background-color: #535c68 !important;
+    color: white !important;
 }
 .messages>ul>li>div{
     margin-bottom: 2px;
@@ -1021,7 +1023,7 @@ footer>.copyright{
     margin-bottom: 5px;
 }
 .about_p{
-    font-size:1.3rem;
+    font-size:0.9rem;
     font-weight: 200;
     font-family: 'Montserrat', sans-serif;
     line-height: 30px;
@@ -1073,16 +1075,16 @@ footer>.copyright{
     background-color: #fff;
     color: #000;
     position: relative;
-    top: -10px;
-    left:-15px;
+  
     font-size: 18px;
     font-weight: 600;
-
+    margin-left:0 !important;
     box-shadow: 0px 15px 32px 5px rgba(0,0,0,0.05);
     border-radius: 50px;
     padding: 50px 25px 50px;
     text-align: center;
     min-height: 400px;
+    margin: 5px 10px;
 }
 .inner_right{
     margin-top: 80px;
@@ -2052,9 +2054,7 @@ padding-top:5px;
     footer>.copyright{
         width:90%;
     }
-    .write_mes{
-        right:0;
-    }
+   
     .footerup{
         margin-left: 0px;
         margin-right:5px;
@@ -2211,7 +2211,6 @@ padding-top:5px;
       font-size:25px;
     }
     .write_mes{
-        left:5%;
         width:90%;
     }
     

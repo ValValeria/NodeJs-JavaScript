@@ -14,7 +14,7 @@ export function ready(process=()=>{},opt=true){
            if(document.documentElement.clientWidth<934){
               if(is_open=='false'){//it wasn't open
               i.dataset.open='true';
-              el('.ul')[0].style.display='block';
+              el('.ul')[0].style.display='flex';
              }
             else {// it is open
                i.dataset.open='false';
