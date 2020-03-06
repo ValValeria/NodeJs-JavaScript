@@ -30,6 +30,9 @@
     cursor: pointer;
     outline: 0;
 }
+.write_mes{
+    right:20px;
+}
 .contact_form>p{
     padding: 15px 30px;
 
@@ -185,7 +188,7 @@
 }
 .notes-text {
     position: relative;
-    font-size: 20px;
+    font-size: 1rem;
     line-height: 32px;
     margin-bottom: 40px;
     display: block;
@@ -363,6 +366,88 @@ padding: 3rem 0;
     background: url(../public/sprite.png) no-repeat 0 -835px;
     width: 41px;
     height: 41px;
+}
+.block--special+.block--special, .block--default+.block--default {
+    padding-top: 11px;
+}
+.course {
+    padding-right: 20px;
+    padding-left: 20px;
+}
+.block {
+    padding: 50px 0;
+}
+.course__title {
+    margin: 0 0 36px;
+}
+.h--2 {
+    font-size: 34px;
+    line-height: 40px;
+    color: #404040;
+    font-family: 'Montserrat', sans-serif;
+    text-align:center;
+    padding: 20px 0
+}
+.course__list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: grid;
+    grid-gap: 30px;
+    grid-template-columns: 1fr 1fr 1fr;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+.course__item {
+    justify-self: center;
+    display: grid;
+    grid-column-gap: 60px;
+    grid-template-rows: auto 1fr;
+    grid-template-columns: 101px 1fr;
+    align-items: center;
+    padding: 0 20px;
+    max-width:310px;
+    display: flex;
+    flex-direction: column;
+}
+.course__pic {
+    grid-row: 1/3;
+    width: 101px;
+    height: 101px;
+    margin-bottom: 0;
+}
+.course__pic {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 170px;
+    height: auto;
+    margin-bottom: 18px;
+}   
+.course__pic>picture>img,.course__pic>picture{
+   width:100%;
+   height:100%;
+}
+.course__subtitle {
+    font-size: 22px;
+    line-height: 28px;
+    font-family: 'Montserrat', sans-serif;
+    margin:20px 0;
+    text-align:center;
+    font-family: "Nunito","Arial",sans-serif;
+
+}
+.course__desc {
+    font-size: 16px;
+    line-height: 24px;
+    font-family: 'Montserrat', sans-serif;
+    text-align:center;
+    font-family: "Nunito","Arial",sans-serif;
+    font-size: 14px;
+}
+.container5{
+        width:90%;
+        margin: 0 auto;
 }
 .d_f{
 display:flex;    
@@ -709,6 +794,27 @@ font-size:40px;
         transform: translateX(-43%);
     }    
 }
+@media (max-width: 1040px){
+  .course__list{
+    grid-template-columns: initial;
+  }
+  .course__item{
+      display:grid;
+      max-width: 700px;
+      padding-right: 10%;
+  }
+ .course__subtitle,.course__desc{
+     text-align:left;
+ }
+  .course__pic{
+      margin-bottom:0;
+      width:auto;
+  }
+  .course__subtitle{
+    font-weight: 900;
+    font-family: "Nunito","Arial",sans-serif;
+  }
+}
 @media(max-width:1070px){
     .ogo1{
         padding: 10px;
@@ -935,6 +1041,15 @@ font-size:40px;
     .feedback-title {
         font-size: 28px;
     }
+    .course__item{
+     padding-right:5%;
+     grid-column-gap: 30px;
+    }
+    .h--2 {
+        font-size: 27px;
+            /* padding: 20px 0; */
+        padding:0
+    }
     .results-box ul li{
         flex:1 1 100%;
     }
@@ -1039,6 +1154,14 @@ font-size:40px;
     .nike>.links_b{
         max-width:18rem;
     }
+    .course__subtitle {
+        font-size: 19px;
+        line-height: 28px;
+    }  
+    .course__desc{
+        font-size: 13px;
+
+    }  
     #gr>h2 {
         font-size: 3rem !important;
     }
@@ -1053,7 +1176,7 @@ font-size:40px;
     line-height: 60px;
     }
 }
-@media(max-width:400px){
+@media(max-width:420px){
     .nike>.links_b{
     height: 60px;
     line-height: 60px;
@@ -1073,7 +1196,7 @@ font-size:40px;
         padding-top:1.7rem;
         font-size: 1.5rem;
     }
-    .notes-text {
+    .notes-text ,.about_p{
         font-size: 14px;
     }
     .title-block:not(.tit) {
@@ -1109,9 +1232,32 @@ font-size:40px;
     .line{
         margin-left:0;
     }
+    .course__item {
+        padding-right: 5%;
+        grid-column-gap: 10px;
+    }
 }
 @media(max-width:380px){
-      
+    .h--2 {
+        font-size: 24px;
+        padding: 0 19px;
+    }
+    .course__item {
+        grid-template-columns: initial;
+    }
+    .course__pic {
+        width:100px;
+    }
+    .h--2{
+        text-align:left;
+    }
+       
+    .course__list{
+        grid-gap:65px;
+    }
+    .block {
+        padding: 65px 0;
+    }
     .showreel-box__title {
         font-size: 22px;
     }  

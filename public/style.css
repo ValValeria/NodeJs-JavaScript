@@ -1023,7 +1023,7 @@ footer>.copyright{
     margin-bottom: 5px;
 }
 .about_p{
-    font-size:0.9rem;
+    font-size:1rem;
     font-weight: 200;
     font-family: 'Montserrat', sans-serif;
     line-height: 30px;
@@ -1626,7 +1626,6 @@ height:65px;
 .list>ul>li{
     font-size: 14px;
     line-height: 160%;
-    color: #011739;
     padding-left: 15px;
     position: relative;
     font-weight: 100;

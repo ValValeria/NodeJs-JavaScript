@@ -9,7 +9,7 @@ const cookieParser1 = require("cookie-parser");
 
 const fs=require('fs');
 
-var port= process.env.PORT || 3000;
+var port= process.env.PORT || 8000;
 
 const bodyParser = require("body-parser");
 
@@ -121,8 +121,10 @@ app.get('/admin/:file',function(req,res,next){
  /**/
 
  function get (req,res,page,opt){
-        database.get_field_spec("com"+req.cookies.number);
-        
+
+        if(typeof(parseInt(req.cookies.number))=='number') {
+           database.get_field_spec("com"+req.cookies.number);
+        }        
         setTimeout(()=>{
               attention(res,page)
         },0)     
@@ -232,7 +234,7 @@ io.on('connection', function (socket){
       let clientIp=socket.request.connection.remoteAddress;
 
        socket.on('message_of_user',(message,number)=>{
-
+              if(!typeof(parseInt(number))=='number') return false;
               database.insert_all('admin',"user"+number,message,clientIp,"com"+number)
                     
               find_user(socket,io,number,true,'new_message',message,"com"+number)          
@@ -240,6 +242,7 @@ io.on('connection', function (socket){
        })
 
        socket.on("exchange_of_id_admin",(number,message)=>{//когда админ хочет написать пользователю
+              if(!typeof(parseInt(number))=='number') return false;
 
              if(number==undefined) return;
              my_num=number.substr(number.indexOf('com')+3);
