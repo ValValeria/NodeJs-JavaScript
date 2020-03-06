@@ -146,7 +146,6 @@ padding-top:20px;
 }
 .section--black{
     background: #272937;
-    background-image: linear-gradient(90deg,rgba(43,134,197,0.7) 0%,rgba(120,75,160,0.7) 50%,rgba(255,60,172,0.7) 100%);
     padding:0;
     padding-top: 2.5625rem !important;
     color:white;
@@ -670,8 +669,8 @@ body>section,body>div:not(.write_mes){
 
    */
     
-    background:#232326 url('/public/banner-big.png') right bottom no-repeat;
-    background-size: 60% ;
+    background:#272937 url('/public/desktop.webp') right bottom no-repeat;
+    background-size: 40% ;
 }
 .home-inner{   
     padding-top:70px;
@@ -1251,7 +1250,6 @@ footer>.copyright{
 
 .blue{
     background: linear-gradient(82.83deg,#00112c 0%,#00245b 39.44%,#006ebd 100%);
-    background-image: linear-gradient(90deg,rgba(43,134,197,0.7) 0%,rgba(120,75,160,0.7) 50%,rgba(255,60,172,0.7) 100%);
     width:100vw;
     line-height:1.5;
     padding-bottom: 10px;
@@ -1876,8 +1874,10 @@ padding-top:5px;
       background-image: url(../public/react-head-mobile.svg);;
     }
     .home-banner{
-        background:url(../public/bg-pattern.png) repeat #232326;
-        background-size: initial;
+        background-image:url(../public/bg-pattern.png);
+        background-repeat: repeat;
+        background-position: initial;
+        background-size:initial;
 
     }
 }
