@@ -99,6 +99,9 @@
 #orderme{
     grid-column: 3/-1;
 }
+.title--big{
+color:white
+}
 .section_two{
     color: #b8bcbf;
     margin: 0 auto;
@@ -168,6 +171,7 @@
     max-width: 1200px;
     margin-top:0 !important;
     padding-top:0 !important;
+    color:#333;
 }
 .doo{
     align-items: center !important;
@@ -182,6 +186,7 @@
     font-size:16px;
     padding:10px;
     padding-bottom:50px;
+    color:#333;
 }
 .im{
     flex:1 1 55%;
@@ -563,6 +568,7 @@ width:100%;
     background-position: 50%;
     position: relative;
     overflow: hidden;
+    background-image: linear-gradient(90deg,rgba(43,134,197,0.7) 0%,rgba(120,75,160,0.7) 50%,rgba(255,60,172,0.7) 100%) !important;
     
 }
 #gr>h2{
@@ -610,9 +616,7 @@ width:100%;
     background-color: #343434;
     padding: 70px 0px;
 }
-.messages>ul>li{
-    background-color: white;
-}
+
 .opisanie{
     background-color:#2d3436 !important;
     color:white;
@@ -1141,7 +1145,7 @@ font-size:40px;
 @media(max-width:445px){
     .ul{
     min-height: 50vh;
-    display: flex;
+    display: none;
     }
     
     .feedback-title {
@@ -1197,7 +1201,7 @@ font-size:40px;
         font-size: 1.5rem;
     }
     .notes-text ,.about_p{
-        font-size: 14px;
+        font-size: 14px !important;
     }
     .title-block:not(.tit) {
         font-size: 1.8rem !important;
