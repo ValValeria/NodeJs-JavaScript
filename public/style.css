@@ -1361,7 +1361,7 @@ footer>.copyright{
  .back-map>#form{
     max-width: 550px;
    /* background: #001e45;*/
-   background-color: rgba(47, 53, 66,0.8);
+   background: rgba(89, 98, 117,1.0);
     padding-bottom: 5px;
     text-align: center;
     margin: 0 auto;
@@ -1698,7 +1698,6 @@ padding-top:5px;
     }
 
     .about_p{
-    font-size: 18px;
     line-height: 26px;
     padding-right:20px;
     }

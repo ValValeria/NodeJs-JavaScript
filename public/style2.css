@@ -68,7 +68,9 @@
     font-size:14px;
 
 }
-
+.mod{
+    width:100%;
+}
 .g>h4{
     font-style: normal;
     color: #000;
@@ -233,8 +235,16 @@ padding: 3rem 0;
 .dodo_par{
     padding-top:1rem;
 }
+.inner_right {
+    /* margin-top: 80px; */
+    max-height: 400px;
+    margin-top:0;
+}
+.inner-left{
+    justify-content: flex-start;
+}
 .fixic{
-    padding-top:50px;
+    margin-top:50px;
 }
 .grig>div{
     max-width: 85% !important;
@@ -300,6 +310,12 @@ padding: 3rem 0;
     line-height: 19px;
     color:white;
 }
+.cards a{
+    margin: 20px ;
+}
+.cards{
+    margin-top:0;
+}
 .text-holder .title {
     font-weight:500;
     font-size:35px;
@@ -360,7 +376,7 @@ padding: 3rem 0;
     text-align:left;
 }
 .pshik{
-    background:#18213f !important ;
+    background: #272937 !important;
     padding-top:30px;
 }
 .text-holder ul li.item-1:after {
@@ -916,7 +932,6 @@ font-size:40px;
     }    
     .points_block{
         margin:10px !important;
-        max-width: 88% !important;
     }
     .notes-text,.about_p{
         font-size:15px;
@@ -1041,6 +1056,12 @@ font-size:40px;
    }
 }
 @media(max-width:555px){
+    ol .points_block {
+        width: 90%;
+        max-width: 450px;
+        margin:0 !important;
+        min-width: auto;
+    }
     .feedback-title {
         font-size: 28px;
     }
@@ -1099,6 +1120,10 @@ font-size:40px;
     .showreel-box__title {
         font-size: 30px;
     }    
+    
+    .mod{
+        grid-template-columns: repeat(auto-fit,minmax(90%,1fr));
+    }
     .ogo {
         font-size: 26px;
         margin-bottom: 5px !important;
@@ -1178,6 +1203,12 @@ font-size:40px;
     height: 60px;
     line-height: 60px;
     }
+    ol .points_block{
+            /* min-width: 400px; */
+    /* max-width: 500px;*/
+    width:90% !important;
+    min-width: initial !important;
+    }
 }
 @media(max-width:420px){
     .nike>.links_b{
@@ -1240,7 +1271,125 @@ font-size:40px;
         grid-column-gap: 10px;
     }
 }
-@media(max-width:380px){
+
+/**/
+ /* Инициируем счетчик */
+.ch{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Nunito', sans-serif;
+    font-weight: 400 !important;
+}
+
+ .da{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    margin-bottom: 10px;
+    color: #404040;
+    font-size: 16px;
+    background: url(../public/border-span.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    position: relative;
+ }
+.nika{
+ display:inline-block;
+ position: absolute;
+ z-index: 20;
+ border-radius: 50%;
+ border: 1px solid black;
+ padding: 10px 20px;
+ font-weight: 700;
+ font-size: 18px;
+}
+
+
+.pos1{
+    height:auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    border-radius: 0;
+    padding:0;
+}
+.mod{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(400px,1fr));
+    grid-auto-rows: 177px;
+    grid-gap: 20px;
+    margin-left:0;
+}
+.points_block p {
+    padding:0 10px;
+    margin: 0 0 8px;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 22px;
+}
+.knowyou{
+    grid-column: 1/2;
+    border-radius: 0;
+}
+ol .points_block{
+    margin:0;
+    width:100%;
+    margin-left:0 !important;
+    min-width: 400px;
+    max-width: 500px;
+    justify-self: center;
+}
+ol{
+    margin-left:0 !important;
+    margin: 2rem 0;
+    align-items: center;
+    justify-content: center;
+}
+/**/
+@media(max-width:390px){
+    .mod{
+        grid-auto-rows: 370px;
+    }
+    ol .points_block {
+        grid-template-rows: repeat(2,50%);
+        background-color: white;
+        grid-template-columns: 1fr;
+        width: 90% !important;
+        max-width: 80% !important;
+
+    }    
+    .clients>h2 {
+        width:90%;
+    }
+    .points_block p {
+        padding: 10px  20px;
+    }   
+    .knowyou{
+        height:auto;
+        height: 50%;
+    }
+    .flex1 .inner_fon{
+        margin-top: 15px;
+    }
+    .back-map>#form {
+        max-width: 90%;
+    }
+    .points_block p {
+        font-size:20px;
+    }   
+    .cards a{
+        margin: 20px 0;
+    }
+    .cards{
+        margin-top:0;
+    }
+    .home-banner {
+        min-height: 90vh;
+    }    
     .h--2 {
         font-size: 24px;
         padding: 0 19px;

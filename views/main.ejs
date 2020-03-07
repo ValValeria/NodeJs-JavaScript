@@ -256,10 +256,11 @@
         </div>
     </div>
 </section>
-<section class="section blue fixic" style="background-image: none !important;">
+<section class="section blue fixic" style="background-image: url(../public/bg-pattern.png) !important;
+background-repeat: repeat; background-size: initial; background-position: initial; padding-bottom: 50px !important;">
     <div class="container pos_rel">
          
-         <div class="wrap-container pos_rel">
+         <div class="wrap-container pos_rel" style="width:100%">
               
               <div class="flex1 clients " >
                   <h2>Как мы взаимодействуем с клиентами?</h2>
@@ -275,9 +276,9 @@
                         </defs>
                     </svg>                        
                   </div>
-                  <div class="points flex1 mod" style="flex-wrap:wrap;justify-content: center;">
-                     
-                       <div class="points_block pos_rel pos1">
+                  <ol class="points flex1 mod" style="flex-wrap:wrap;justify-content: center;">
+                       
+                       <li class="points_block pos_rel pos1">
                          <div class="knowyou" style="background: linear-gradient(180deg,#6edcc4,#1aab8b);"></div>
                            <div class="fon flex1">
                                 <div class="inner_fon">
@@ -296,11 +297,13 @@
                                      </svg>
                                 </div>
                            </div>
-                            <span>01</span>
-                            <p>Заполнение заявки на нашем сайте</p>
-                       </div>
+                            <p class='ch'>
+                                <span class='da'>01</span>
+                                Заполнение заявки на нашем сайте
+                            </p>
+                       </li>
 
-                      <div class="points_block pos_rel pos1">
+                      <li class="points_block pos_rel pos1">
                           <div class="knowyou"></div c>
                           <div>
                             <div class="fon flex1 pos_rel">
@@ -319,10 +322,12 @@
                                     </svg>      
                                 </div>
                            </div ></div>
-                            <span>02</span>
-                            <p>Обсуждение деталей</p>
-                          </div>
-                          <div class="points_block pos_rel pos1">
+                           <p class='ch'>
+                            <span class='da'>02</span>
+                            Обсуждение деталей
+                           </p>
+                        </li>
+                          <li class="points_block pos_rel pos1">
                             <div class="knowyou" style="background: linear-gradient(180deg,#f44881,#ec454f);"></div>  
                             <div class="fon flex1">
                                  <div class="inner_fon">
@@ -331,10 +336,11 @@
                                      </svg>                                       
                                  </div>
                             </div>
-                             <span>03</span>
-                             <p>Подтверждение заказа</p>
-                          </div>  
-                          <div class="points_block pos_rel pos1">
+                            <p class='ch'>
+                                <span class='da'>03</span>Подтверждение заказа</p>
+                        </li>  
+
+                          <li class="points_block pos_rel pos1">
                             <div class="knowyou" style="background: linear-gradient(180deg,#21c8f6,#637bff);"></div>
                             <div class="fon flex1">
                                  <div class="inner_fon">
@@ -396,12 +402,14 @@
                                                                            
                                  </div>
                             </div>
-                             <span>04</span>
-                             <p>Получение готового продукта</p>
+                            <p class='ch'>
+                                <span class='da'>04</span>
+                                Получение готового продукта
+                            </p>
                           </div>  
-                      </div>
+                        </li>
                       
-                  </div>
+                    </ol>
                   <div class="buttons width_all jus_center " >
                     <a href="#orderme" class="newbutton">Оставить заявку
                         <small class="arrow">↓</small>
