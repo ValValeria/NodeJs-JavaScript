@@ -482,7 +482,6 @@ width:100%;
     min-height:90vh;
     width: 100vw;
     overflow:hidden;
-    max-height:125vh;
 }
 .showreel-box .video-opener {
     cursor: pointer;
@@ -1167,6 +1166,9 @@ font-size:40px;
      }    
 }
 @media(max-width:445px){
+    .cards a {
+        max-width: 270px;
+    }    
     .ul{
     min-height: 50vh;
     display: none;
@@ -1350,24 +1352,48 @@ ol{
     justify-content: center;
 }
 /**/
-@media(max-width:390px){
+@media(max-width:445px){
     .mod{
-        grid-auto-rows: 370px;
+        grid-auto-rows: 360px;
     }
     ol .points_block {
         grid-template-rows: repeat(2,50%);
         background-color: white;
-        grid-template-columns: 1fr;
         width: 90% !important;
         max-width: 80% !important;
-
+        height: 300px;
+        grid-template-columns: 100%;
+        max-width:85% !important;
+        min-width: 200px;
     }    
+    ol{
+        grid-template-columns: 1fr;
+        grid-template-columns: 80%;
+
+        grid-gap:20px;
+    }
+    .mod{
+        grid-template-columns: 1fr !important;
+    }
+    
     .clients>h2 {
         width:90%;
     }
     .points_block p {
         padding: 10px  20px;
     }   
+    .back-map #form label input, .back-map #form label textarea{
+        border-radius: 0;
+    }
+    .back-map>#form {
+        max-width:100% !important;
+    }
+    .blue {
+        padding-bottom: 0px;
+    }
+    .back-map{
+        padding-bottom: 0px !important;
+    }
     .knowyou{
         height:auto;
         height: 50%;
