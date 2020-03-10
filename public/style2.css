@@ -163,21 +163,19 @@ color:white
 .white_c{
     color: #404040 !important;
 }
+
 .ogo{
-    font-size: 40px;
-    line-height: 66px;
+    font-size: 20px;
+    line-height: 30px;
     font-weight: 900;
-    text-transform: uppercase;
     display: block;
     margin-bottom: 30px;
     max-width: 1200px;
     margin-top:0 !important;
-    padding-top:0 !important;
+    padding-top:20px !important;
     color:#333;
 }
-.doo{
-    align-items: center !important;
-}
+
 .gu{
     display:flex;
     justify-content: center;
@@ -806,6 +804,15 @@ font-size:40px;
     padding: 0;
 }
 /**/
+.dodo{
+    align-items: center !important;
+}
+.gg{
+    align-items: center !important;   
+}
+.ogo{
+    padding-bottom:100px ;
+}
 
 @media(max-width:1200px){
     .cov>img{
@@ -839,6 +846,13 @@ font-size:40px;
     }
     .doo{
         flex-direction: column-reverse;
+    }
+    .ogo{
+        padding-bottom:35px ;
+        font-family: 'Nunito';
+        font-size: 25px;
+        font-weight: 100;
+        line-height: 40px;
     }
 }
 @media (max-width:880px){
