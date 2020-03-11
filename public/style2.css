@@ -876,11 +876,17 @@ font-size:40px;
         flex-direction: column-reverse;
     }
     .ogo{
-        padding-bottom:35px ;
+        padding-bottom:0 ;
         font-family: 'Nunito';
         font-size: 25px;
         font-weight: 100;
         line-height: 40px;
+        font-weight: 100;
+    line-height: 40px;
+    font-size: 20px !important;
+    }
+    .bab>a{
+        max-width: 90% !important;
     }
 }
 @media (max-width:880px){
