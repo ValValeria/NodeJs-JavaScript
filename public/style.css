@@ -1464,6 +1464,7 @@ footer>.copyright{
 }
 
 @media screen and (max-width:845px){
+    
     #gr>h1{
         font-size: 2.5rem !important;
     }
