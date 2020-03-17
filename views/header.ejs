@@ -23,6 +23,35 @@
          <% if(css){%>
           <link  href="/public/ad.css" type="text/css">
           <%}%>
+          <script>
+             window.onload=()=>location.href.includes('/services') ? fun() : null
+
+             function fun(){
+                 
+                 [].forEach.call(document.querySelectorAll('.fines'),elem=>{
+                     elem.onclick=(e)=>{
+                          new Promise((res,req)=>{
+                             if(e.target.classList.contains('fines')) res(e.target.dataset.url)
+                             else req(null)
+                          })
+                          .then(url=>{
+                              
+                              let img=document.querySelector('#s')
+                              img.src=url
+                              let fix= document.querySelector('.fixs')
+                              img.onload=()=>{
+                               fix.style.display='block'
+                               fix.children[1].onclick=()=>{
+                                  fix.style.display='none'
+                               }
+                              }
+          
+                          })
+                          .catch(()=>console.log())
+                     }
+                 })
+             }
+          </script>
           <!-- Yandex.Metrika counter -->
 <script type="text/javascript" >
   (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};

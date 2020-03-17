@@ -1,4 +1,21 @@
 <%- include('header.ejs')%>
+<div class="fixs">
+    <div class='w31'>
+        <div><img alt="..." id="s" ></div>
+    </div>
+    <div class="close">
+        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28">
+            <g fill="none" fill-rule="evenodd" transform="translate(2 2)">
+                <circle cx="12" cy="12" r="12" fill="#FFF" opacity="1"></circle>
+                <circle cx="12" cy="12" r="12.75" stroke="#222D38" stroke-width="1.5" opacity="1"></circle>
+                <g fill="#222D38" opacity="1" transform="translate(6 6)">
+                    <rect width="1.611" height="13.9" x="5.435" y="-.941" rx=".806" transform="rotate(45 6.24 6.01)"></rect>
+                    <rect width="1.611" height="13.9" x="5.435" y="-.941" rx=".806" transform="scale(-1 1) rotate(45 0 -9.058)"></rect>
+                </g>
+            </g>
+        </svg>
+    </div>
+</div>
 <div class="kick_me">
     <!--
         Landing page, site , shops
@@ -88,7 +105,7 @@
            <!--Start-->
            <div class="iit ls">
                  <div class="text-holder">
-                      <span class="title tts ">Используемые технологии</span>
+                      <span class="title tts tts1">Используемые технологии</span>
                     
                        <ul>
                             <li class="item-1"> 
@@ -114,15 +131,15 @@
   </div>
 </section>
 <section class="course block block--default">
-    <div class="course__wrapper container5" style="min-height: 80vh;
+    <div class="course__wrapper container5 cons" style="min-height: 80vh;
     display: flex;
     flex-direction: column;
     justify-content: center;">
         <h2 class="course__title h h--2">4 сильных причины заказать "<%=name%>"</h2>
 
         <!--   если количество карточек кратно 3 добавляем класс  course__list--three  -->
-        <ul class="course__list course__list--three">
-            <li class="course__item">
+        <ul class="course__list course__list--three lsa">
+            <li class="course__item aj">
                 <div class="course__pic">
                     <picture>
                        <img class=" lazy" src="../public/fir.webp"/>
@@ -133,7 +150,7 @@
                     Своевременное выполнение работы
                 </p>
             </li>
-            <li class="course__item">
+            <li class="course__item aj">
                 <div class="course__pic">
                     <picture>
                        <img class=" lazy" src="../public/sec.png">
@@ -144,7 +161,7 @@
                     Любой удобный способ коммуникации
                 </p>
             </li>
-            <li class="course__item">
+            <li class="course__item aj">
                 <div class="course__pic">
                     <picture>
                        <img class=" lazy" src="../public/for.png">
@@ -158,6 +175,47 @@
         </ul>
     </div>
 </section>  
+
+<section class="section blue fixic lulu" style="background-image: url(../public/bg-pattern.png) !important;
+background-repeat: repeat; background-size: initial; background-position: initial; padding-bottom: 50px !important;">
+    <div class="container pos_rel">
+         
+         <div class="wrap-container pos_rel" style="width:100%">
+              
+              <div class="flex1 clients jsa1" >
+                  <h2>Примеры работ</h2>
+                  
+                  <ol class="points flex1 mod shs" style="flex-wrap:wrap;justify-content: center;">
+                       
+                    <% portfolio.forEach(elem=>{ %>
+                      <li class="points_block pos_rel pos1  "  style=" background: white url(https://assets.htmlacademy.ru/img/intensive/bg-triada.v2.svg) no-repeat right center;
+                      background-size: 200%;
+                      background-position: 100%;">
+                         <div class="knowyou fines" data-url="<%=elem.photo[1]%>" style="background: url(<%=elem.photo[0]%>) no-repeat center center;background-size: cover;"></div>
+                           <div class="fon flex1" style="visibility: hidden;">
+                           </div>
+                            <p class='ch ' style="font-size:15px">
+                                <span class='da osa course__subtitle' style="text-align:center;background:none;width:auto;height:auto;font-size:20px;line-height: 30px;font-family:'Nunito'">
+                                    <%=elem.description.title%>
+                                </span>
+                                <%=elem.description.content%>
+                            </p>
+                       </li>
+                       <%})%>
+
+                    
+                      
+                    </ol>
+                  <div class="buttons width_all jus_center " >
+                    <a href="#orderme" class="newbutton">Оставить заявку
+                        <small class="arrow">↓</small>
+                    </a>
+                  </div>
+              </div>
+         </div>
+    </div>
+</section>
+
 <section class="section blue white pshik">
     <div class="chick"></div>
     <div class="chick2"></div>
