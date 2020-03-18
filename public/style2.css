@@ -557,6 +557,9 @@ padding: 3rem 0;
    width:100%;
    height:100%;
 }
+.animated{
+   padding-top:20px;
+}
 .course__subtitle {
     font-size: 22px;
     line-height: 28px;
@@ -1406,6 +1409,7 @@ font-size:40px;
         box-shadow: 1px 1px 58px -6px rgba(0,0,0,0.75);
 
     }
+    .dic{font-size:21px !important}
     .dk>img{
         max-width:100%;
     }
