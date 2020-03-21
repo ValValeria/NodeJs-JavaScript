@@ -643,8 +643,10 @@ width:100%;
     line-height: 42px;
     font-weight: 700;
     text-transform: uppercase;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 }
 .showreel-box__sub-title {
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
     font-size: 16px;
     line-height: 18px;
     text-transform: uppercase;
@@ -1366,13 +1368,18 @@ font-size:40px;
     }
     .dic{
         font-weight:100 !important;
+        font-size: 25px !important;
+
     }
   
 }
 @media(max-width:490px){
     .showreel-box__title {
-        font-size: 30px;
+        font-size: 40px;
     }    
+    .showreel-box__sub-title{
+        display:none;
+    }
     
     .mod{
         grid-template-columns: repeat(auto-fit,minmax(90%,1fr));
@@ -1509,67 +1516,7 @@ font-size:40px;
     .lsa{
         margin:0;
     }
-}
-@media(max-width:420px){
-    .nike>.links_b{
-    height: 60px;
-    line-height: 60px;
-    }
-    .about_h1{
-        font-size:2.5rem;
-    }
-    .ogo {
-        font-size: 25px;
-        line-height: 40px;
-    }    
-    .gu{
-        margin-left:0 !important;
-    }
-    .servicess>h6 {
-        padding: 0;
-        padding-top:1.7rem;
-        font-size: 1.5rem;
-    }
-    .notes-text ,.about_p{
-        font-size: 14px !important;
-    }
-    .title-block:not(.tit) {
-        font-size: 1.8rem !important;
-    }
-    .notes-text{
-        margin-top: 10px;
-    }  
-    .about_p {
-        font-size: 16px;
-    }      
-    .nike>.links_b{
-        max-width:16rem;
-    }
-   
-    .contact_form>h3 ,.page-body__container{
-        color: white;
-        font-size: 34px;
-    }
-    .text-holder p {
-        padding-right: 10px;
-    }   
-    .cards a{
-        max-width: 300px;
-        position: static;
-        margin-left: 0 !important;
-        min-height: 350px;
 
-    }
-    .pos1{
-        margin-left: 0 !important;
-    }
-    .line{
-        margin-left:0;
-    }
-    .course__item {
-        padding-right: 5%;
-        grid-column-gap: 10px;
-    }
 }
 
 /**/
@@ -1764,8 +1711,97 @@ ol{
         font-size: 28px;
         line-height: 40px;
     }
+    #gr>h2 {
+        font-size: 3rem !important;
+    }
+    .home-banner {
+        min-height: 95vh;
+    }
 }
 
 @media(max-width:839px){
    
+}
+@media(max-width:420px){
+    .nike>.links_b{
+    height: 60px;
+    line-height: 60px;
+    }
+    .about_h1{
+        font-size:2.5rem;
+    }
+    .ogo {
+        font-size: 25px;
+        line-height: 40px;
+    }    
+    .gu{
+        margin-left:0 !important;
+    }
+    .servicess>h6 {
+        padding: 0;
+        padding-top:1.7rem;
+        font-size: 1.5rem;
+    }
+    .notes-text ,.about_p{
+        font-size: 14px !important;
+    }
+    .title-block:not(.tit) {
+        font-size: 1.8rem !important;
+    }
+    .notes-text{
+        margin-top: 10px;
+    }  
+    .about_p {
+        font-size: 16px;
+    }      
+    .nike>.links_b{
+        max-width:16rem;
+    }
+   
+    .contact_form>h3 ,.page-body__container{
+        color: white;
+        font-size: 34px;
+    }
+    .text-holder p {
+        padding-right: 10px;
+    }   
+    .cards a{
+        max-width: 300px;
+        position: static;
+        margin-left: 0 !important;
+        min-height: 350px;
+
+    }
+    .pos1{
+        margin-left: 0 !important;
+    }
+    .line{
+        margin-left:0;
+    }
+    .course__item {
+        padding-right: 5%;
+        grid-column-gap: 10px;
+    }
+    .showreel-box__title{
+        font-size: 30px;
+    }
+    .dic{
+        padding:10px 0 !important;
+    }
+    .doo{
+        margin-top:0 !important;
+    }
+    .sveti .text-holder{
+        width:90%;
+        padding-left:10px;
+    }
+    .sveti .text-holder p, .sveti .text-holder ul li p {
+        font-size: 12px;
+    }
+
+}
+@media(max-width:360px){
+    .showreel-box__title {
+        font-size: 27px;
+    }
 }

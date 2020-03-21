@@ -1884,14 +1884,14 @@ padding-top:5px;
     .letters{
         display: none !important;
     }
-    .relative_my{
-      background-image: url(../public/react-head-mobile.svg);;
-    }
+    
     .home-banner{
-        background-image:url(../public/bg-pattern.png);
-        background-repeat: repeat;
-        background-position: initial;
-        background-size:initial;
+        background-image:url(../public/hero.svg);
+        background-position: center center;
+        background-size: 200% 200%;
+
+        background-position: center bottom;
+        background-size: 130%;
 
     }
 }
@@ -2050,7 +2050,9 @@ padding-top:5px;
     .dic{font-size: 26px !important;}
 }
 @media(max-width:520px){
-
+   .doo{
+       margin-top:0 !important;
+   }
     
 
     .title--big{
