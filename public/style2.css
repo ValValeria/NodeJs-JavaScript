@@ -1371,6 +1371,7 @@ font-size:40px;
         font-size: 25px !important;
 
     }
+    
   
 }
 @media(max-width:490px){
@@ -1379,6 +1380,9 @@ font-size:40px;
     }    
     .showreel-box__sub-title{
         display:none;
+    }
+    .showreel-box__title {
+        font-size: 30px;
     }
     
     .mod{
