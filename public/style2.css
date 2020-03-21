@@ -477,7 +477,7 @@ padding: 3rem 0;
     font-weight: 900;
     font-size: 22px ;
     display: block;
-    margin: 0 0 10px;
+    margin: 0 0 20px;
     color:white;
     text-transform: uppercase;
     padding-top:0;
@@ -730,6 +730,9 @@ width:100%;
     position: relative;
     overflow: hidden;
     
+}
+.text-holder .title{
+    line-height: 1.2 !important;
 }
 #gr>h2{
     color: #feca57;
