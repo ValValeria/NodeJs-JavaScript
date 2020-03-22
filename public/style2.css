@@ -1010,7 +1010,7 @@ font-size:40px;
     }
     ol .points_block {
     border-radius:15px;
-    background-color: rgba(99, 110, 114,1) !important;
+    background-color: rgba(99, 110, 114,0.92) !important;
     box-shadow: 0px 4px 90px rgba(207, 207, 207, 0.5) !important;
     border:none !important;
     }
@@ -1482,7 +1482,7 @@ font-size:40px;
 
     }
     .da{
-        color: #feca57 !important;
+        color:white !important;
     }
     ol .points_block{
         background-position: 120% !important;
@@ -1577,6 +1577,7 @@ font-size:40px;
     }
 }
 @media(max-width:450px){
+
     .tts1{
         font-size:30px;
     }
@@ -1650,7 +1651,22 @@ font-size:40px;
         margin:0;
     }
    
-    
+    .yh .showreel-box__title {
+    font-size: 23px;
+     }
+     .showreel-box .video-opener-box {
+        position: relative;
+        -ms-flex-preferred-size: 64px;
+        flex-basis: 40px;
+        max-width: 40px;
+        /* height: 30px; */
+        height: 40px;
+        margin-right: 5px;
+    }
+    .da{
+    color: white!important;
+    font-size: 23px !important ;
+    }
 }
 
 /**/
@@ -1730,6 +1746,9 @@ ol{
     margin: 2rem 0;
     align-items: center;
     justify-content: center;
+}
+.jsa1{
+    flex-wrap:nowrap !important;
 }
 /**/
 @media(max-width:445px){
