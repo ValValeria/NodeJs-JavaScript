@@ -1087,6 +1087,12 @@ font-size:40px;
         color: #404040 !important;
       
     }
+    .gsa{
+        position: relative;
+        width: 90% !important;
+        max-width: initial !important;
+        
+    }
 @media(max-width:1200px){
     .cov>img{
         transform: translateX(-43%);
