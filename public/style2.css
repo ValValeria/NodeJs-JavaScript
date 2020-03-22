@@ -1010,7 +1010,7 @@ font-size:40px;
     }
     ol .points_block {
     border-radius:15px;
-    background-color: rgba(99, 110, 114,0.9) !important;
+    background-color: rgba(99, 110, 114,1) !important;
     box-shadow: 0px 4px 90px rgba(207, 207, 207, 0.5) !important;
     border:none !important;
     }
@@ -1568,6 +1568,13 @@ font-size:40px;
     background-position: left 40%;
     background-position: -60% 40%;
     }
+    .jsa1{
+        flex-wrap:nowrap !important;
+    }
+    .lulu{
+        padding-bottom: 40px !important;
+        
+    }
 }
 @media(max-width:450px){
     .tts1{
@@ -1642,7 +1649,8 @@ font-size:40px;
     .lsa{
         margin:0;
     }
-
+   
+    
 }
 
 /**/
@@ -1929,5 +1937,14 @@ ol{
 @media(max-width:360px){
     .showreel-box__title {
         font-size: 27px;
+    }
+    .showreel-box .video-opener-box {
+        display:none;
+    }    
+    ol+.buttons{
+        margin: 20px 0 !important;
+    }
+    ol .pos1{
+        max-width: 97% !important;
     }
 }
