@@ -1077,13 +1077,13 @@ font-size:40px;
         width:100% !important;
     }
 
-    .gush ol li{
+    .nia{
        background-color:white !important;
     }
-    .gush .da{
+    .nia .da{
         color: #404040 !important;
     }
-    .gush .ch{
+    .nia .ch{
         color: #404040 !important;
       
     }
@@ -1585,7 +1585,7 @@ font-size:40px;
         padding-bottom: 40px !important;
         
     }
-    .gush .mod{
+    .gush{
         grid-auto-rows: 360px !important;
     }
 }
@@ -1680,14 +1680,14 @@ font-size:40px;
     color: white!important;
     font-size: 23px !important ;
     }
-    .gush .da{
+    .nia .da{
         font-size: initial !important ;
   
     }
-    .gush .mod{
+    .nia .mod{
         grid-gap: 20px !important;
     }
-    .gush .mod{
+    .gush{
         grid-auto-rows: 320px !important;
     }
 }
