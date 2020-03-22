@@ -1077,6 +1077,16 @@ font-size:40px;
         width:100% !important;
     }
 
+    .gush ol li{
+       background-color:white !important;
+    }
+    .gush .da{
+        color: #404040 !important;
+    }
+    .gush .ch{
+        color: #404040 !important;
+      
+    }
 @media(max-width:1200px){
     .cov>img{
         transform: translateX(-43%);
@@ -1575,6 +1585,9 @@ font-size:40px;
         padding-bottom: 40px !important;
         
     }
+    .gush .mod{
+        grid-auto-rows: 360px !important;
+    }
 }
 @media(max-width:450px){
 
@@ -1666,6 +1679,16 @@ font-size:40px;
     .da{
     color: white!important;
     font-size: 23px !important ;
+    }
+    .gush .da{
+        font-size: initial !important ;
+  
+    }
+    .gush .mod{
+        grid-gap: 20px !important;
+    }
+    .gush .mod{
+        grid-auto-rows: 320px !important;
     }
 }
 
