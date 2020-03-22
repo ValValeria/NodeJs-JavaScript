@@ -1585,9 +1585,7 @@ font-size:40px;
         padding-bottom: 40px !important;
         
     }
-    .gush{
-        grid-auto-rows: 360px !important;
-    }
+    
 }
 @media(max-width:450px){
 
@@ -1689,6 +1687,8 @@ font-size:40px;
     }
     .gush{
         grid-auto-rows: 320px !important;
+        grid-auto-rows: 340px !important;
+        grid-gap: 70px !important;
     }
 }
 
