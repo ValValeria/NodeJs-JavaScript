@@ -649,7 +649,6 @@ width:100%;
     line-height: 42px;
     font-weight: 700;
     text-transform: uppercase;
-    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 }
 .showreel-box__sub-title {
     text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
@@ -668,7 +667,6 @@ width:100%;
     background-repeat: no-repeat;
     background-size: 100% auto ;
     background-position: initial;
-    min-height: 100vh;
     display: flex;
     flex-direction: column;
     /* align-items: center; */
