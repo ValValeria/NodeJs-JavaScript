@@ -1974,6 +1974,9 @@ ol{
     .showreel-box{
         margin: 2rem 0;
     }
+    .myl .showreel-box {
+        margin: 0rem 0;
+    }
     #gr>h2 {
         font-size: 2.5rem !important;
     }
@@ -2001,6 +2004,12 @@ ol{
     }
     .home-banner {
         min-height: 95vh;
+    }
+    .myl .text-holder{
+        padding:0 4%
+    }
+    .myl .text-holder ul li p{
+        width:90%
     }
 }
 
