@@ -1387,6 +1387,18 @@ font-size:40px;
      .yyd{
          background-image: none !important;
      }
+     .my1 .video-opener-box{
+         display:none ;
+     }
+     .my1 .showreel-box__sub-title{
+         display:none;
+     }
+     .my .showreel-box{
+         margin-bottom:10px !important;
+     }
+     .my .lightgray:hover,.my .lightgray{
+        box-shadow: 0px 4px 90px rgba(236, 240, 241,0.5)!important;
+     }
 
 }
 
@@ -1602,7 +1614,7 @@ font-size:40px;
         display:none;
     }
     .showreel-box__title {
-        font-size: 30px;
+        font-size: 35px;
     }
     
     .mod{
@@ -2077,6 +2089,9 @@ ol{
     .showreel-box__title {
         font-size: 27px;
     }
+    .showreel-box__title {
+        font-size: 27px;
+    }
     .showreel-box .video-opener-box {
         display:none;
     }    
@@ -2085,6 +2100,14 @@ ol{
     }
     ol .pos1{
         max-width: 97% !important;
+    }
+    .showreel-box {
+        margin-top:0
+    }    
+    .shadow>.info>h4 {
+        /* font-size: 1.7rem; */
+        font-family: 'Ubuntu Condensed' !important;
+        max-width: 90%;
     }
 }
 .nia{
