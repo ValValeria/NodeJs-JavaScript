@@ -333,6 +333,7 @@ padding-top:20px;
 .display_flex{
    display:flex;
    align-items: center;
+   justify-content: center;
 }
 .imgg2{
     flex:  1 1 35%;
@@ -671,15 +672,10 @@ body>section,body>div:not(.write_mes){
     background-attachment: fixed;
     display:flex;
     align-items: center;
-    /*background-image: repeating-linear-gradient(150deg,rgba(255,255,255,.06),rgba(255,255,255,.06) 1px,transparent 0,transparent 41px),repeating-linear-gradient(-150deg,rgba(255,255,255,.06),rgba(255,255,255,.06) 1px,transparent 0,transparent 41px);
-   */
-   /*background-image: url(../public/bg-pattern.png);
-    background-color: #18213f;
-
-   */
+  
     
-    background:#272937 url('/public/desktop.webp') right bottom no-repeat;
-    background-size: 40% ;
+    background:#272937 url('https://itproger.com/intensive/img/bg-python.svg') center center no-repeat;
+    background-size: cover ;
 }
 .home-inner{   
     padding-top:70px;
@@ -896,7 +892,7 @@ textarea{
     display: flex;
     height:90%;
     flex-direction: column;
-    align-items:flex-start;
+    align-items:center;
     justify-content: center;
 }
 .greeting>h1{
@@ -908,7 +904,7 @@ textarea{
     font-size: 2rem;
 }
 #gr>h1{
-    text-align: left;
+    text-align: center;
     /*font-family: 'Open Sans Condensed', sans-serif;
     /*font-family: 'PT Sans', sans-serif;
     font-family: 'Alegreya Sans', sans-serif;*/
@@ -935,11 +931,7 @@ textarea{
 .inner-left>h1{
     margin: 5% auto;
 }
-.error{
-    background-color: brown !important;
-    color:white !important;
-    font-size:1.5rem;
-}
+
 .yees{
     background-color: #3498db !important;
     color:white !important;
@@ -1020,7 +1012,7 @@ footer>.copyright{
 }
 .about_h1{
     font-weight: 400;
-    font-size: 3rem;
+    font-size: 2rem;
     margin-bottom: 15px;
     padding:15px 0;
 }
@@ -1461,6 +1453,11 @@ footer>.copyright{
 .image1{
     padding-top:30px;
     max-height:350px;
+}
+.error{
+    background-color: brown !important;
+    color:white !important;
+    font-size:1.5rem;
 }
 @media(max-width:1300px){
    .line_one{

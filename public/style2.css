@@ -186,7 +186,7 @@ color:white
 .section_two{
     color: #b8bcbf;
     margin: 0 auto;
-    padding: 95px 0;
+    padding: 55px 0;
     font-family: 'Montserrat', sans-serif;
    /* background-color: rgb(245, 245, 245);*/
     width:100vw;
@@ -1148,7 +1148,24 @@ font-size:40px;
     ol .points_block{
       /*  max-width:90% !important;*/
     }
-   
+    .sa{
+        max-width: inherit;
+        justify-content: center;
+        max-width: 600px;
+        margin:0 auto;
+    }
+    .sa a{
+        max-width:40%;
+        margin:10px;
+    }
+    #clouds{
+        background: #fff;
+        width:100% !important;
+        margin:0 !important
+    }
+    #clouds>svg{
+        width:100%;
+    }
 @media(max-width:1221px){/*1200*/
     .cov>img{
         transform: translateX(-43%);
@@ -1209,7 +1226,7 @@ font-size:40px;
         min-height: 350px;
     }
     .imagel{
-        padding-top: 20px !important;
+        padding-top: 50px !important;
     }
 }
 @media (max-width:880px){
