@@ -1012,7 +1012,7 @@ footer>.copyright{
 }
 .about_h1{
     font-weight: 400;
-    font-size: 2rem;
+    font-size: 45px;
     margin-bottom: 15px;
     padding:15px 0;
 }
@@ -1711,6 +1711,10 @@ padding-top:5px;
         flex-wrap: wrap-reverse;
         justify-content: center;
     }
+    .skati .flex1{
+        flex-wrap: nowrap !important;
+
+    }
     .cards{
         flex-wrap: wrap !important;
     }
@@ -1720,7 +1724,7 @@ padding-top:5px;
     .flex1>:nth-child(even),.flex1>:nth-child(odd){
         margin-left:20px;
     }
-
+    
     .about_p{
     line-height: 26px;
     padding-right:20px;
