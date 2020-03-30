@@ -669,13 +669,14 @@ body>section,body>div:not(.write_mes){
     padding-top:10%;
     width:100vw;
     overflow: hidden;
-    background-attachment: fixed;
     display:flex;
     align-items: center;
   
     
     background:#272937 url('https://itproger.com/intensive/img/bg-python.svg') center center no-repeat;
     background-size: cover ;
+    background-attachment: fixed;
+
 }
 .home-inner{   
     padding-top:70px;
@@ -1244,7 +1245,7 @@ footer>.copyright{
     right: 22px;
 }
 .servicess>h6{
-    padding: 3rem 0;
+    padding: 3rem 0 ;
     font-size:2.3rem;
 }
 

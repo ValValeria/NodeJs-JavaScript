@@ -697,7 +697,7 @@ width:100%;
     display:flex;
     justify-content: space-around;
     flex-wrap:wrap;
-    max-width:1000px;
+    max-width:850px;
     margin:auto;
 }
 .results-box ul li.item-1 {
@@ -1170,20 +1170,35 @@ font-size:40px;
         align-items: center !important;
         padding-top:0 !important;
         max-width: 1000px;
+        width:90%;
     }
     .skati {
-        background-color: #272937;
+        background-color:rgb(245, 245, 245);
     }
     .skati .imagel{
         padding-top: 0 !important;
     }
     .skati .about_p{
-        font-size: 36px;
+        font-size: 30px;
         margin-bottom: 10px;
         color:white;
         font-family: Montserrat,sans-serif;
         line-height: 1.3;
-        max-width:500px;
+        max-width:600px;
+        font-weight:900;
+        font-family: 'Ubuntu Condensed', sans-serif;
+        font-weight:0;
+        color: #232323;
+    }
+    .dksa{
+        color: white;
+        color: #232323;
+        font-size: 15px;
+        max-width: 400px;
+        margin: 20px 0;
+        margin-top: 40px;
+        line-height: 170%;
+        font-weight: normal;
     }
     .doro{
         justify-content: flex-start;
@@ -1203,6 +1218,10 @@ font-size:40px;
      height: 104px;
      transform: rotate(180deg);
      background-color: white;
+    }
+    .skati .imagel div{
+        height:100%;
+        width:100%;
     }
 @media(max-width:1221px){/*1200*/
     .cov>img{
@@ -1242,16 +1261,9 @@ font-size:40px;
     }
     .skati .about_p {
         font-size: 30px;
-        font-family: Montserrat,sans-serif;
-        text-align: center !important;
-        padding: 0 2% !important;
     }
-    .doro{
-        justify-content: center;
-    }
-    .doro .ks{
-        margin-righT: 0 !important;
-    }
+    
+    
     .doo{
         flex-direction: column-reverse;
     }
@@ -1277,6 +1289,12 @@ font-size:40px;
     }
     .imagel{
         padding-top: 50px !important;
+    }
+    .doro{
+        display:block;
+    }
+    .doro .ks{
+        margin-right:0 !important;
     }
 }
 @media (max-width:880px){
@@ -1314,6 +1332,16 @@ font-size:40px;
     .greeting>h1 {
       padding-bottom: 0;
     }    
+    .skati .gg{
+        width:90%;
+    }
+    .skati .about_us{
+        flex: 1 1 40%;
+    }
+    .skati .gg .about_us .about_p {
+        font-size:26px;
+        word-spacing: 2px;
+    }
 }
 @media (max-width:800px){
      .tts1{
@@ -1344,6 +1372,9 @@ font-size:40px;
     .sveti .text-holder p {
         margin: 0 0 55px;
         font-size: 13px;
+    }
+    .skati{
+        padding-top: 60px;
     }
 }
 @media(max-width:700px){
@@ -1466,7 +1497,20 @@ font-size:40px;
      .my .lightgray:hover,.my .lightgray{
         box-shadow: 0px 4px 90px rgba(236, 240, 241,0.5)!important;
      }
-
+     .skati .gg{
+         flex-direction: column;
+         background-image: url(/public/desktop.webp);
+    background-position: right bottom;
+    background-size: 30% auto;
+    background-repeat: no-repeat;
+     }
+     .skati .imagel  div img{
+         max-height:350px;
+     }
+     .skati .imagel{
+        max-height:initial;
+        display:none
+     }
 }
 
 @media(max-width:659px){
@@ -1670,7 +1714,9 @@ font-size:40px;
         background-position: 120% !important;
         background-position: 125% !important;
     }
-   
+    .skati .gg{
+        background-image: none;
+    }
   
 }
 @media(max-width:490px){
@@ -2078,6 +2124,9 @@ ol{
     .sveti .text-holder ul li p{
         width:90%
     }
+    .gush{
+        grid-gap: 20px !important;
+    }
 }
 
 @media(max-width:839px){
@@ -2158,6 +2207,12 @@ ol{
     }
     .sveti .text-holder p, .sveti .text-holder ul li p {
         font-size: 12px;
+    }
+    .skati .about_p {
+        font-size:25px !important;
+    }
+    .dksa{
+        font-size: 14px;
     }
 
 }
