@@ -55,7 +55,7 @@
 
 <section class="course block block--default">
     <div class="course__wrapper container5">
-        <h2 class="course__title h h--2">Как для Вас мы разработаем "<%=name%>"</h2>
+        <h2 class="course__title h h--2">Как для Вас я разработаю "<%=name%>"</h2>
 
         <!--   если количество карточек кратно 3 добавляем класс  course__list--three  -->
         <ul class="course__list course__list--three">
@@ -67,7 +67,7 @@
                 </div>
                 <h3 class="course__subtitle">ИССЛЕДОВАНИЕ </h3>
                 <p class="course__desc">
-                    Портрет целевой аудитории - выявляем реальные потребности/возражения ваших клиентов. И "закрываем" их выгодами и гарантиями. 
+                    Портрет целевой аудитории - выявляю реальные потребности/возражения ваших клиентов. И "закрываю" их выгодами и гарантиями. 
 
                 </p>
             </li>
@@ -96,7 +96,7 @@
         </ul>
     </div>
 </section>        
-<section class="section gray1 dp">
+<section class="section gray1 dp" style="padding-bottom: 20px !important;">
   <div class="container hfs">
        <div class="d_f ti ak">
            <div class="cov dk">
@@ -132,7 +132,8 @@
 </section>
  
 
-<section class="section blue fixic lulu" >
+
+<section class="section blue fixic lulu" style="padding-top:20px !important;background: white !important;" >
     <div class="container pos_rel">
          
          <div class="wrap-container pos_rel" style="width:100%">
@@ -144,43 +145,43 @@
                            <div class="video-opener-box">
                           </div>
                        <div class="showreel-box__info">
-                           <div class="showreel-box__title">Примеры работ</div>
+                           <div class="showreel-box__title" style="    color: #333;">Примеры работ</div>
                        </div> 
                      </div>
                    </div>                  
                   <ol class="points flex1 mod shs" style="flex-wrap:wrap;justify-content: center;">
                        
                     <% portfolio.forEach(elem=>{ %>
-                      <li class="points_block pos_rel pos1  "  style=" background: white url(https://assets.htmlacademy.ru/img/intensive/bg-triada.v2.svg) no-repeat right center;
-                      background-size: 200%;
-                      ">
-                         <div class="knowyou fines" data-url="<%=elem.photo[1]%>" style="background: url(<%=elem.photo[0]%>) no-repeat center center;background-size: cover;"></div>
+                      <li class="points_block pos_rel pos1  "  style=" background:  url(https://assets.htmlacademy.ru/img/intensive/bg-triada.v2.svg)  no-repeat right center;
+                      background-size: 200%;background-color: white !important;     box-shadow: 0 3px 5px 0 rgba(87,87,87,.29);
+                      ;    width: 100%; min-width: initial !important; max-width: initial !important;  ">
+                          <div class="knowyou fines" data-url="<%=elem.photo[1]%>" style="background: url(<%=elem.photo[0]%>) no-repeat center center;background-size: cover;"></div>
                            <button class="fon flex1" style="visibility: hidden;">
                            </button>
-                            <p class='ch ' style="font-size:15px">
-                                <span class='da osa course__subtitle aha' style="text-align:center;background:none;width:auto;height:auto;font-size:26px;line-height: 30px;font-family:'Nunito'">
+                            <div class='ch ' style="font-size:15px;    color: #232323 !important; ">
+                                <span class='da osa course__subtitle aha' style="text-align:center;background:none;width:auto;height:auto;font-size:26px;line-height: 30px;font-family:'Nunito';    color: #232323 !important;">
                                     <%=elem.description.title%>
                                 </span>
                                 <%=elem.description.content%>
-                            </p>
+                                <div class="oslik">
+                                    <button href="#"class="orange showme" style="margin-top:28px;font-size:12px;">Посмотреть</button>
+                                </div>
+                            </div>
                        </li>
                        <%})%>
 
-                    
-                      
                     </ol>
-                  <div class="buttons width_all jus_center " >
-                    <a href="#orderme" class="newbutton">Оставить заявку
-                        <small class="arrow">↓</small>
-                    </a>
+                 
+                  <div class="buttons width_all jus_center " style="position: relative; z-index: 30;margin-left:0" >
+                       <a href="#orderme" class="newbutton orange" style="font-weight: 500; border-radius: 0;width:220px;margin: 20px 0">Заказать </a>
                   </div>
-              </div>
+               </div>
          </div>
     </div>
 </section>
 
-<section class="course block block--default">
-    <div class="course__wrapper container5 cons" style="min-height: 80vh;
+<section class="course block block--default" style="padding-top:20px;">
+    <div class="course__wrapper container5 cons" style="
     display: flex;
     flex-direction: column;
     justify-content: center;">
