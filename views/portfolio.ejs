@@ -1,5 +1,22 @@
 <%-include('header.ejs')%>
-<div class="kick_me" style="background-color: white;" >
+<div class="fixs">
+    <div class='w31'>
+        <div><img alt="..." id="s" ></div>
+    </div>
+    <div class="close">
+        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28">
+            <g fill="none" fill-rule="evenodd" transform="translate(2 2)">
+                <circle cx="12" cy="12" r="12" fill="#FFF" opacity="1"></circle>
+                <circle cx="12" cy="12" r="12.75" stroke="#222D38" stroke-width="1.5" opacity="1"></circle>
+                <g fill="#222D38" opacity="1" transform="translate(6 6)">
+                    <rect width="1.611" height="13.9" x="5.435" y="-.941" rx=".806" transform="rotate(45 6.24 6.01)"></rect>
+                    <rect width="1.611" height="13.9" x="5.435" y="-.941" rx=".806" transform="scale(-1 1) rotate(45 0 -9.058)"></rect>
+                </g>
+            </g>
+        </svg>
+    </div>
+</div>
+<div class="kick_me lks" style="background-color: white;" >
     <div class="container2">
         <div class=" see" style="margin-top:80px;background-image:none;color:black;  font-family: 'Montserrat', sans-serif ">
           <div class="container1" style="width:100%">  
@@ -40,7 +57,7 @@
              
         </div>
         <section>
-            <div class="container1 myl">
+            <div class="container1 myl" style="padding-bottom: 0;">
              <!--Start-->
              <div class="container flex1 gg doo">
                 <div class="imagel im" style="margin:0 auto">   
@@ -55,20 +72,19 @@
                      <div>
                          <h1 class="about_h1 ogo txt_center dic" style="max-width:90%;max-width: 90%;
                          margin: 10px auto !important;">   Любой может сделать из простого сложное.
-                            Мы умеем превратить сложное в простое.</h1>
+                            Я умею превращать сложное в простое.</h1>
                      </div>
                      
                 </div>
             </div>
              <!--End-->
-                <div class='yyd'>
+                <div class='yyd yyd1' >
                     <div class="showreel-box">
                         <div class="video-opener"> 
                                <div class="video-opener-box">
                               </div>
                            <div class="showreel-box__info">
                                <div class="showreel-box__title">Technologies</div>
-                               <div class="showreel-box__sub-title">Используемые технологии</div>
                            </div> 
                          </div>
                        </div>
@@ -122,6 +138,7 @@
                                              <h4> Landing</h4>
                                              <div>
                                                     <div href="#"class="watch">Посмотреть</div>
+                                                    
                                              </div>
                                       </div>
                                   </div>                   
@@ -175,7 +192,52 @@
             
         </section>
     </div>
-</div>    
+</div>   
+<section class="section blue fixic lulu" style="padding-top:20px !important;background: white !important;" >
+    <div class="container pos_rel">
+         
+         <div class="wrap-container pos_rel" style="width:100%">
+              
+              <div class="flex1 clients jsa1" >
+                  
+                <div class="showreel-box yh">
+                    <div class="video-opener"> 
+                           <div class="video-opener-box">
+                          </div>
+                       <div class="showreel-box__info">
+                           <div class="showreel-box__title" style="    color: #333;">Примеры работ</div>
+                       </div> 
+                     </div>
+                   </div>                  
+                  <ol class="points flex1 mod shs" style="flex-wrap:wrap;justify-content: center;">
+                       
+                    <% portfolio.forEach(elem=>{ %>
+                      <li class="points_block pos_rel pos1  "  style=" background:  url(https://assets.htmlacademy.ru/img/intensive/bg-triada.v2.svg)  no-repeat right center;
+                      background-size: 200%;background: white !important;     box-shadow: 0 3px 5px 0 rgba(87,87,87,.29);
+                      ;    width: 100%; min-width: initial !important; max-width: initial !important;  ">
+                         <div class="knowyou fines" data-url="<%=elem.photo[1]%>" style="background: url(<%=elem.photo[0]%>) no-repeat center center;background-size: cover;"></div>
+                           <button class="fon flex1" style="visibility: hidden;">
+                           </button>
+                            <p class='ch ' style="font-size:15px;    color: #232323 !important; ">
+                                <span class='da osa course__subtitle aha' style="text-align:center;background:none;width:auto;height:auto;font-size:26px;line-height: 30px;font-family:'Nunito';    color: #232323 !important;">
+                                    <%=elem.description.title%>
+                                </span>
+                                <%=elem.description.content%>
+                            </p>
+                       </li>
+                       <%})%>
+
+                    </ol>
+                 
+                  <div class="buttons width_all jus_center " style="position: relative; z-index: 30;" >
+                       <a href="#orderme" class="newbutton orange" style="font-weight: 500; border-radius: 0;width:220px;margin: 20px 0">Заказать </a>
+                  </div>
+               </div>
+         </div>
+    </div>
+</section>
+
+
 <section class="section gray1 sveti">
     <div class="container">
          <div class="d_f ">
@@ -185,9 +247,9 @@
              <!--Start-->
              <div class="iit">
                    <div class="text-holder">
-                        <span class="title ">Наши гарантии</span>
-                        <p >Мы работаем на результат.
-                          Постоянно поддерживаем связь с клиентами и учитываем все их пожелания.
+                        <span class="title ">Мои гарантии</span>
+                        <p >Я работаю на результат.
+                          Постоянно поддерживаю связь с клиентами и учитываю все их пожелания.
                        </p>
                          <ul>
                               <li class="item-1"> 
@@ -197,12 +259,12 @@
                               </li> 
                               <li class="item-2"> 
                                   <span class="title-block tit">Надежность</span> 
-                                  <p>Наш опыт обеспечит разработку исключительно работающих, проверенных и надежных 
+                                  <p>Мой  обеспечит разработку исключительно работающих, проверенных и надежных 
                                       методов достижения продаж. </p>
                               </li>
                                <li class="item-3">
                                     <span class="title-block tit">Безопасность</span>
-                                    <p>Мы  гарантирует конфиденциальность
+                                    <p>Я  гарантирую конфиденциальность
                                          и неразглашение информации третьим лицам.</p>
                                </li>
                            </ul>

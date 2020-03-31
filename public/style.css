@@ -269,19 +269,21 @@ padding-top:20px;
     background-color: #272937;
 }
 .watch{
-    transform: translateY(10px);
-    background: #e74c3c !important;
-    outline: none;
-    box-sizing: border-box;
+    background-color: #f8de15;
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+    color: #000;
+    background: #f8de15;
+    letter-spacing: 1px;
+    border: 1px solid #f8de15;
+    text-transform: uppercase;
+    padding: 19px 35px 17px;
+    line-height: 14px;
+    display: inline-block;
     cursor: pointer;
-    letter-spacing: .5px;
-    font-size: 18px !important;
-    margin: 0;
-    padding:3% 2% ;
-    font-family: 'Nunito', sans-serif;
-    text-align: center;
-    color:white;
-    width:195px;
+    outline: 0;
+    margin-top:20px;
 }
 .space-around{
     justify-content: space-around !important;

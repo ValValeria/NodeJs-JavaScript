@@ -153,6 +153,14 @@ app.get('/admin/:file',function(req,res,next){
               options.title="MyPortfolio - Создание сайтов  ";
          }else if(page=="portfolio"){
               options.title="Примеры работ";
+              ////
+              try {
+                     const data = JSON.parse(fs.readFileSync('pages.json', 'utf8'))["site_pod_kluch"]["portfolio"]
+                     options.portfolio=data
+
+              } catch (err) {
+                     options.portfolio=null
+              }
          }else if(page=="uslugi"){
               options.title="Услуги";
          }

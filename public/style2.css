@@ -663,7 +663,7 @@ width:100%;
 .yyd{
     padding: 40px 0;
     background-color: #272937;
-    background-image: url(../public/hero.svg) !important;
+    /*background-image: url(../public/hero.svg) !important;*/
     background-repeat: no-repeat;
     background-size: 100% auto ;
     background-position: initial;
@@ -673,6 +673,16 @@ width:100%;
     /* box-shadow: 0 0 black; */
     justify-content: center;
     background-position: center -15%;
+}
+.sveti{
+    padding-top:60px;
+}
+.lks{
+    padding-bottom:0;
+}
+.yyd1{  
+    padding: 20px 0;
+
 }
 .sveti .cov{
     min-height:100%;
@@ -1034,7 +1044,7 @@ font-size:40px;
     font-family:inherit
     }
     .mod{
-    grid-gap: 20px !important;
+    grid-gap: 40px !important;
     }
     .dp{
         background-image:none !important;
@@ -1222,6 +1232,24 @@ font-size:40px;
     .skati .imagel div{
         height:100%;
         width:100%;
+    }
+    #asa{
+        font-style: normal;
+        color: #000;
+        text-transform: uppercase;
+        position: relative;
+        z-index: 1;
+        padding: 1rem 0;
+        padding-top: 3rem;
+        font-size: 2rem;
+        text-align: center;
+        color: #404040;
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 550;
+        padding-bottom:40px;
+    }
+    ol .points_block {
+        max-width: 86% !important;
     }
 @media(max-width:1221px){/*1200*/
     .cov>img{
@@ -1807,6 +1835,11 @@ font-size:40px;
         padding-bottom: 40px !important;
         
     }
+    #asa{
+        font-size:1.6rem;
+        padding-bottom:20px;
+        padding-top:1rem;
+    }
     
 }
 @media(max-width:450px){
@@ -2023,6 +2056,7 @@ ol{
     
     .clients>h2 {
         width:90%;
+      
     }
     .points_block p {
         padding: 10px  20px;
@@ -2125,7 +2159,16 @@ ol{
         width:90%
     }
     .gush{
-        grid-gap: 20px !important;
+        grid-gap: 40px !important;
+    }
+    .gg{
+        margin-top:0
+    }
+    .imagel {
+        padding-top: 10px !important; 
+    }
+    .yyd1 .shadow>.info>h4 {
+        font-family: inherit !important;
     }
 }
 
@@ -2239,6 +2282,11 @@ ol{
         /* font-size: 1.7rem; */
         font-family: 'Ubuntu Condensed' !important;
         max-width: 90%;
+    }
+    #asa {
+        font-size: 1.3rem;
+        padding-bottom: 3rem;
+        padding-top: 1rem;
     }
 }
 .nia{
