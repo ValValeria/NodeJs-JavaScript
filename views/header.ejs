@@ -25,14 +25,24 @@
           <%}%>
           <script>
              window.onload=()=>(location.href.includes('/services') || location.href.includes('/portfolio')) ? fun() : null
-
-             function fun(){
-                 
-                 [].forEach.call(document.querySelectorAll('.fines'),elem=>{
-                     elem.onclick=(e)=>{
-                          new Promise((res,req)=>{
-                             if(e.target.classList.contains('fines')) res(e.target.dataset.url)
-                             else req(null)
+             
+             let somefun=(e)=>{
+              new Promise((res,req)=>{
+                             console.log(1)
+                               
+                             if ( e.target.classList.contains('showme')){
+                                  
+                              let url=e.target.parentElement.parentElement.previousElementSibling.previousElementSibling.dataset.url
+                               
+                              res(url)
+                             }else if(e.target.classList.contains('fines')) {
+                               res(e.target.dataset.url)
+                               console.log('0')
+                             }
+                             else {
+                               console.log('2')
+                               req(null)
+                            }
                           })
                           .then(url=>{
                               
@@ -48,8 +58,18 @@
           
                           })
                           .catch(()=>console.log())
-                     }
+             }
+
+             function fun(){
+                 function inner(css){
+                  [].forEach.call(document.querySelectorAll(css),elem=>{
+                    elem.onclick=(e)=>{
+                        somefun(e)
+                    }
                  })
+                 }
+                 inner('.fines')
+                 inner('.showme')                
              }
           </script>
           <!-- Yandex.Metrika counter -->

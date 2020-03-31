@@ -71,7 +71,7 @@
                 <div class="about_us gu">
                      <div>
                          <h1 class="about_h1 ogo txt_center dic" style="max-width:90%;max-width: 90%;
-                         margin: 10px auto !important;">   Любой может сделать из простого сложное.
+                         margin: 10px auto !important;font-family: 'Nunito' !important;">   Любой может сделать из простого сложное.
                             Я умею превращать сложное в простое.</h1>
                      </div>
                      
@@ -213,23 +213,26 @@
                        
                     <% portfolio.forEach(elem=>{ %>
                       <li class="points_block pos_rel pos1  "  style=" background:  url(https://assets.htmlacademy.ru/img/intensive/bg-triada.v2.svg)  no-repeat right center;
-                      background-size: 200%;background: white !important;     box-shadow: 0 3px 5px 0 rgba(87,87,87,.29);
+                      background-size: 200%;background-color: white !important;     box-shadow: 0 3px 5px 0 rgba(87,87,87,.29);
                       ;    width: 100%; min-width: initial !important; max-width: initial !important;  ">
-                         <div class="knowyou fines" data-url="<%=elem.photo[1]%>" style="background: url(<%=elem.photo[0]%>) no-repeat center center;background-size: cover;"></div>
+                          <div class="knowyou fines" data-url="<%=elem.photo[1]%>" style="background: url(<%=elem.photo[0]%>) no-repeat center center;background-size: cover;"></div>
                            <button class="fon flex1" style="visibility: hidden;">
                            </button>
-                            <p class='ch ' style="font-size:15px;    color: #232323 !important; ">
+                            <div class='ch ' style="font-size:15px;    color: #232323 !important; ">
                                 <span class='da osa course__subtitle aha' style="text-align:center;background:none;width:auto;height:auto;font-size:26px;line-height: 30px;font-family:'Nunito';    color: #232323 !important;">
                                     <%=elem.description.title%>
                                 </span>
                                 <%=elem.description.content%>
-                            </p>
+                                <div class="oslik">
+                                    <button href="#"class="orange showme" style="margin-top:28px;font-size:12px;">Посмотреть</button>
+                                </div>
+                            </div>
                        </li>
                        <%})%>
 
                     </ol>
                  
-                  <div class="buttons width_all jus_center " style="position: relative; z-index: 30;" >
+                  <div class="buttons width_all jus_center " style="position: relative; z-index: 30;margin-left:0" >
                        <a href="#orderme" class="newbutton orange" style="font-weight: 500; border-radius: 0;width:220px;margin: 20px 0">Заказать </a>
                   </div>
                </div>

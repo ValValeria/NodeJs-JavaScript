@@ -2029,9 +2029,9 @@ ol{
     flex-wrap:nowrap !important;
 }
 /**/
-@media(max-width:445px){
-    .mod{
-        grid-auto-rows: 360px;
+@media(max-width:500px){/*445*/
+    .wrap-container{
+        padding-bottom: 0;
     }
     ol .points_block {
         grid-template-rows: repeat(2,50%);
@@ -2169,6 +2169,21 @@ ol{
     }
     .yyd1 .shadow>.info>h4 {
         font-family: inherit !important;
+    }
+    .mod{
+        grid-auto-rows: 440px !important;
+    }
+    .lulu .pos_rel{
+        width:90%;
+
+    }
+    ol .points_block{
+        height:100%;
+        min-height:100% !important;
+        padding-bottom:10px;
+    }
+    .sveti{
+        padding-top:15px;
     }
 }
 
