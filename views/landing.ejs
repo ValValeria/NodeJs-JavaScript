@@ -53,9 +53,9 @@
     
 </div>     
 
-<section class="course block block--default">
+<section class="course block block--default" style="padding-bottom:70px;width:95% !important">
     <div class="course__wrapper container5">
-        <h2 class="course__title h h--2">Как для Вас я разработаю "<%=name%>"</h2>
+        <h2 class="course__title h h--2">Как для Вас я разработываю "<%=name%>"</h2>
 
         <!--   если количество карточек кратно 3 добавляем класс  course__list--three  -->
         <ul class="course__list course__list--three">
@@ -96,16 +96,28 @@
         </ul>
     </div>
 </section>        
-<section class="section gray1 dp" style="padding-bottom: 20px !important;">
-  <div class="container hfs">
-       <div class="d_f ti ak">
-           <div class="cov dk">
+<section class="section gray1 dp aas" style="padding-bottom: 0 !important;    background: #efefef; position: relative;">
+  <div class="container hfs" style="flex-direction: column;align-items: center;padding-bottom:30px">
+       <div class="showreel-box yh yh1">
+        <div class="video-opener"> 
+               <div class="video-opener-box">
+              </div>
+           <div class="showreel-box__info">
+               <div class="showreel-box__title" style="    color: #333;">Используемые технологии</div>
+           </div> 
+         </div>
+       </div>
+       <div class="js" style="display: none;">
+           <img src="https://itproger.com/img/tests/javascript.svg" style="height:100%">
+       </div>
+
+       <div class="d_f ti ak ak1" style="align-items: initial;">
+           <div class="cov dk dk12"style="flex:1 1 65%;">
                <img src="<%= slider[0] %>">
            </div>
            <!--Start-->
-           <div class="iit ls">
+           <div class="iit ls" style="width:auto;padding-top:10px !important;flex:1 1 35%;">
                  <div class="text-holder">
-                      <span class="title tts tts1">Используемые технологии</span>
                     
                        <ul>
                             <li class="item-1"> 
@@ -129,11 +141,17 @@
            <!--End-->
        </div>
   </div>
+  <div id="clouds" style="height:100px; transform: rotate(180deg);">
+    <svg xmlns="http://www.w3.org/2000/svg" height="100" viewBox="0 0 100 100" preserveAspectRatio="none">
+    <path d="M-5 100q5-80 10 0zm5 0q5-100 10 0m-5 0q5-70 10 0m-5 0q5-90 10 0m-5 0q5-70 10 0m-5 0q5-110 10 0m-5 0q5-90 10 0m-5 0q5-70 10 0m-5 0q5-90 10 0m-5 0q5-50 10 0m-5 0q5-80 10 0m-5 0q5-60 10 0m-5 0q5-40 10 0m-5 0q5-50 10 0m-5 0q5-80 10 0m-5 0q5-55 10 0m-5 0q5-70 10 0m-5 0q5-80 10 0m-5 0q5-50 10 0m-5 0q5-75 10 0m-5 0q5-85 10 0z" fill="#EFEFEF"></path>
+    </svg>
+  </div>
+
 </section>
  
 
 
-<section class="section blue fixic lulu" style="padding-top:20px !important;background: white !important;" >
+<section class="section blue fixic lulu lulu1" style="padding-top:0 !important;margin-top:0;background: white !important;" >
     <div class="container pos_rel">
          
          <div class="wrap-container pos_rel" style="width:100%">
@@ -180,7 +198,7 @@
     </div>
 </section>
 
-<section class="course block block--default" style="padding-top:20px;">
+<section class="course block block--default" style="padding-top:20px;min-height:80vh;">
     <div class="course__wrapper container5 cons" style="
     display: flex;
     flex-direction: column;
