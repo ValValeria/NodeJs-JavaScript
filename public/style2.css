@@ -1100,9 +1100,6 @@ font-size:40px;
         justify-content:flex-end ;
         overflow: hidden;
     }
-    .dk12{
-        display:none;
-    }
     .cov>img{
         max-width:500px;
         width:100%;
