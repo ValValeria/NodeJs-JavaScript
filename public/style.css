@@ -570,7 +570,6 @@ body>section,body>div:not(.write_mes){
     margin-bottom: 20px;
     font-size: 48px;
     line-height: 66px;
-    color: #404040 !important;
 }
 .feedback-title__highlight {
     opacity: 0.6;
@@ -1109,7 +1108,6 @@ footer>.copyright{
 }
 .contact_form>p{
     padding:10px 0;
-    color: #404040 !important;
 }
 .cards>a{
     display: flex;
@@ -1370,8 +1368,7 @@ footer>.copyright{
    background: rgba(89, 98, 117,1.0);
    background: #ecf0f3;
    background-color: rgb(245, 245, 245) !important;
-   box-shadow: 13px 13px 20px #cbced1,
-   -13px -13px 20px #ffffff;
+   
     padding-bottom: 5px;
     text-align: center;
     margin: 0 auto;
