@@ -1353,6 +1353,23 @@ font-size:40px;
     .dic{
         transform: translateY(-50px);
     }
+    .back-map>#form{
+        box-shadow:
+  /*bottom shadow*/
+  0px 20px 20px rgba(0,0,0,0.2),
+  0px 5px 10px rgba(0,0,0,0.2),
+  /*long bottom shadow*/
+  0px 70px 50px rgba(0,0,0,0.4),
+  /*right shadow*/
+  30px 50px 50px rgba(0,0,0,0.2),
+  /*left shadow*/
+  -30px 50px 50px rgba(0,0,0,0.2),
+  /*right inset*/
+  inset 20px 0px 60px rgba(0,0,0,0.1),
+  /*left inset*/
+  inset -20px 0px 60px rgba(0,0,0,0.1) !important;
+
+    }
    
 @media(max-width:1221px){/*1200*/
     .cov>img{
@@ -2024,6 +2041,12 @@ font-size:40px;
         font-size:1.6rem;
         padding-bottom:20px;
         padding-top:1rem;
+    }
+    .section_two .title-block{
+        padding-top: 5.6rem;
+    }
+    .section_two .notes-text{
+        margin: 40px auto;
     }
     
 }
