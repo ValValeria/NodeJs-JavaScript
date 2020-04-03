@@ -1353,6 +1353,7 @@ font-size:40px;
     .dic{
         transform: translateY(-50px);
     }
+   
 @media(max-width:1221px){/*1200*/
     .cov>img{
         transform: translateX(-43%);
@@ -1476,6 +1477,13 @@ font-size:40px;
         font-size:26px;
         word-spacing: 2px;
     }
+    .container5 h2{
+        text-align:left;
+      }
+      .yh1 .video-opener{
+          justify-content: flex-start;
+      }
+
 }
 @media (max-width:800px){
      .tts1{
@@ -1722,6 +1730,9 @@ font-size:40px;
   .dk12{
      display:none
   }
+  .ls{
+      justify-content: flex-start;
+  }
 }
 @media(max-width:617px){
     .aj{
@@ -1781,8 +1792,12 @@ font-size:40px;
         margin-right:0;
         margin-bottom: 5px;
     }
-
-   
+    .yh1{
+       padding-bottom:0;
+    }
+    .yh1 {
+        padding-left: 7%;
+    }
 }
 @media(max-width:555px){
     ol .points_block {
@@ -1966,11 +1981,19 @@ font-size:40px;
         display:none
     }
     .yh1 {
-        padding-left: 50px;
+        padding-left:7%;
         margin-bottom: 0 !important;
     }
     .yh1 .showreel-box__title {
         font-size: 25px;
+        padding-bottom: 10px;
+    }
+    .ls ul li p {
+        color: #404040 !important;
+        font-size: 14px;
+    }
+    .ls ul li span{
+        font-size: 19px;
     }
     .js{
         display:none !important;
@@ -2529,6 +2552,15 @@ ol{
     }
     .results-box .title-block{
         padding-top:20px;
+    }
+    .results-box .title-block {
+        padding-top: 3rem;
+        width: 90%;
+        margin: 0 auto;
+        margin-bottom: 30px;
+    }
+    .back-map form{
+        border-radius: 25px;
     }
 }
 .nia{
