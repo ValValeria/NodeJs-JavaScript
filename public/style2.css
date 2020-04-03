@@ -2048,7 +2048,10 @@ font-size:40px;
     .section_two .notes-text{
         margin: 40px auto;
     }
-    
+    .klasi{
+     margin: 0 auto;
+     font-size: 1.8rem !important;
+    }
 }
 @media(max-width:450px){
 
