@@ -1344,10 +1344,8 @@ font-size:40px;
         padding:35px 35px 35px 35px !important;
         border-radius: 40px;
         font-size:20px !important;
-        background: #ecf0f3;
-        background: rgb(245, 245, 245) !important;
-        box-shadow: 13px 13px 20px #cbced1,
-                    -13px -13px 20px #ffffff;
+        background: white !important;
+       
       
     }
     .dic{
