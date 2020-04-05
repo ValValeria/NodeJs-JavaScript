@@ -2511,9 +2511,12 @@ ol{
     .dksa{
         font-size: 14px;
     }
-
+    .gush {
+        grid-auto-rows: 350px !important;
+        }
+   
 }
-@media(max-width:360px){
+@media(max-width:380px){
     .showreel-box__title {
         font-size: 27px;
     }
@@ -2537,9 +2540,10 @@ ol{
         font-family: 'Ubuntu Condensed' !important;
         max-width: 90%;
     }
+
     #asa {
         font-size: 1.3rem;
-        padding-bottom: 3rem;
+        padding-bottom: 1rem;
         padding-top: 1rem;
     }
     .yh{
@@ -2579,14 +2583,30 @@ ol{
         padding-top:20px;
     }
     .results-box .title-block {
-        padding-top: 3rem;
+        padding-top: 4.5rem;
         width: 90%;
         margin: 0 auto;
-        margin-bottom: 30px;
+        margin-bottom: 10px;
     }
     .back-map form{
         border-radius: 25px;
     }
+    .grig{
+        padding-bottom: 1rem!important;
+    }
+   
+     .klasi{
+      width: 80% !important;
+     padding-bottom: 1.5rem !important;
+     padding-top: 2rem !important;
+     }
+     .tit{
+         padding-top: 0 !important;
+         padding-bottom: 10px !important;
+     }
+     .klasi{
+        font-size: 1.7rem !important;
+     }
 }
 .nia{
     background-color: white !important;
