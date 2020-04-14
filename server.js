@@ -13,14 +13,13 @@ var port= process.env.PORT || 8000;
 
 const bodyParser = require("body-parser");
 
-const urlencodedParser = bodyParser.urlencoded({extended: false});
 const json=bodyParser.json();
 
 const database=require('./functions.js').con;
 
-app.use(cookieParser1());
 
 app.set("view engine", "ejs");
+app.use(cookieParser1());
 
 
 /** Admin area*/
@@ -120,14 +119,18 @@ app.get('/admin/:file',function(req,res,next){
 
  /**/
 
- function get (req,res,page,opt){
+ function get (req,res,page){
 
         if(typeof(parseInt(req.cookies.number))=='number') {
-           database.get_field_spec("com"+req.cookies.number);
+           new Promise((resolve,req1)=>{
+              database.get_field_spec("com"+req.cookies.number,resolve,req1)
+           }) 
+           .then(()=>{
+              attention(res,page)    
+            })
+            .catch(()=>console.log('error'))   
         }        
-        setTimeout(()=>{
-              attention(res,page)
-        },0)     
+           
  }
 
  function attention(res,page){
@@ -170,8 +173,7 @@ app.get('/admin/:file',function(req,res,next){
 app.get('/',(req,res)=>{
        /** */
        /** */
-      
-       
+
        if(req.cookies.__proto__== null){
               req.cookies=new Object;
        }

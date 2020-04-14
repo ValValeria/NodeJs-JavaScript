@@ -675,7 +675,8 @@ body>section,body>div:not(.write_mes){
     align-items: center;
   
     
-    background:#272937  center center no-repeat;
+    background: #272937;
+
     background-image: repeating-linear-gradient(150deg,rgba(255,255,255,.05),rgba(255,255,255,.05) 1px,transparent 0,transparent 41px),repeating-linear-gradient(-150deg,rgba(255,255,255,.05),rgba(255,255,255,.05) 1px,transparent 0,transparent 41px);
     background-size: 82px 47px;
     background-size: cover ;
@@ -849,7 +850,7 @@ a>.flex1{
     border-radius: 10px;
     padding: 5px 10px;
     max-width:70%;
-    color: #222d38!important;
+    color: #222d38;
 
     min-width: 100px;
     min-height:30px;
@@ -1472,11 +1473,7 @@ footer>.copyright{
     padding-top:30px;
     max-height:350px;
 }
-.error{
-    background-color: brown !important;
-    color:white !important;
-    font-size:1.5rem;
-}
+
 @media(max-width:1300px){
    .line_one{
        left:0;
@@ -1921,15 +1918,7 @@ padding-top:5px;
         display: none !important;
     }
     
-    .home-banner{
-        background-image:url(../public/hero.svg);
-        background-position: center center;
-        background-size: 200% 200%;
-        background-attachment: initial;
-        background-position: center bottom;
-        background-size: 130%;
-
-    }
+   
 }
 @media screen and (max-width:700px){
     
