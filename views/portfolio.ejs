@@ -212,42 +212,52 @@
 
 </section>   
 <section class="section blue fixic lulu" style="padding-top:50px ; margin-top:0 !important; background:white !important;" >
-    <div class="container pos_rel">
+    <div class="container pos_rel" style="padding: 0;">
          
          <div class="wrap-container pos_rel" style="width:100%">
               
-              <div class="flex1 clients jsa1" >
+              <div class=" clients jsa1 yyd1 ons" >
                   
-                <div class="showreel-box yh">
-                    <div class="video-opener"> 
-                           
+                <div class="showreel-box">
+                    <div class="video-opener" style="flex-basis: auto;"> 
+                           <div class="video-opener-box">
+                          </div>
                        <div class="showreel-box__info">
-                           <div class="showreel-box__title" style="    color: #333;">Примеры работ</div>
+                           <div class="showreel-box__title" style="padding-bottom: 0;">Примеры работ</div>
                        </div> 
                      </div>
-                   </div>                  
-                  <ol class="points flex1 mod shs" style="flex-wrap:wrap;justify-content: center;">
-                       
-                    <% portfolio.forEach(elem=>{ %>
-                      <li class="points_block pos_rel pos1  "  style=" background:  url(https://assets.htmlacademy.ru/img/intensive/bg-triada.v2.svg)  no-repeat right center;
-                      background-size: 200%;background-color: white !important;     box-shadow: 0 3px 5px 0 rgba(87,87,87,.29);
-                      ;    width: 100%; min-width: initial !important; max-width: initial !important;  ">
-                          <div class="knowyou fines" data-url="<%=elem.photo[1]%>" style="background: url(<%=elem.photo[0]%>) no-repeat center center;background-size: cover;"></div>
-                           <button class="fon flex1" style="visibility: hidden;">
-                           </button>
-                            <div class='ch ' style="font-size:15px;    color: #232323 !important; ">
-                                <span class='da osa course__subtitle aha' style="text-align:center;background:none;width:auto;height:auto;font-size:26px;line-height: 30px;font-family:'Nunito';    color: #232323 !important;">
-                                    <%=elem.description.title%>
-                                </span>
-                                <%=elem.description.content%>
-                                <div class="oslik">
-                                    <button href="#"class="orange showme" style="margin-top:28px;font-size:12px;">Посмотреть</button>
-                                </div>
-                            </div>
-                       </li>
-                       <%})%>
+                   </div>                
+<!----Start-->
+<div id="my_port" style="width:100%">
+      
+ 
+    <div class="service_wrap wrap  bab" style="padding-top:0;">
+        <% portfolio.forEach(elem=>{ %>
 
-                    </ol>
+      <a class="fines service_wrap_item hove"  href="#gsx" data-id="1"  data-url="<%=elem.photo[1]%>" style="background: url(<%=elem.photo[0]%>);    background-position-x: center;">
+          <div class="qoutes ">	
+              <div class="relative all">
+                  <div>&#8411;</div>
+               </div>
+          </div>
+
+          <div class="shadow lightgray">
+                 <div class="info">
+                     <h4> <%=elem.description.title%> </h4>
+                     <div>
+                            <div href="#"class=" orange showme">Посмотреть</div>
+                            
+                     </div>
+              </div>
+          </div>                   
+      </a>        
+      <%})%>
+    </div>   
+
+</div>
+<!--End-->
+
+                 
                  
                   <div class="buttons width_all jus_center " style="position: relative; z-index: 30;margin-left:0" >
                        <a href="#orderme" class="newbutton orange" style="font-weight: 500; border-radius: 0;width:220px;margin: 20px 0">Заказать </a>

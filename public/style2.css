@@ -1447,6 +1447,25 @@ font-size:40px;
         color:white !important;
         font-size:1.5rem;
     }
+    .jsa1 .hove{
+        min-height:430px !important;
+    }
+    .jsa1 .bab{
+        flex-wrap: wrap;
+    }
+    .lulu .pos_rel{
+        width:100%;
+        max-width: 1200px;
+    }
+    .ons .showreel-box{
+        padding:0;
+        padding-bottom: 20px;
+    }
+    .bab a{
+        margin-bottom: 25px;
+        
+    }
+    
 @media(max-width:1221px){/*1200*/
     .cov>img{
         transform: translateX(-43%);

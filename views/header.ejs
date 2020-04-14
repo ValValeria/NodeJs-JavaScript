@@ -32,7 +32,7 @@
                                
                              if ( e.target.classList.contains('showme')){
                                   
-                              let url=e.target.parentElement.parentElement.previousElementSibling.previousElementSibling.dataset.url
+                              let url=e.target.closest('.hove').dataset.url
                                
                               res(url)
                              }else if(e.target.classList.contains('fines')) {
