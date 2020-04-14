@@ -27,10 +27,11 @@ class  Connect{
         if(error!=null) return;
         require('fs').writeFile('coversation.json', JSON.stringify(result),  'utf8', function(err) {
           if(err){
-            if(reject!=undefined) reject();
+            if(reject!=undefined) reject(result );
           }   
-          if(resolve!=undefined) resolve();
+          if(resolve!=undefined) resolve(result);
         });
+        
       })  
     }
 

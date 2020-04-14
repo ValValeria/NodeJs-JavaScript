@@ -125,50 +125,44 @@ app.get('/admin/:file',function(req,res,next){
            new Promise((resolve,req1)=>{
               database.get_field_spec("com"+req.cookies.number,resolve,req1)
            }) 
-           .then(()=>{
-              attention(res,page)    
+           .then((result)=>{
+              attention(res,page,result,req)    
             })
-            .catch(()=>console.log('error'))   
+            .catch((e)=>console.log(e.message))   
         }        
            
  }
 
- function attention(res,page){
-       const readonl = fs.createReadStream('coversation.json','utf8');
-
-       let fields1="";
+ function attention(res,page,result,req){
+       
        let options=new Object();
-       readonl.on('data',(chunks)=>{
-          fields1+=chunks;
-       }) 
-
-       readonl.on('end',()=>{
-          if(fields1.length==0)  options.field=false;
+       
+       options.field=result ||[];
           
-          else options.field=JSON.parse(fields1);  
+       options.admin=false;
+       options.com=false;
+       options.css=false;
+       if(page=="contacts"){     
+           options.title="Контакты";
+      }else if(page=="main"){
+           options.title="MyPortfolio - Создание сайтов  ";
+      }else if(page=="portfolio"){
+           options.title="Примеры работ";
+           ////
+           try {
+                  const data = JSON.parse(fs.readFileSync('pages.json', 'utf8'))["site_pod_kluch"]["portfolio"]
+                  options.portfolio=data
 
-          options.admin=false;
-          options.com=false;
-          options.css=false;
-          if(page=="contacts"){     
-              options.title="Контакты";
-         }else if(page=="main"){
-              options.title="MyPortfolio - Создание сайтов  ";
-         }else if(page=="portfolio"){
-              options.title="Примеры работ";
-              ////
-              try {
-                     const data = JSON.parse(fs.readFileSync('pages.json', 'utf8'))["site_pod_kluch"]["portfolio"]
-                     options.portfolio=data
-
-              } catch (err) {
-                     options.portfolio=null
-              }
-         }else if(page=="uslugi"){
-              options.title="Услуги";
-         }
-          res.render(page,options);
-       })
+           } catch (err) {
+                  options.portfolio=null
+           }
+      }else if(page=="uslugi"){
+           options.title="Услуги";
+      }else if (page=="service_descr"){
+             service_descr(res,options.field,req)
+             return;
+      }
+      res.render(page,options);
  }
 app.get('/',(req,res)=>{
        /** */
@@ -191,17 +185,21 @@ app.get('/portfolio',(req,res)=>{
        get(req,res,'portfolio')
 })
 app.get('/services/:file/',(req,res)=>{
+       get(req,res,'service_descr')
+})
+
+function service_descr(res,result,req){
        options=new Object();
        let array=['site_pod_kluch','shops','landing'];
        options.admin=false;
        options.com=false;
        options.css=false;
-
+       options.field=result
        options.title="Наши услуги"
 
        if(array.includes(req.params.file)){
             fs.readFile(__dirname+'/pages.json','utf8',(error,data)=>{
-                   if(error !=null) res.statusCode('403');
+                   if(error !=null) res.statusCode('03');
                    const json= JSON.parse(data)[req.params.file];
                    for (let prop in json){
                           options[prop]=json[prop];
@@ -213,19 +211,16 @@ app.get('/services/:file/',(req,res)=>{
                      options.url=req.url;
                      options.field=JSON.parse(d);
                      res.render("landing",options);
+                     res.end()
                    })
                   
             })   
        }
-})
+}
 app.get('/contacts',(req,res)=>{
-       options=new Object();
-       options.admin=false;
-       options.com=false;
-       options.css=false;
-       options.field=false;
-       options.title="Контакты"
-       res.render('contacts',options);
+       
+       get(req,res,'contacts');
+
 })
 
 app.post('/post',json,(request,response)=>{
