@@ -525,7 +525,8 @@ padding: 3rem 0;
     /*color: #404040;*/
     font-family: 'Montserrat', sans-serif;
     text-align:center;
-    padding: 20px 0
+    padding: 20px 0;
+    padding-bottom:10px;
 }
 
 .course__list {
