@@ -264,7 +264,7 @@ color:white
     min-width: 30%;
     min-height: 390px !important;
     flex:1 1 33%;
-
+     background-color: white;
 }
 .write_mes{
     border-radius: 20px;
@@ -1095,7 +1095,7 @@ font-size:40px;
     }
     
     .yh .showreel-box__title {
-        font-size: 35px;
+        font-size: 40px;
     }
     .dk{
         max-height:600px;
@@ -1465,6 +1465,32 @@ font-size:40px;
         margin-bottom: 25px;
         
     }
+    .yh2 .showreel-box__title {
+         margin-bottom: 30px;
+    }
+    .h--2{
+        font-size: 40px;
+    text-align: center;
+    font-weight: 400;
+    white-space: nowrap;
+    word-break: 2px;
+    letter-spacing: 2px;
+    width: 100%;
+    line-height:60px;
+    }
+    .yh2 .h--2{
+        margin:0 ;
+        margin-bottom:10px;
+    }
+    .hds{
+        padding-bottom:10px !important;
+    }
+    .jsa2 .hove {
+        min-height: 350px !important;
+    }
+    .shadow>.info>h4 {
+        font-weight:500;
+    }
     
 @media(max-width:1221px){/*1200*/
     .cov>img{
@@ -1549,6 +1575,9 @@ font-size:40px;
         margin-right:0 !important;
     }
 }
+@media(max-width:946px){
+   
+}
 @media (max-width:880px){
     
    
@@ -1594,15 +1623,18 @@ font-size:40px;
         font-size:26px;
         word-spacing: 2px;
     }
-    .container5 h2{
-        text-align:left;
+    .container5 h2,.yh2 .h--2{
+        text-align:center;
       }
       .yh1 .video-opener{
           justify-content: flex-start;
       }
+      .yh2 .video-opener {
+        justify-content: center;
+    }
 
 }
-@media (max-width:800px){
+@media (max-width:820px){
      .tts1{
          font-size:25px !important;
      }
@@ -1641,6 +1673,10 @@ font-size:40px;
     }
     .yh1 .showreel-box__title {
         font-size: 30px;
+    }
+    .yh2 .h--2{
+        font-size: 33px;
+        padding-bottom:40px;
     }
 }
 @media(max-width:700px){
@@ -1775,9 +1811,20 @@ font-size:40px;
         max-height:initial;
         display:none
      }
+     .yh2 .h--2 {
+        font-size: 30px;
+        padding-bottom: 40px;
+    }
+    .hov2{
+        min-height:350px !important;
+    }
+   
+    .lulu1{
+        padding-top:10px !important;
+    }
 }
 
-@media(max-width:659px){
+@media(max-width:670px){
     .dp{
         padding-top:10px !important;
     }
@@ -1850,6 +1897,21 @@ font-size:40px;
   .ls{
       justify-content: flex-start;
   }
+  .yh2 .h--2 {
+    font-size: 33px;
+    /* width: 90%; */
+    white-space: initial;
+    word-wrap: break-word;
+   } 
+   .soa{
+    font-size: 1.5rem !important;
+   }
+   .hds{
+    margin: 0 !important;
+    padding: 0 !important;
+    padding-top: 20px !important;
+   }
+   
 }
 @media(max-width:617px){
     .aj{
@@ -1914,6 +1976,13 @@ font-size:40px;
     }
     .yh1 {
         padding-left: 7%;
+    }
+    .course__subtitle {
+        font-weight: 500;
+        font-family: "Nunito","Arial",sans-serif;
+    }
+    .shadow>.info>h4 {
+        padding-bottom:20px;
     }
 }
 @media(max-width:555px){
@@ -2022,6 +2091,39 @@ font-size:40px;
     }
     .back-map #form label input, .back-map #form label textarea {
         border-radius: 0 !important;
+    }
+    .yh .showreel-box__title {
+     font-size: 33px; 
+    }
+    .yh2 .h--2 {
+        font-size: 28px;
+    }
+    .qoutes>small, .qoutes>div {
+        transform: translateY(-40.5%);
+    }
+    .lulu1 .showreel-box {
+        margin-bottom: 0 !important;
+    }
+    .inner-left p {
+        font-size: 14px;
+        line-height: 26px;
+    }
+    .text-holder p {
+        font-size: 14px;
+    }
+    .back-map #form label input, .back-map #form label textarea {
+        box-shadow: unset !important;
+        border-radius: 0 !important;
+        border-bottom: 1px solid white !important;
+    }
+    .back-map #form label {
+        width: 98% !important;
+    }
+    .back-map #form label ::placeholder,.back-map #form label textarea::placeholder{
+        color:white !important;
+    }
+    .back-map>#form {
+        background: rgba(89, 98, 117,1.0) !important;
     }
 } 
 @media(max-width:490px){
@@ -2151,6 +2253,15 @@ font-size:40px;
     .klasi{
      margin: 0 auto;
      font-size: 1.8rem !important;
+    }
+    .yh2 .h--2 {
+        font-size: 28px;
+    }
+    .lulu1 .showreel-box {
+        margin: 0 !important;
+    }
+    .yh2 .h--2 {
+        font-size: 28px !important;
     }
 }
 @media(max-width:450px){
@@ -2497,12 +2608,18 @@ ol{
     .back-map>#form {
         max-width: 90% !important;
     }
-    .back-map #form label input, .back-map #form label textarea {
-        border-radius: 25px !important; 
-    }
+    
     .clients>h2 {
         width: 90%;
         margin-bottom: 20px;
+    }
+    .course__list {
+       
+        margin: 0 auto;
+        width: 90%;
+    }
+    .showme{
+        padding: 15px 20px;
     }
     .imagel{
         padding-top: 40px !important;
@@ -2525,6 +2642,9 @@ ol{
     .dic{
         padding-left: 20px !important;
     padding-right: 20px !important;
+    }
+    .yh2 .showreel-box__title {
+        padding: 0 !important;
     }
 }
 
@@ -2615,9 +2735,15 @@ ol{
     .gush {
         grid-auto-rows: 350px !important;
         }
-   
+    .yh2 .h--2 {
+            font-size: 25px !important;
+    }
+    .course__subtitle {
+        font-size: 20px;
+    }
 }
 @media(max-width:380px){
+
     .showreel-box__title {
         font-size: 27px;
     }
@@ -2708,6 +2834,7 @@ ol{
      .klasi{
         font-size: 1.7rem !important;
      }
+   
 }
 .nia{
     background-color: white !important;
