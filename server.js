@@ -195,7 +195,7 @@ function service_descr(res,result,req){
        options.com=false;
        options.css=false;
        options.field=result
-       options.title="Наши услуги"
+       options.title=" Мои услуги"
 
        if(array.includes(req.params.file)){
             fs.readFile(__dirname+'/pages.json','utf8',(error,data)=>{
