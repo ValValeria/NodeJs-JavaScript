@@ -1505,6 +1505,11 @@ font-size:40px;
         box-shadow: 0px 4px 90px white !important;
         box-shadow: none!important;
     }
+    .jsa1 .hove {
+        min-height: 430px !important;
+        position: relative;
+        z-index: 10;
+    }
     
     
 @media(max-width:1221px){/*1200*/
