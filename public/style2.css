@@ -1367,7 +1367,7 @@ font-size:40px;
   inset 20px 0px 60px rgba(0,0,0,0.1),
   /*left inset*/
   inset -20px 0px 60px rgba(0,0,0,0.1) !important;
-
+  background: rgba(89, 98, 117,1.0) !important;
     }
     .yyd1{
         background-color: white;
@@ -1518,6 +1518,49 @@ font-size:40px;
         margin: 0;
         margin-bottom: 10px;
         margin-bottom: 25px;
+    }
+    .orange{
+        border-radius: 0 ;
+    }
+    .see{
+        margin-top:0 !important;
+    }
+    .kick_me{
+        padding-top:80px;
+    }
+    .wrap-container{
+        padding-top: 40px !important;
+    }
+    .sveti .iit .title, .sveti .iit p, .sveti .iit ul, .sveti .iit ul li .tit {
+        color: #404040;
+
+    }
+    .hove .shadow>.info>h4 {
+        color: #3d3a3a;
+        margin-bottom: 0px;
+    }
+    .lulu .info{
+        width:100%;
+    }
+    .lulu .info h4{
+        padding-bottom:20px;
+    }
+    .back-map #form label input, .back-map #form label textarea {
+        box-shadow: none;
+        border-bottom:1px solid white;
+        border-radius: 0;
+        color:white !important;
+    }
+    .back-map #form label input ::placeholder, .back-map #form label textarea::placeholder {
+       color:white !important;
+    }
+    .yyd1{
+        padding:40px 0;
+    }
+    .sveti .iit .title,.sveti .title,.sveti .iit ul li .tit  {
+        font-family: 'Ubuntu Condensed' !important;
+        font-family: 'Ubuntu Condensed' !important;
+
     }
 @media(max-width:1221px){/*1200*/
     .cov>img{

@@ -14,7 +14,7 @@
          <script src="/public/submit.js" type="module"></script>
          <link rel="stylesheet" href='/public/style.css'>
          <link rel="stylesheet" href='/public/style2.css'>
-         
+        
          <% if(admin ){%>
           <script src='/admin/admin.js'  type="module"></script>
          <%}else if(!com){%>
@@ -23,55 +23,10 @@
          <% if(css){%>
           <link  href="/public/ad.css" type="text/css">
           <%}%>
-          <script>
-             window.onload=()=>(location.href.includes('/services') || location.href.includes('/portfolio')) ? fun() : null
-             
-             let somefun=(e)=>{
-              new Promise((res,req)=>{
-                             console.log(1)
-                               
-                             if ( e.target.classList.contains('showme')){
-                                  
-                              let url=e.target.closest('.hove').dataset.url
-                               
-                              res(url)
-                             }else if(e.target.classList.contains('fines')) {
-                               res(e.target.dataset.url)
-                               console.log('0')
-                             }
-                             else {
-                               console.log('2')
-                               req(null)
-                            }
-                          })
-                          .then(url=>{
-                              
-                              let img=document.querySelector('#s')
-                              img.src=url
-                              let fix= document.querySelector('.fixs')
-                              img.onload=()=>{
-                               fix.style.display='block'
-                               fix.children[1].onclick=()=>{
-                                  fix.style.display='none'
-                               }
-                              }
-          
-                          })
-                          .catch(()=>console.log())
-             }
-
-             function fun(){
-                 function inner(css){
-                  [].forEach.call(document.querySelectorAll(css),elem=>{
-                    elem.onclick=(e)=>{
-                        somefun(e)
-                    }
-                 })
-                 }
-                 inner('.fines')
-                 inner('.showme')                
-             }
-          </script>
+          <%if(portfolio){%>
+          <script  src="/public/services.js"></script>
+          <%}%>
+         
           <!-- Yandex.Metrika counter -->
 <script type="text/javascript" >
   (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};

@@ -1418,8 +1418,9 @@ footer>.copyright{
     right: 25px;
 }
 .back-map #form label ::placeholder,.back-map #form label textarea::placeholder{
-    color:white;
     color: #404040 !important;  
+
+    color:white !important;
 }
 .back-map #form input{
     height: 50px;

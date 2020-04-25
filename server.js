@@ -148,6 +148,7 @@ app.get('/admin/:file',function(req,res,next){
            options.title="MyPortfolio - Создание сайтов  ";
       }else if(page=="portfolio"){
            options.title="Примеры работ";
+           options.portfolio=true
            ////
            try {
                   const data = JSON.parse(fs.readFileSync('pages.json', 'utf8'))["site_pod_kluch"]["portfolio"]
@@ -196,7 +197,7 @@ function service_descr(res,result,req){
        options.css=false;
        options.field=result
        options.title=" Мои услуги"
-
+       options.portfolio=true
        if(array.includes(req.params.file)){
             fs.readFile(__dirname+'/pages.json','utf8',(error,data)=>{
                    if(error !=null) res.statusCode('03');
