@@ -23,9 +23,18 @@
          <% if(css){%>
           <link  href="/public/ad.css" type="text/css">
           <%}%>
-          <%if(portfolio){%>
-          <script  src="/public/services.js"></script>
-          <%}%>
+          <script>
+            if(location.pathname.includes('/portfolio')|| location.pathname.includes('/services')){
+              (()=>{
+              
+               let script = document.createElement('script');
+               script.src = "/public/services.js";
+               script.defer=true
+               document.head.append(script);
+              })()
+            }
+          </script>
+          
          
           <!-- Yandex.Metrika counter -->
 <script type="text/javascript" >
