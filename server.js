@@ -20,7 +20,7 @@ const database=require('./functions.js').con;
 
 app.set("view engine", "ejs");
 app.use(cookieParser1());
-
+app.use(json);
 
 /** Admin area*/
 
@@ -120,16 +120,17 @@ app.get('/admin/:file',function(req,res,next){
  /**/
 
  function get (req,res,page){
-
-        if(typeof(parseInt(req.cookies.number))=='number') {
-           new Promise((resolve,req1)=>{
-              database.get_field_spec("com"+req.cookies.number,resolve,req1)
-           }) 
-           .then((result)=>{
+        Promise.resolve()
+        .then(()=>{
+              if(typeof(parseInt(req.cookies.number))=='number') {
+                     return database.get_field_spec("com"+req.cookies.number)
+              }  
+              return Promise.resolve() 
+        })
+        .then((result=null)=>{
               attention(res,page,result,req)    
-            })
-            .catch((e)=>console.log(e.message))   
-        }        
+        })
+        .catch((e)=>console.log(e+"||"))     
            
  }
 
@@ -166,9 +167,6 @@ app.get('/admin/:file',function(req,res,next){
       res.render(page,options);
  }
 app.get('/',(req,res)=>{
-       /** */
-       /** */
-
        if(req.cookies.__proto__== null){
               req.cookies=new Object;
        }
@@ -225,7 +223,8 @@ app.get('/contacts',(req,res)=>{
 })
 
 app.post('/post',json,(request,response)=>{
-       database.insert_all('admin',request.body.email,request.body.message,request.ip,"com"+request.cookies.number,1);
+       database.insert_all('admin',request.body.email,request.body.message,request.ip,"com"+request.cookies.number,1)
+       
        response.send();
 })
 
@@ -241,8 +240,10 @@ io.on('connection', function (socket){
 
        socket.on('message_of_user',(message,number)=>{
               if(!typeof(parseInt(number))=='number') return false;
-              database.insert_all('admin',"user"+number,message,clientIp,"com"+number)
-                    
+              database.insert_all('admin',"user"+number,message,clientIp,"com"+number,0)
+              .catch((error)=>{
+                     console.log(error)
+              })      
               find_user(socket,io,number,true,'new_message',message,"com"+number)          
              
        })
@@ -357,7 +358,9 @@ function find_user(socket,io ,number,admin=false,event,...options){
    }
   
 }
-
+process.on('uncaughtException', err => {
+       console.log(err)
+})
 
 function get_year(){
 let CookieDate = new Date;

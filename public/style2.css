@@ -1562,6 +1562,7 @@ font-size:40px;
         font-family: 'Ubuntu Condensed' !important;
 
     }
+
 @media(max-width:1221px){/*1200*/
     .cov>img{
         transform: translateX(-43%);
@@ -2725,7 +2726,10 @@ ol{
     line-height: 60px;
     }
     .about_h1{
-        font-size:2.5rem;
+        font-size:2.25rem;
+    }
+    .gg .imagel img{
+        max-height: 300px !important;
     }
     .ogo {
         font-size: 25px;
@@ -2743,7 +2747,7 @@ ol{
         font-size: 14px !important;
     }
     .title-block:not(.tit) {
-        font-size: 1.8rem !important;
+        font-size: 1.65rem !important;
     }
     .notes-text{
         margin-top: 10px;
@@ -2751,6 +2755,14 @@ ol{
     .about_p {
         font-size: 16px;
     }      
+    .section_two .notes-text {
+        margin: 40px auto 0;
+    }
+    .results-box ul li p {
+        font-size: 13px;
+        color: rgb(105, 102, 102);
+    }
+   
     .nike>.links_b{
         max-width:16rem;
     }
@@ -2810,6 +2822,29 @@ ol{
     }
     .course__subtitle {
         font-size: 20px;
+    }
+    #ggf a {
+        max-width: 240px;
+        min-width: 240px;
+    }
+    #ggf a h4{
+        margin-bottom: 20px ;
+    }
+    .cards a{
+        min-height:300px;
+    }
+    .cards a p {
+        font-size: 13px;
+        font-weight: 400;
+    }
+    .gush .points_block {
+        height: 250px !important;
+    }
+    .gush {
+        grid-auto-rows: 300px !important;
+    }
+    .fixic{
+        margin-top:0;
     }
 }
 @media(max-width:380px){
