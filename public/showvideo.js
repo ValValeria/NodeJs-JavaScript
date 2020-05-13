@@ -12,7 +12,6 @@ const  videoError=new CustomEvent('videoError',{
 
 window.addEventListener('scroll',()=>{
     const move=document.documentElement || document.body ;
-    console.log(processScrollMove.scrollPrevHeight+"||"+move.scrollTop)
     processScrollMove.scroll(null,processScrollMove.scrollPrevHeight,move.scrollTop)
 
     processScrollMove.scrollPrevHeight=move.scrollTop;
@@ -64,7 +63,6 @@ const _mainObj={
     },
     pause(){
         this.videoTag.pause();
-        this.videoTag.setAttribute('hidden',true)
         this.homeBanner.classList.add('box-shadow'); 
     }
 }
@@ -99,7 +97,6 @@ function processScroll(error,oldscrollHeight,newScrollHeight){
     }
     if(newScrollHeight>oldscrollHeight && videoObj.videoTag.clientHeight+100<newScrollHeight){
             videoObj.canShow=false;
-            console.log(videoObj.videoTag.currentTime)
 
             return videoObj.pause();
     }
