@@ -19,8 +19,10 @@
           <script src='/admin/admin.js'  type="module"></script>
          <%}else if(!com){%>
          <script src="/public/main_page.js" type="module"></script>
-         <script src="/public/showvideo.js" defer ></script>
          <%}%>
+         <%if (isMain){%>
+          <script src="/public/showvideo.js" defer ></script>
+          <%}%>
          <% if(css){%>
           <link  href="/public/ad.css" type="text/css">
           <%}%>

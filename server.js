@@ -147,6 +147,7 @@ app.get('/admin/:file',function(req,res,next){
            options.title="Контакты";
       }else if(page=="main"){
            options.title="MyPortfolio - Создание сайтов  ";
+           options.isMain=true;
       }else if(page=="portfolio"){
            options.title="Примеры работ";
            options.portfolio=true
