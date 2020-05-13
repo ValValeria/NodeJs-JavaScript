@@ -20,25 +20,28 @@
          <%}else if(!com){%>
          <script src="/public/main_page.js" type="module"></script>
          <%}%>
-         <%if (isMain){%>
-          <script src="/public/showvideo.js" defer ></script>
-          <%}%>
+         
          <% if(css){%>
           <link  href="/public/ad.css" type="text/css">
           <%}%>
           <script>
-            if(location.pathname.includes('/portfolio')|| location.pathname.includes('/services')){
-              (()=>{
-              
-               let script = document.createElement('script');
-               script.src = "/public/services.js";
+            function script(src){
+              let script = document.createElement('script');
+               script.src = src;
                script.defer=true
                document.head.append(script);
-              })()
             }
+            if(location.pathname.includes('/portfolio')|| location.pathname.includes('/services')){
+              script("/public/services.js")
+            }
+            else if(location.pathname=="/"){
+              console.log('Main page is active');
+              script('public/showvideo.js')
+            }
+
           </script>
           
-         
+      
           <!-- Yandex.Metrika counter -->
 <script type="text/javascript" >
   (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};

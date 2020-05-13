@@ -2959,11 +2959,18 @@ ol{
          height:auto;
      }
      #gr>h2{
-        width:95%;
         margin-top: 0px;
         margin-bottom: 20px;
-        word-break: break-all;
-        font-size: 3.7rem !important;
+        font-size: 3.56rem !important;
+     }
+     .tw-w-full .display_flex{
+         width:95%;
+     }
+     .home-banner{
+         min-height:110vh;
+     }
+     #gr span{
+         display:block;
      }
 }
 .nia{
