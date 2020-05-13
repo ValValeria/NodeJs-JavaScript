@@ -2959,10 +2959,11 @@ ol{
          height:auto;
      }
      #gr>h2{
+        width:95%;
         margin-top: 0px;
         margin-bottom: 20px;
         word-break: break-all;
-        font-size: 2.5rem !important;
+        font-size: 3.7rem !important;
      }
 }
 .nia{
