@@ -35,7 +35,6 @@ const _mainObj={
     changeOpacity(){
          
       if(!this.canShow) {
-          this.homeBanner.classList.add('box-shadow');
           return;
       }
       this.opacity+=this.changeInitOpacity
