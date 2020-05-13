@@ -1564,10 +1564,12 @@ font-size:40px;
     }
     .home-banner{
         position: relative;
+        min-height:110vh;
     }
     .box-shadow{
         background-image: repeating-linear-gradient(150deg,rgba(255,255,255,.05),rgba(255,255,255,.05) 1px,transparent 0,transparent 41px),repeating-linear-gradient(-150deg,rgba(255,255,255,.05),rgba(255,255,255,.05) 1px,transparent 0,transparent 41px);
     }
+
 @media(max-width:1221px){/*1200*/
     .cov>img{
         transform: translateX(-43%);
