@@ -61,10 +61,10 @@ const _mainObj={
         this.pause();
         this.videoTag.hidden=true
         this.videoTag.remove();
+        this.homeBanner.classList.add('box-shadow'); 
     },
     pause(){
         this.videoTag.pause();
-        this.homeBanner.classList.add('box-shadow'); 
     }
 }
 
