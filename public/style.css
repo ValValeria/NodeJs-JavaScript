@@ -677,12 +677,12 @@ body>section,body>div:not(.write_mes){
     
     background: #272937;
 
-    background-image: repeating-linear-gradient(150deg,rgba(255,255,255,.05),rgba(255,255,255,.05) 1px,transparent 0,transparent 41px),repeating-linear-gradient(-150deg,rgba(255,255,255,.05),rgba(255,255,255,.05) 1px,transparent 0,transparent 41px);
     background-size: 82px 47px;
     background-size: cover ;
     background-attachment: fixed;
 
 }
+
 .home-inner{   
     padding-top:70px;
     position: absolute;
@@ -937,7 +937,16 @@ textarea{
 .inner-left>h1{
     margin: 5% auto;
 }
-
+.video{
+    position: absolute;
+    top: 0;
+    width: auto;
+    min-height: 110%;
+    min-width: 100%;
+}
+.home-banner{
+    position: relative;
+}
 .yees{
     background-color: #3498db !important;
     color:white !important;
@@ -949,6 +958,7 @@ textarea{
     margin: auto;
     background-repeat: no-repeat;
     background-position: right bottom;
+    display: flex;
 }
 .relative{
     position: relative;
@@ -1474,7 +1484,9 @@ footer>.copyright{
     padding-top:30px;
     max-height:350px;
 }
-
+.home-banner{
+    position: relative;
+}
 @media(max-width:1300px){
    .line_one{
        left:0;
@@ -1697,6 +1709,9 @@ padding-top:5px;
 .lulu .showreel-box__title{
     text-shadow: none;
 
+}
+.tw-w-full{
+    margin: auto 0 !important;
 }
 @media (max-width:1100px){
     .tw-w-full{

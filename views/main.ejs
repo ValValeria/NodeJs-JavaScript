@@ -1,6 +1,9 @@
 <%-include('header.ejs')%>
 
-<div class="home-banner">
+<div class="home-banner box-shadow">
+     <video  id="video" preload hidden muted>
+       <source src="/public/video.mp4"  type="video/mp4" id="source"/>
+     </video>
      <div class=" height_all relative_my">
             <div class=" tw-w-full display_flex ">
                  <div class='display_flex'>
@@ -8,9 +11,9 @@
                         <div class="greeting " id="gr">
                             <h2>Web-development</h2>    
 
-                            <h1>Веб-разработка,
+                           <!-- <h1>Веб-разработка,
                                 индивидуальные решения,
-                                сайты под ключ</h1>
+                                сайты под ключ</h1>-->
                         </div>
                        <div class='buttons nike sa'>
                            <a href="#orderme" class="links_b  ks" style="    background: #ecc284;
