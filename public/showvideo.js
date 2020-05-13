@@ -59,6 +59,7 @@ const _mainObj={
     },
     error(){
         this.pause();
+        this.videoTag.hidden=true
         this.videoTag.remove();
     },
     pause(){
@@ -98,6 +99,9 @@ function processScroll(error,oldscrollHeight,newScrollHeight){
     if(newScrollHeight>oldscrollHeight && videoObj.videoTag.clientHeight+100<newScrollHeight){
             videoObj.canShow=false;
 
+            return videoObj.pause();
+    }else if (videoObj.videoTag.clientHeight+100<newScrollHeight){
+            videoObj.canShow=false;
             return videoObj.pause();
     }
     videoObj.canShow=true;
