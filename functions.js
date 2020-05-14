@@ -14,7 +14,6 @@ class  Connect{
           if(command.length==5)  command.push(0);
            return new Promise((resolve,reject)=>{
              this.pool.query("INSERT INTO my (receiver,sender,message,ip,area,is_letter) values(?,?,?,?,?,?)",command,(error,result)=>{
-                console.log(command)
                 if(error) reject(error)
                 resolve(result)
              })

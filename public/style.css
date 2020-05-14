@@ -1487,6 +1487,9 @@ footer>.copyright{
 .home-banner{
     position: relative;
 }
+.g h4{
+    font-weight:100;
+}
 @media(max-width:1300px){
    .line_one{
        left:0;

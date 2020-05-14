@@ -603,6 +603,10 @@ justify-content: center;
 padding-top:50px;
 width:100%;
 }
+.graq .d_f{
+    background: #272937 !important;
+
+}
 .gray1{
     background: radial-gradient(ellipse at center,#5f5d5d 0,#232326  100%);
     min-height:90vh;

@@ -5,18 +5,20 @@ function entryPoint(){
 
       },videoObj.ms)
 }
+
+function func(){
+    const move=document.documentElement || document.body ;
+    processScrollMove.scroll(null,processScrollMove.scrollPrevHeight,move.scrollTop)
+
+    processScrollMove.scrollPrevHeight=move.scrollTop;
+}
+
 const  videoError=new CustomEvent('videoError',{
     cancelable:true,
     bubbles:true
 })
 
-window.addEventListener('scroll',()=>{
-    const move=document.documentElement || document.body ;
-    processScrollMove.scroll(null,processScrollMove.scrollPrevHeight,move.scrollTop)
-
-    processScrollMove.scrollPrevHeight=move.scrollTop;
-
-})
+window.addEventListener('scroll',func)
 document.addEventListener('videoError',()=>{
     processScrollMove.scroll=processScrollMove.scroll.bind(processScrollMove,1)
 })
@@ -95,16 +97,21 @@ function processScroll(error,oldscrollHeight,newScrollHeight){
          videoObj.error();
          return false;
     }
-    if(newScrollHeight>oldscrollHeight && videoObj.videoTag.clientHeight+100<newScrollHeight){
+    if(videoObj.opacity!=0){
+        if((newScrollHeight>oldscrollHeight && videoObj.videoTag.clientHeight+100<newScrollHeight)
+        ||videoObj.videoTag.clientHeight+100<newScrollHeight){
             videoObj.canShow=false;
 
             return videoObj.pause();
-    }else if (videoObj.videoTag.clientHeight+100<newScrollHeight){
-            videoObj.canShow=false;
-            return videoObj.pause();
+       }else if(newScrollHeight-videoObj.videoTag.clientHeight<110 && oldscrollHeight>newScrollHeight){
+            videoObj.canShow=true;
+            return videoObj.opacity<videoObj.endOpacity?entryPoint(): videoObj.restart();
+       }
+    }else if((newScrollHeight!=oldscrollHeight && newScrollHeight-videoObj.videoTag.clientHeight<110 )||( newScrollHeight==0 && oldscrollHeight==0)){
+        videoObj.canShow=true;
     }
-    videoObj.canShow=true;
     return entryPoint();
+
 }
 
 
@@ -112,7 +119,7 @@ function processScroll(error,oldscrollHeight,newScrollHeight){
 ((videoObj)=>{
    let video=videoObj.videoTag
    video.addEventListener('canplaythrough',()=>{
-        entryPoint();
+        func();
    })
    video.addEventListener('error',()=>{
       document.dispatchEvent(videoError)
@@ -121,7 +128,8 @@ function processScroll(error,oldscrollHeight,newScrollHeight){
    video.addEventListener('abort',()=>{
       document.dispatchEvent(videoError)
    })
-
+  
+   
 })(videoObj)
 
 
