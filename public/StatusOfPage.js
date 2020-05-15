@@ -15,6 +15,7 @@
             if(this.error!=null) return null;
             
             if(document.readyState=="complete"){
+                alert('yes')
                 this.change(true)
                 this.loadElem.dispatchEvent(this.customEv)
             }
