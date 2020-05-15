@@ -96,7 +96,8 @@
 
         if(error || !videoObj.loadedPage)
         {
-            console.log('errors')
+            console.log(error)
+            console.log(!videoObj.loadedPage)
              videoObj.canShow=false;
              if(error) videoObj.error();
              return false;
