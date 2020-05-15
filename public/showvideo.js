@@ -67,7 +67,6 @@
     }
     
     function func(){
-        console.log('func')
         const move=document.documentElement || document.body ;
         processScrollMove.scroll(null,processScrollMove.scrollPrevHeight,move.scrollTop)
     
@@ -91,7 +90,7 @@
     
     function processScroll(error,oldscrollHeight,newScrollHeight){
         newScrollHeight= typeof(newScrollHeight)=='number'? newScrollHeight:oldscrollHeight
-        console.log(newScrollHeight,oldscrollHeight)
+        console.log(newScrollHeight,oldscrollHeight,videoObj.opacity)
 
         if(error || !videoObj.loadedPage)
         {
@@ -100,17 +99,15 @@
              return false;
         }
         if(videoObj.opacity!=0){
-            if((newScrollHeight>oldscrollHeight && videoObj.videoTag.clientHeight+100<newScrollHeight)
-            ||videoObj.videoTag.clientHeight+100<newScrollHeight){
+        
+            if((newScrollHeight>=oldscrollHeight && videoObj.videoTag.clientHeight+100<newScrollHeight)){
                 videoObj.canShow=false;
     
                 return videoObj.pause();
-           }else if(newScrollHeight-videoObj.videoTag.clientHeight<110 && oldscrollHeight>newScrollHeight){
+           }else if(newScrollHeight-videoObj.videoTag.clientHeight<100 && oldscrollHeight>=newScrollHeight){
                 videoObj.canShow=true;
                 return videoObj.opacity<videoObj.endOpacity?entryPoint(): videoObj.restart();
            }
-        }else if((newScrollHeight-videoObj.videoTag.clientHeight<110 )){
-            videoObj.canShow=true;
         }
         return entryPoint();
     
