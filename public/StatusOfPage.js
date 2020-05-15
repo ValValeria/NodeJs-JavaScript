@@ -26,7 +26,10 @@
     }
     Object.freeze(obj)
 
-    document.addEventListener('readystatechange', obj.loading.bind(obj));
+    document.addEventListener('readystatechange', ()=>{
+        if(window.scroll) window.scroll(0,0)
+        obj.loading();
+    });
     
    
    

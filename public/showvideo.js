@@ -125,10 +125,7 @@
            console.log('canplaythrough')
            func();
        })      
-       video.addEventListener('suspend',()=>{
-           console.log('suspended')
-           func();
-       })
+       
        window.addEventListener('scroll',func);
     
        document.addEventListener('videoError',()=>{
