@@ -11,7 +11,7 @@
         homeBanner:document.querySelector('.home-banner'),
         canShow:true,
         changeOpacity(){
-             
+          console.log('called')
           if(!this.canShow) {
               return;
           }
@@ -111,6 +111,7 @@
                 return videoObj.opacity<videoObj.endOpacity?entryPoint(): videoObj.restart();
            }
         }
+        videoObj.canShow=true;
         return entryPoint();
     
     }
