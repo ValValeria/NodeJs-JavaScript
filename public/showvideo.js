@@ -89,6 +89,9 @@
     
     
     function processScroll(error,oldscrollHeight,newScrollHeight){
+        newScrollHeight= typeof(newScrollHeight)=='number'? newScrollHeight:oldscrollHeight
+        console.log(newScrollHeight,oldscrollHeight)
+
         if(error || !videoObj.loadedPage)
         {
              videoObj.canShow=false;
@@ -105,7 +108,7 @@
                 videoObj.canShow=true;
                 return videoObj.opacity<videoObj.endOpacity?entryPoint(): videoObj.restart();
            }
-        }else if((newScrollHeight!=oldscrollHeight && newScrollHeight-videoObj.videoTag.clientHeight<110 )||( newScrollHeight==0 && oldscrollHeight==0)){
+        }else if((newScrollHeight!=oldscrollHeight && newScrollHeight-videoObj.videoTag.clientHeight<110 )||( newScrollHeight==oldscrollHeight && newScrollHeight< videoObj.videoTag.clientHeight)){
             videoObj.canShow=true;
         }
         return entryPoint();
@@ -124,6 +127,7 @@
     
        })
        video.addEventListener('abort',()=>{
+          console.log('abort')
           document.dispatchEvent(videoError)
        })
       
