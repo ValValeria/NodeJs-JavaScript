@@ -12,6 +12,12 @@
     z-index:10000004;
     font-family: sans-serif;
 }
+.sveti .iit p {
+   font-size:14px;
+}
+.text-holder ul li span {
+    font-size: 18px;
+}
 .loading{
     width:200px;
     height:200px;
