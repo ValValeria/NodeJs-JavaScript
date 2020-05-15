@@ -94,7 +94,7 @@
 
         console.log(newScrollHeight,oldscrollHeight,videoObj.opacity)
 
-        if(error || !videoObj.loadedPage)
+        if(error || !videoObj.loadedPage)///1
         {
             console.log(error)
             console.log(!videoObj.loadedPage)
@@ -136,7 +136,7 @@
        window.addEventListener('scroll',func);
 
        document.addEventListener('videoError',()=>{
-           processScrollMove.scroll=processScrollMove.scroll.bind(processScrollMove,1)
+           processScrollMove.scroll=processScrollMove.scroll.bind(processScrollMove,video.error)
        })
        document.addEventListener('page-loaded',()=>{
            videoObj.loadedPage=true;
