@@ -67,3 +67,13 @@
         transform: rotate(-360deg);      
     }
 }
+@-moz-keyframes a1{
+    to{
+        transform: rotate(360deg);
+    }
+}
+@-moz-keyframes a2{
+    to{
+        transform: rotate(-360deg);      
+    }
+}
