@@ -1,4 +1,15 @@
 (function(){
+    let id =setTimeout(function name(){
+        if(Date.now()-window.timeStart>6000){
+            
+            document.querySelector('#somespan').innerHTML="Проблема <br/> с интернетом"
+            obj.loadElem.dispatchEvent(window.videoError)
+            
+           return setTimeout(obj.change.bind(obj,true),1000);
+        }
+        setTimeout(name,500)
+    },500)
+
     const obj={
         loadElem:document.querySelector('#loadingPage'),
         customEv:new CustomEvent('page-loaded',{bubbles:true,cancelable:false}),
@@ -6,6 +17,7 @@
         error:null,
         change(){
             if(arguments[0]==true) this.error=1
+            clearTimeout(id)
             this.loadElem.setAttribute('style','display:none !important')
             document.body.style.overflowY="scroll"
             this.loadElem.firstElementChild.classList.remove('loading')
@@ -26,14 +38,7 @@
         obj.loading();
     });
     
-    requestAnimationFrame(()=>{
-        if(Date.now()-window.timeStart>6000){
-            
-            document.querySelector('#somespan').innerHTML="Проблема <br/> с интернетом"
-            obj.loadElem.dispatchEvent(window.videoError)
-            
-            setTimeout(this.change.bind(this,true),1000)
-        }
-    })
+    
+   
    
 })()

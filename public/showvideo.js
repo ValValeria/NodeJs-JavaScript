@@ -10,6 +10,7 @@
         loadedPage:false,
         homeBanner:document.querySelector('.home-banner'),
         canShow:true,
+        errorsExists:false,
         changeOpacity(){
           if(!this.canShow) {
               return;
@@ -101,14 +102,16 @@
     const  videoError=window.videoError   
     
     
-    function processScroll(error){
+    function processScroll(){
         let { prev:oldscrollHeight,new:newScrollHeight}=Storage.states;
-         
-        if(error || !this.loadedPage)///1
+
+        if(!this.loadedPage)///1
         {
              this.canShow=false;
-             if(error) this.error();
              return false;
+        }
+        if(this.errorsExists){
+            return false;
         }
         if(this.opacity!=0){
         
@@ -133,8 +136,9 @@
     
     ((videoObj)=>{
        let video=videoObj.videoTag
-       const errors=['stalled','error']
+       const errors=['error']
        errors.forEach(elem=>{
+           console.log(elem)
            video.addEventListener(elem,()=>{
                document.dispatchEvent(videoError)
            })
@@ -146,9 +150,10 @@
        window.addEventListener('scroll',func);/**change the coordinates */
     
        document.addEventListener('videoError',()=>{
-           console.log('error')
            if(video.error || video.readyState!="HAVE_ENOUGH_DATA"){
-             processScrollMove.scroll=processScrollMove.scroll.bind(processScrollMove,video.error || true)
+             videoObj.canShow=false;
+             videoObj.errorsExists=true;
+             videoObj.error();
            }
        })
        document.addEventListener('page-loaded',()=>{
