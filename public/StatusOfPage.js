@@ -9,11 +9,11 @@
             this.loadElem.setAttribute('data-loaded',arguments[0]);
             document.body.style.overflowY="scroll"
             document.body.style.maxHeight="auto"
+            document.body.style.display="flex"
             this.loadElem.firstElementChild.classList.remove('loading')
         },
         loading(){
-            document.documentElement.scrollTop=0
-
+        
             if(Date.now()-window.timeStart>15000){
                 document.querySelector('#somespan').innerHTML="Проблема <br/> с интернетом"
                 this.loadElem.dispatchEvent(window.videoError)

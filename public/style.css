@@ -508,6 +508,10 @@ body{
     position: relative;
     overflow: hidden;
 }
+
+#loadingPage{
+    display:block;
+}
 .footer>.copyright {
     flex-direction: column;
     display: inline-block;
