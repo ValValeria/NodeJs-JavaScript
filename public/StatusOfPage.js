@@ -28,6 +28,7 @@
     
     requestAnimationFrame(()=>{
         if(Date.now()-window.timeStart>6000){
+            alert('err')
             document.querySelector('#somespan').innerHTML="Проблема <br/> с интернетом"
             obj.loadElem.dispatchEvent(window.videoError)
             
