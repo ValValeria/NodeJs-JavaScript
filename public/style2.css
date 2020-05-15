@@ -1029,9 +1029,7 @@ font-size:40px;
 .sveti{
     background: white !important;
 }
-.sveti .iit .title,.sveti .iit p,.sveti .iit ul,.sveti .iit ul li .tit{
-    color:#404040;
-}
+
 
 .lulu{
     background-image: linear-gradient(to right, #232526 0%, #414345 51%, #232526 100%) !important;
@@ -1574,6 +1572,22 @@ font-size:40px;
         background-image: repeating-linear-gradient(150deg,rgba(255,255,255,.05),rgba(255,255,255,.05) 1px,transparent 0,transparent 41px),repeating-linear-gradient(-150deg,rgba(255,255,255,.05),rgba(255,255,255,.05) 1px,transparent 0,transparent 41px);
     }
 
+    .sveti .iit .title,.sveti .iit p,.sveti .iit ul,.sveti .iit ul li .tit{
+        color:#404040;
+        font-family: 'Montserrat', sans-serif !important;
+        font-weight:100 !important;
+    }
+    .sveti .iit {
+        flex: 1 1 50%;
+        max-width: 500px;
+        padding:0 1.5%;
+    }
+    .sveti .container .d_f {
+        padding-top: 60px;
+        max-width: fit-content;
+        margin: 0 auto;
+    }
+    
 @media(max-width:1221px){/*1200*/
     .cov>img{
         transform: translateX(-43%);
@@ -2854,6 +2868,37 @@ ol{
     }
     .fixic{
         margin-top:0;
+    }
+    .bab>a {
+        max-width: 70% !important;
+        min-height: 300px !important;
+    }
+    .yyd1 .shadow>.info>h4 {
+        font-family: inherit !important;
+        padding-bottom: 7px;
+    }
+    .thatfon {
+        /* font-family: 'Acme', sans-serif !important; */
+        font-size: 13px !important;
+        font-family: Montserrat, sans-serif !important;
+    }
+   
+    .lulu > .pos_rel >.wrap-container {
+        padding-top: 0px !important;
+    }
+    .jsa1 .hove {
+      min-height: 300px !important;
+    }
+    .sveti .iit .text-holder .title{
+     font-size:30px;
+    }
+    .sveti .iit .sveti .iit .title{
+        font-size:20px;
+        margin:0 ;
+        margin-bottom:10px;
+    }
+    .sveti .container .d_f {
+        padding-top: 40px;
     }
 }
 @media(max-width:380px){

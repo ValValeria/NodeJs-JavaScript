@@ -14,7 +14,6 @@
 @import url('https://fonts.googleapis.com/css?family=Source+Code+Pro&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Gothic+A1|Source+Code+Pro&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Didact+Gothic&display=swap');
-@import url('https://fonts.googleapis.com/css?family=Montserrat|Nunito&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Quicksand&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Comfortaa&display=swap');
 @import url('https://fonts.googleapis.com/css?family=IBM+Plex+Sans&display=swap');
@@ -508,7 +507,7 @@ body{
     align-items: center;
     overflow-x:hidden ;
     position: relative;
-
+    overflow-y: hidden;
 }
 .footer>.copyright {
     flex-direction: column;

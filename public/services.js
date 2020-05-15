@@ -68,10 +68,8 @@ function fun(){
                         let children=el.children
                         for(let child of children){
                             if(child.matches('.lightgray')){
-                                child.onclick=(e)=>{
-                                    somefun(e)
-                                }
-                                child.firstElementChild.firstElementChild.onclick=(e)=>{
+                               
+                                child.firstElementChild.lastElementChild.onclick=(e)=>{
                                     somefun(e)
                                 }
                             }
