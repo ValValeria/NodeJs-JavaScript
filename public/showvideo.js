@@ -89,7 +89,9 @@
     
     
     function processScroll(error,oldscrollHeight,newScrollHeight){
-        newScrollHeight= typeof(newScrollHeight)=='number'? newScrollHeight:oldscrollHeight
+        newScrollHeight= typeof(newScrollHeight)=='number'? newScrollHeight:0
+        oldscrollHeight= typeof(oldscrollHeight)=='number'? oldscrollHeight:0
+
         console.log(newScrollHeight,oldscrollHeight,videoObj.opacity)
 
         if(error || !videoObj.loadedPage)
