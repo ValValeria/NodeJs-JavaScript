@@ -147,7 +147,9 @@
     
        document.addEventListener('videoError',()=>{
            console.log('error')
-           processScrollMove.scroll=processScrollMove.scroll.bind(processScrollMove,video.error || true)
+           if(video.error && video.read.readyState!="HAVE_ENOUGH_DATA"){
+             processScrollMove.scroll=processScrollMove.scroll.bind(processScrollMove,video.error || true)
+           }
        })
        document.addEventListener('page-loaded',()=>{
            videoObj.loadedPage=true;
