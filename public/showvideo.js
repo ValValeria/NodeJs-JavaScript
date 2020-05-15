@@ -135,10 +135,7 @@
        document.addEventListener('page-loaded',()=>{
            videoObj.loadedPage=true;
        })
-       video.addEventListener('suspend',()=>{
-           console.log('suspend')
-           videoObj.pause();
-       })
+       
        window.addEventListener('beforeunload',()=>{
            console.log('refresh')
            videoObj.pause();
