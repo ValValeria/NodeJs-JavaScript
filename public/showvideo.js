@@ -41,6 +41,12 @@
         },
         pause(){
             this.videoTag.pause();
+        },
+        changed(obj){
+           this.scroll(obj)
+        },
+        scroll(){
+            processScroll.call(this)
         }
     }
     
@@ -57,57 +63,69 @@
         }
     });
     
+    class DataStorage{
+        _prevState=0;
+        _newState=0;
+        constructor(prevState=0,newState=0){
+          this._prevState=prevState;
+          this._newState=0;
+        }
+        set newState(value){
+           if(value) this._newState=value
+           videoObj.changed({prev:this._prevState,new:this._newState})
+           this._prevState=this._newState
+
+        }
+        get states(){
+            return {prev:this._prevState,new:this._newState}
+        }
+      }
+      const Storage=new DataStorage()
+
+
+
     function entryPoint(){
         setTimeout(function name(){
             videoObj.changeOpacity();
             if(videoObj.opacity<videoObj.endOpacity &&  videoObj.canShow) setTimeout(name,videoObj.ms);
     
           },videoObj.ms)
-    }
+     }
     
     function func(){
         const move=document.documentElement || document.body ;
-        processScrollMove.scroll(null,processScrollMove.scrollPrevHeight,move.scrollTop)
     
-        processScrollMove.scrollPrevHeight=move.scrollTop;
+        Storage.newState=move.scrollTop;
     }
     
-    const  videoError=window.videoError
- 
+    const  videoError=window.videoError   
     
     
-    const processScrollMove={
-          scroll:processScroll.bind(this),
-          scrollPrevHeight:0
-    }
-    
-    
-    
-    
-    function processScroll(error,oldscrollHeight,newScrollHeight){
-        newScrollHeight= typeof(newScrollHeight)=='number'? newScrollHeight:0
-        oldscrollHeight= typeof(oldscrollHeight)=='number'? oldscrollHeight:0
-
-
-        if(error || !videoObj.loadedPage)///1
+    function processScroll(error){
+        let { prev:oldscrollHeight,new:newScrollHeight}=Storage.states;
+         
+        if(error || !this.loadedPage)///1
         {
-             videoObj.canShow=false;
-             if(error) videoObj.error();
+             this.canShow=false;
+             if(error) this.error();
              return false;
         }
-        if(videoObj.opacity!=0){
+        if(this.opacity!=0){
         
-            if((newScrollHeight>=oldscrollHeight && videoObj.videoTag.clientHeight+100<newScrollHeight)){
-                videoObj.canShow=false;
+            if((newScrollHeight>=oldscrollHeight && this.videoTag.clientHeight+100<newScrollHeight)){
+                this.canShow=false;
     
-                return videoObj.pause();
-           }else if(newScrollHeight-videoObj.videoTag.clientHeight<100 && oldscrollHeight>=newScrollHeight){
-                videoObj.canShow=true;
-                return videoObj.opacity<videoObj.endOpacity?entryPoint(): videoObj.restart();
+                return this.pause();
+           }else if(newScrollHeight-this.videoTag.clientHeight<100 && oldscrollHeight>=newScrollHeight){
+                this.canShow=true;
+                return this.opacity<this.endOpacity?entryPoint(): this.restart();
            }
+        }else{
+            if(newScrollHeight-this.videoTag.clientHeight<200 && oldscrollHeight>=newScrollHeight){
+                this.canShow=true;
+                return entryPoint();
+            }
         }
-        videoObj.canShow=true;
-        return entryPoint();
     
     }
     
@@ -115,18 +133,17 @@
     
     ((videoObj)=>{
        let video=videoObj.videoTag
-       const errors=['waiting','abort','stalled','error']
+       const errors=['stalled','error']
        errors.forEach(elem=>{
            video.addEventListener(elem,()=>{
                document.dispatchEvent(videoError)
            })
        })
        video.addEventListener('canplaythrough',()=>{
-           console.log('canplaythrough')
-           func();
+           videoObj.scroll();/***entry point */
        })      
        
-       window.addEventListener('scroll',func);
+       window.addEventListener('scroll',func);/**change the coordinates */
     
        document.addEventListener('videoError',()=>{
            console.log('error')
@@ -138,7 +155,6 @@
        })
        
        window.addEventListener('beforeunload',()=>{
-           console.log('refresh')
            videoObj.pause();
        })
 
