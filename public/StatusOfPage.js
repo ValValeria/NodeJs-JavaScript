@@ -10,11 +10,8 @@
                 this.loadElem.firstElementChild.classList.remove('loading')
         },
         loading(){
-            if(this.dataStart-window.timeStart>2 ){
-               document.querySelector('#somespan').textContent="Видео не удалось загрузить"
-              setTimeout(()=>this.change(false),2000);
-            }
-            else if(document.readyState=="complete"){
+            console.log(this.dataStart-window.timeStart)
+            if(document.readyState=="complete" ){
                 this.change(true);
                 this.loadElem.dispatchEvent(this.customEv)
             }            
