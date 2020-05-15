@@ -88,12 +88,9 @@
         newScrollHeight= typeof(newScrollHeight)=='number'? newScrollHeight:0
         oldscrollHeight= typeof(oldscrollHeight)=='number'? oldscrollHeight:0
 
-        console.log(newScrollHeight,oldscrollHeight,videoObj.opacity)
 
         if(error || !videoObj.loadedPage)///1
         {
-            console.log(error)
-            console.log(!videoObj.loadedPage)
              videoObj.canShow=false;
              if(error) videoObj.error();
              return false;
