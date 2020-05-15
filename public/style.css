@@ -505,9 +505,8 @@ body{
     display: flex;
     flex-direction: column;
     align-items: center;
-    overflow-x:hidden ;
     position: relative;
-    overflow-y: hidden;
+    overflow: hidden;
 }
 .footer>.copyright {
     flex-direction: column;

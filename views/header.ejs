@@ -19,6 +19,10 @@
          <script>
            if(location.pathname=="/"){
              window.timeStart=Date.now();
+             window.videoError=new CustomEvent('videoError',{
+                  cancelable:true,
+                  bubbles:true
+             })
            }
          </script>
          <% if(admin ){%>

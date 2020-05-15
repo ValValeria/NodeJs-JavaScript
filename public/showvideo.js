@@ -11,7 +11,6 @@
         homeBanner:document.querySelector('.home-banner'),
         canShow:true,
         changeOpacity(){
-          console.log('called')
           if(!this.canShow) {
               return;
           }
@@ -73,10 +72,7 @@
         processScrollMove.scrollPrevHeight=move.scrollTop;
     }
     
-    const  videoError=new CustomEvent('videoError',{
-        cancelable:true,
-        bubbles:true
-    })
+    const  videoError=window.videoError
  
     
     
@@ -125,7 +121,7 @@
        const errors=['waiting','abort','stalled','error']
        errors.forEach(elem=>{
            video.addEventListener(elem,()=>{
-            document.dispatchEvent(videoError)
+               document.dispatchEvent(videoError)
            })
        })
        video.addEventListener('canplaythrough',()=>{
@@ -137,9 +133,10 @@
            func();
        })
        window.addEventListener('scroll',func);
-
+    
        document.addEventListener('videoError',()=>{
-           processScrollMove.scroll=processScrollMove.scroll.bind(processScrollMove,video.error)
+           console.log('error')
+           processScrollMove.scroll=processScrollMove.scroll.bind(processScrollMove,video.error || true)
        })
        document.addEventListener('page-loaded',()=>{
            videoObj.loadedPage=true;
@@ -150,6 +147,7 @@
            console.log('refresh')
            videoObj.pause();
        })
+
        
     })(videoObj)
         
