@@ -10,8 +10,7 @@
                 this.loadElem.firstElementChild.classList.remove('loading')
         },
         loading(){
-            console.log(window.timeStart-this.dataStart)
-            if(window.timeStart-this.dataStart>2 ){
+            if(this.dataStart-window.timeStart>2 ){
                document.querySelector('#somespan').textContent="Видео не удалось загрузить"
               setTimeout(()=>this.change(false),2000);
             }
