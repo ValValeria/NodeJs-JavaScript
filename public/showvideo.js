@@ -143,6 +143,7 @@
        })
        document.addEventListener('page-loaded',()=>{
            videoObj.loadedPage=true;
+           func();
        })
        
        window.addEventListener('beforeunload',()=>{
