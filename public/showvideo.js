@@ -67,6 +67,7 @@
     }
     
     function func(){
+        console.log('func')
         const move=document.documentElement || document.body ;
         processScrollMove.scroll(null,processScrollMove.scrollPrevHeight,move.scrollTop)
     
@@ -108,7 +109,7 @@
                 videoObj.canShow=true;
                 return videoObj.opacity<videoObj.endOpacity?entryPoint(): videoObj.restart();
            }
-        }else if((newScrollHeight!=oldscrollHeight && newScrollHeight-videoObj.videoTag.clientHeight<110 )||( newScrollHeight==oldscrollHeight && newScrollHeight< videoObj.videoTag.clientHeight)){
+        }else if((newScrollHeight-videoObj.videoTag.clientHeight<110 )){
             videoObj.canShow=true;
         }
         return entryPoint();
@@ -119,17 +120,16 @@
     
     ((videoObj)=>{
        let video=videoObj.videoTag
+       const errors=['waiting','abort','stalled','error']
+       errors.forEach(elem=>{
+           video.addEventListener(elem,()=>{
+            document.dispatchEvent(videoError)
+           })
+       })
        video.addEventListener('canplaythrough',()=>{
-            func();
-       })
-       video.addEventListener('error',()=>{
-          document.dispatchEvent(videoError)
-    
-       })
-       video.addEventListener('abort',()=>{
-          console.log('abort')
-          document.dispatchEvent(videoError)
-       })
+           console.log('canplaythrough')
+           func();
+       })      
       
        window.addEventListener('scroll',func);
 
