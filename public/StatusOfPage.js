@@ -15,7 +15,6 @@
             if(this.error!=null) return null;
             
             if(document.readyState=="complete"){
-                alert('yes')
                 this.change(true)
                 this.loadElem.dispatchEvent(this.customEv)
             }
@@ -29,7 +28,7 @@
     
     requestAnimationFrame(()=>{
         if(Date.now()-window.timeStart>6000){
-            alert('err')
+            
             document.querySelector('#somespan').innerHTML="Проблема <br/> с интернетом"
             obj.loadElem.dispatchEvent(window.videoError)
             
