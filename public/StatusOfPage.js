@@ -1,44 +1,33 @@
 (function(){
-    let id =setTimeout(function name(){
-        if(Date.now()-window.timeStart>6000){
-            
-            document.querySelector('#somespan').innerHTML="Проблема <br/> с интернетом"
-            obj.loadElem.dispatchEvent(window.videoError)
-            
-           return setTimeout(obj.change.bind(obj,true),1000);
-        }
-        setTimeout(name,500)
-    },500)
-
     const obj={
         loadElem:document.querySelector('#loadingPage'),
         customEv:new CustomEvent('page-loaded',{bubbles:true,cancelable:false}),
         loaded:false,
         error:null,
         change(){
-            if(arguments[0]==true) this.error=1
-            clearTimeout(id)
             this.loadElem.setAttribute('style','display:none !important')
             document.body.style.overflowY="scroll"
             this.loadElem.firstElementChild.classList.remove('loading')
         },
-        loading(){
+        loading(bool){
 
-            if(this.error!=null) return null;
-            
-            if(document.readyState=="complete"){
-                this.change(true)
+            this.change();
+            if(!bool){
                 this.loadElem.dispatchEvent(this.customEv)
-            }
+            }            
         }
     }
     Object.seal(obj)
 
-    document.addEventListener('readystatechange', ()=>{
-        obj.loading();
-    });
     
-    
-   
-   
+    requestAnimationFrame(function s(){
+        console.log(Date.now()-window.timeStart)
+        if(Date.now()-window.timeStart>7000){
+          return  obj.loading(true);
+        }else if(document.readyState=="complete"){
+          return obj.loading(false)
+        }
+        requestAnimationFrame(s)
+    })
+
 })()

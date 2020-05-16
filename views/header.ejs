@@ -17,13 +17,11 @@
          <link rel="stylesheet" href='/public/style2.css'>
          <link rel="stylesheet" href='/public/styl3.css'>
          <script>
-           if(location.pathname=="/"){
              window.timeStart=Date.now();
              window.videoError=new CustomEvent('videoError',{
                   cancelable:true,
                   bubbles:true
              })
-           }
          </script>
          <% if(admin ){%>
           <script src='/admin/admin.js'  type="module"></script>
