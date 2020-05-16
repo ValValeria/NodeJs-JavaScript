@@ -150,6 +150,7 @@
        window.addEventListener('scroll',func);/**change the coordinates */
     
        document.addEventListener('videoError',()=>{
+           console.log('videoError')
            if(video.error || video.readyState!=4){
              videoObj.canShow=false;
              videoObj.errorsExists=true;

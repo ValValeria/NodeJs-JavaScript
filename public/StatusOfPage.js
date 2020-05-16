@@ -21,12 +21,12 @@
 
     
     requestAnimationFrame(function s(){
-        if(location.pathname==="/" && Date.now()-window.timeStart>8600){
+        if(location.pathname==="/" && Date.now()-window.timeStart>9000){
             return  obj.loading(true);
         }else if(Date.now()-window.timeStart>6000){
             return  obj.loading(true);
         }else if(document.readyState=="complete"){
-          return obj.loading(false)
+            return obj.loading(false)
         }
         requestAnimationFrame(s)
     })

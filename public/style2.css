@@ -86,19 +86,20 @@
 }
 .orange:hover{
     background-color: transparent;
-    border-color:#f8de15;
-    color:#f8de15;
+    border-color:#f7d275;
+    color:#f7d275;
 }
 
 .orange{
     background-color: #f8de15;
+    background-color: #f7d275;
     font-size: 14px;
     font-weight: 600;
     text-decoration: none;
     color: #000;
-    background: #f8de15;
     letter-spacing: 1px;
     border: 1px solid #f8de15;
+    border:1px solid #f7d275;
     border-radius: 30px;
     text-transform: uppercase;
     padding: 19px 35px 17px;
@@ -1587,6 +1588,7 @@ font-size:40px;
         max-width: fit-content;
         margin: 0 auto;
     }
+    
     
 @media(max-width:1221px){/*1200*/
     .cov>img{
