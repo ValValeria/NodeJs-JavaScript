@@ -6,7 +6,7 @@
     align-items: center;
     width:100% !important;
     height:100%;
-    overflow-y: hidden;
+    overflow: hidden;
     position: fixed;
     top:0;
     left:0;

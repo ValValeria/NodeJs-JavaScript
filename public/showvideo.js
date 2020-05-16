@@ -150,7 +150,7 @@
        window.addEventListener('scroll',func);/**change the coordinates */
     
        document.addEventListener('videoError',()=>{
-           if(video.error || video.readyState!="HAVE_ENOUGH_DATA"){
+           if(video.error || video.readyState!=4){
              videoObj.canShow=false;
              videoObj.errorsExists=true;
              videoObj.error();

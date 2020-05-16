@@ -12,16 +12,16 @@
         loading(bool){
 
             this.change();
-            if(!bool){
-                this.loadElem.dispatchEvent(this.customEv)
-            }            
+            if(!bool) this.loadElem.dispatchEvent(window.videoError);
+            this.loadElem.dispatchEvent(this.customEv)
+                       
         }
     }
     Object.seal(obj)
 
     
     requestAnimationFrame(function s(){
-        console.log(Date.now()-window.timeStart)
+
         if(Date.now()-window.timeStart>7000){
           return  obj.loading(true);
         }else if(document.readyState=="complete"){
