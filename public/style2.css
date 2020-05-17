@@ -1588,6 +1588,7 @@ font-size:40px;
         max-width: fit-content;
         margin: 0 auto;
     }
+
     
     
 @media(max-width:1221px){/*1200*/
@@ -2081,6 +2082,13 @@ font-size:40px;
     }
     .shadow>.info>h4 {
         padding-bottom:20px;
+    }
+    .g>h4 {
+        font-size: 2rem !important;
+        line-height:2rem;
+    }
+    #gr>h2 {
+        padding-bottom: 25px;
     }
 }
 @media(max-width:555px){
@@ -2905,6 +2913,13 @@ ol{
     .contact_info {
         min-height:200px;
         height:auto;
+    }
+    .klasi{
+        padding-top:2rem !important;
+        padding-bottom: 1rem !important;
+    }
+    .g h4{
+        font-size:1.65rem !important;
     }
 }
 @media(max-width:380px){
