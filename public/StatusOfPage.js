@@ -22,6 +22,7 @@
     
     requestAnimationFrame(function s(){
         if(location.pathname==="/" && Date.now()-window.timeStart>15000){
+            console.log('error')
             return  obj.loading(true);
         }else if(Date.now()-window.timeStart>6000){
             return  obj.loading(true);
