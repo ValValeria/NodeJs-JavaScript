@@ -151,7 +151,7 @@
     
        document.addEventListener('videoError',()=>{
            console.log('videoError')
-           if(video.error || video.readyState!=4){
+           if(video.error || !video.readyState>2){
              videoObj.canShow=false;
              videoObj.errorsExists=true;
              videoObj.error();
