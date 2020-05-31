@@ -3,9 +3,9 @@ class  Connect{
        this.mysql=  require("mysql2");
        this.pool= this.mysql.createPool({   
         host: "remotemysql.com",
-        user: "C5CTjjXhqo",
-        password: "Eu6f3raCnq", 
-        database: "C5CTjjXhqo",
+        user: "******",
+        password: "*******", 
+        database: "********",
         port:3306
       }); 
     }
