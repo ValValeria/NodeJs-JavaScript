@@ -1,0 +1,63 @@
+
+.bg-dark{
+    background-color:#0e0e0e;
+}
+
+.center{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.section{
+    min-height:100vh !important;
+    width:100vw;
+}
+
+.banner__title-gr{
+        font-size: 6.25em;
+        margin-bottom: 20px !important;
+        /* font-weight: 300; */
+        line-height: 1.2;
+}
+
+.btn-beauty{
+        background: #ecc284 !important;
+        color: #333 !important;
+}
+
+.text-center{
+    text-align: center;
+}
+
+.text-white{
+    color:white;
+}
+
+.first-slide{
+    padding-top:75px;
+}
+
+.banner__subtitle{
+     max-width:500px;
+     margin: 1rem 0 2rem 0;
+}
+
+.wrap-md-pd{
+    width:90%;
+    max-width:1100px;
+    margin:0 auto;
+    padding: 2rem 0;
+}
+
+#app{
+    min-height:100vh;
+}
+
+.p-0{
+    padding:0;
+}
+
+.banner-abme{
+    background-image: url('/public/bg.jpg');
+}

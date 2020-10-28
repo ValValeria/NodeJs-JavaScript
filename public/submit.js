@@ -4,7 +4,10 @@ document.addEventListener('DOMContentLoaded',gsx)
 
 function gsx(){   
     ready();
-    document.querySelector('#form').addEventListener('submit',i)
+    const form = document.querySelector('#form');
+    if(form){
+        form.addEventListener('submit',i)
+    }
     check();
 }
 

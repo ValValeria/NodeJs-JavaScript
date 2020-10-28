@@ -1,6 +1,10 @@
 
 const express= require('express');
+
+const getRandomInt = require('./functions').getRandomInt;
+
 const app= express();
+
 const http=require('http').Server(app);
 
 const io = require('socket.io')(http);
@@ -15,15 +19,20 @@ const bodyParser = require("body-parser");
 
 const json=bodyParser.json();
 
-const database=require('./functions.js').con;
+const database=require('./mysql.js').con;
 
+const path = require('path')
+
+const get_year = require('./functions.js').get_year;
 
 app.set("view engine", "ejs");
 app.use(cookieParser1());
 app.use(json);
+app.use(express.static(path.resolve('build')))
+app.use('/public',express.static(path.resolve('public')));
+app.use('/build',express.static(path.resolve('build')));
 
 /** Admin area*/
-
 app.use('/admin',(req,res,next)=>{
        res.cookie('admin', 'true', { expires: get_year(), httpOnly: true });
        if(req.cookies.__proto__== null){
@@ -39,7 +48,7 @@ app.use('/admin',(req,res,next)=>{
 })
 app.get('/admin',(req,res)=>{
        res.clearCookie('id_of_user');
-       options=new Object();
+       const options=new Object();
        options.com=false;
        options.css=false;
        options.field=false;
@@ -65,10 +74,6 @@ app.get('/admin',(req,res)=>{
                res.render('admin_p',options);
 
        })
-       
-       
-       /*Need to get fields of mysql */
-
 })
 
 app.get('/admin/:file',function(req,res,next){
@@ -189,7 +194,7 @@ app.get('/services/:file/',(req,res)=>{
 })
 
 function service_descr(res,result,req){
-       options=new Object();
+       let options=new Object();
        let array=['site_pod_kluch','shops','landing'];
        options.admin=false;
        options.com=false;
@@ -253,7 +258,7 @@ io.on('connection', function (socket){
               if(!typeof(parseInt(number))=='number') return false;
 
              if(number==undefined) return;
-             my_num=number.substr(number.indexOf('com')+3);
+             let my_num=number.substr(number.indexOf('com')+3);
 
              database.insert_all("user"+my_num,"admin",message,clientIp,number);
 
@@ -274,14 +279,13 @@ io.on('connection', function (socket){
                             let  id1=com_id.substr(com_id.indexOf('user')+4);
                             
                             let k=find_user(socket,io,id1,false);
-
+                            let stat;
                             if(k==false){
                                 stat="ofline";
                             }else stat="online";
                          
                             let line={area:elem.area,status:stat};
-                            
-                                
+                                                   
                             if(json.findIndex(el=>el.area==elem.area)==-1){
                                    json.push(line);
                             }
@@ -301,33 +305,9 @@ io.on('connection', function (socket){
 })
 
 
-app.use('/public',express.static(__dirname+'/public'));
-
-
-app.use(function(req, res, next) {
-       options=new Object();
-       options.admin=false;
-       options.com=false;
-       options.css=false;
-       options.field=false;
-       options.title="404";
-       res.status(404).render('404',options);
-});
-
-
-function getRandomInt(min, max) {
-       min = Math.ceil(min);
-       max = Math.floor(max);
-       return Math.floor(Math.random() * (max - min)) + min; //Включно з мінімальним та виключаючи максимальне значення 
-}
-
-
-
-
 function find_user(socket,io ,number,admin=false,event,...options){
    let obj=io.sockets.sockets;   
    let id=socket.id;   
-   ///socket,io,my_num,false,'message_from_admin',message,number
    if(admin){
      for(let elem in obj){
        let soc=io.sockets.sockets[elem];
@@ -359,13 +339,27 @@ function find_user(socket,io ,number,admin=false,event,...options){
    }
   
 }
+
+app.use("/aboutme",function(req, res, next) {
+       let options={admin:false,com:false,css:false,field:false};
+       options.title="About me";
+       return res.render("blank_template",options);
+});
+
+app.use(function(req, res, next) {
+       let options=new Object();
+       options.admin=false;
+       options.com=false;
+       options.css=false;
+       options.field=false;
+       options.title="404";
+       res.status(404).render('404',options);
+});
+
+
 process.on('uncaughtException', err => {
        console.log(err)
 })
 
-function get_year(){
-let CookieDate = new Date;
-CookieDate.setFullYear(CookieDate.getFullYear() +10);
-return CookieDate.toUTCString();
-}
-http.listen(port,()=>console.log('hello'));
+
+http.listen(port,()=>console.log('running'));

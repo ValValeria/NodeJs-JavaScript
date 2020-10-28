@@ -3,12 +3,12 @@ class  Connect{
        this.mysql=  require("mysql2");
        this.pool= this.mysql.createPool({   
         host: "remotemysql.com",
-        user: "******",
-        password: "*******", 
-        database: "********",
+        user: "1oASotOvGd",
+        password: "QMQGmS6YCU", 
+        database: "1oASotOvGd",
         port:3306
       }); 
-    }
+     }
    
     insert_all(...command){
           if(command.length==5)  command.push(0);
@@ -17,8 +17,7 @@ class  Connect{
                 if(error) reject(error)
                 resolve(result)
              })
-           })
-      
+           })      
     }
     get_field(){
         return new Promise((res,rej)=>{
@@ -42,7 +41,6 @@ class  Connect{
         })
       })
     }
-
 }
 
 module.exports.con=new Connect();
