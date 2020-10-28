@@ -340,11 +340,11 @@ function find_user(socket,io ,number,admin=false,event,...options){
   
 }
 
-/*app.use("/aboutme",function(req, res, next) {
+app.use("/aboutme",function(req, res, next) {
        let options={admin:false,com:false,css:false,field:false};
        options.title="About me";
        return res.render("blank_template",options);
-});*/
+});
 
 app.use(function(req, res, next) {
        let options=new Object();
