@@ -3,11 +3,20 @@ class  Connect{
        this.mysql=  require("mysql2");
        this.pool= this.mysql.createPool({   
         host: "remotemysql.com",
-        user: "1oASotOvGd",
-        password: "QMQGmS6YCU", 
-        database: "1oASotOvGd",
+        user: "******",
+        password: "*****", 
+        database: "*****",
         port:3306
       }); 
+       this.pool.query(`create table IF NOT EXISTS my(
+         id  int auto_increment primary key ,
+         receiver varchar(50),
+         sender varchar(50),
+         ip varchar(100),
+         message varchar(300),
+         area varchar(100),
+         is_letter integer
+       ) `)
      }
    
     insert_all(...command){
