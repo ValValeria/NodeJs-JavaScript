@@ -1,7 +1,7 @@
 const mypath = require("path");
-const node_externals = require('webpack-node-externals')
 
 module.exports = {
+        mode:"development",
         entry:{
             client:mypath.resolve('react/index.jsx'),
         },
@@ -46,7 +46,7 @@ module.exports = {
             ],
         },
         resolve: {
-            extensions: ['.js','.jsx']
+            extensions: ['.js','.jsx','.css']
         },
         target:"node"
     };

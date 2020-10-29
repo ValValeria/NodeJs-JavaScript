@@ -3,7 +3,7 @@
   "version": " 1.0.0",
   "scripts": {
     "start": "node ./server/server.js",
-    "webpack": "webpack --watch"
+    "w": "webpack --watch"
   },
   "dependencies": {
     "@babel/core": "^7.11.4",
