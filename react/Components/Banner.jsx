@@ -10,7 +10,7 @@ export default class Banner extends React.Component{
                 <div className="wrap-md-pd center text-center section__items">
                        <div className="section__item center flex-column mr-2-rem" style={{maxWidth:"500px"}}>
                            <h2 className="banner__title-gr">Programmer</h2>
-                           <p className="banner__subtitle">I'm a passionate developer who loves to exploring more and more in programming specially frameworks & libraries</p>
+                           <p className="banner__subtitle">I'm a passionate developer who loves to exploring more and more in programming. </p>
                            <Button variant="contained" className="btn-beauty" href="#frm" >Contact me</Button>
                        </div>
                        <div className="section__item" style={{paddingTop:"2rem"}}>
