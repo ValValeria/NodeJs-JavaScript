@@ -1,10 +1,9 @@
 import React from 'react';
+import BasicLayout from '../Layouts/BasicLayout'
 
 export default function(){
-    return(
-        <section className="section  center section">
-                <div className="wrap-md-pd center text-center">
-                       <div className="center flex-column wrap-md">
+        return(
+                     <BasicLayout>
                            <h2 className="section__title">Немного обо мне</h2>
                            <section className="section__items center" >
                                   <div className="section__item about_h1">
@@ -18,9 +17,7 @@ export default function(){
                                          с различными технологиями.
                                        </p>
                                   </div>
-                           </section>
-                       </div>
-                </div>
-        </section>
+                            </section>      
+                     </BasicLayout>
     )
 }
