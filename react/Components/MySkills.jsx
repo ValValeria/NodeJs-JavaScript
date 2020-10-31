@@ -2,9 +2,9 @@ import React from 'react'
 import BasicLayout from '../Layouts/BasicLayout'
 export default function(){
     return (
-        <BasicLayout className="bg-light">
+        <BasicLayout >
                 <h2 className="section__title">Мои навыки</h2>
-                <section className="section__items center" style={{flexDirection:"column"}}>
+                <section className="section__items skills center" style={{flexDirection:"column"}}>
                     <div className="section__item center card">
                          <div className="card__content">
                              <h6>HTML, JS, CSS</h6>

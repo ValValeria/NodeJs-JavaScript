@@ -3,13 +3,6 @@ import { makeStyles } from '@material-ui/core/styles';
 import ButtonBase from '@material-ui/core/ButtonBase';
 import Typography from '@material-ui/core/Typography';
 
-const images = [
-  {
-    url: 'public/images/git.jpg',
-    title: 'View more projects on my profile',
-    width: '100%',
-  }
-];
 const useStyles = makeStyles((theme) => ({
   root: {
     display: 'flex',
@@ -27,7 +20,7 @@ const useStyles = makeStyles((theme) => ({
     '&:hover, &$focusVisible': {
       zIndex: 1,
       '& $imageBackdrop': {
-        opacity: 0.15,
+        opacity: 0.25,
       },
       '& $imageMarked': {
         opacity: 0,
@@ -84,13 +77,11 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function(){
+
+export default function ImageCard({image,url,children}){
     const classes = useStyles();
 
-    return(
-    <section style={{marginTop:"1.5rem"}}>
-        <div className={classes.root}>
-      {images.map((image) => (
+    return (
         <ButtonBase
           focusRipple
           key={image.title}
@@ -99,12 +90,12 @@ export default function(){
           style={{
             width: image.width,
           }}
-          onClick={()=>window.open("https://github.com/ValValeria")}
+          onClick={()=>window.open(url)}
         >
           <span
             className={classes.imageSrc}
             style={{
-              backgroundImage: `url(${image.url})`,
+              backgroundImage: `url(${image.image})`,
             }}
           />
           <span className={classes.imageBackdrop} />
@@ -115,13 +106,10 @@ export default function(){
               color="inherit"
               className={classes.imageTitle}
             >
-              {image.title}
+              {children}
               <span className={classes.imageMarked} />
             </Typography>
           </span>
         </ButtonBase>
-      ))}
-    </div>
-</section>
     )
 }

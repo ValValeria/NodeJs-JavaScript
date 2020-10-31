@@ -20,7 +20,7 @@ function MyStack({skills}){
                   {
                     skills.map(v=>{
                         return (
-                            <div className="section__item center"  key={v.image} style={{maxWidth:"300px",margin:"1.2rem"}}>
+                            <div className="section__item center"  key={v.image} style={{maxWidth:"300px",margin:"1.2rem",flex:"1 1 27%"}}>
                                 <MyCard {...v}/>
                             </div>
                         )

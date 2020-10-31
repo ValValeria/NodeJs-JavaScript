@@ -5,7 +5,7 @@ import Form from './Components/Form'
 import MySkills from './Components/MySkills';
 import MyStack from './Components/MyStack'
 import Examples from './Components/Examples';
-import Questions from './Components/Questions';
+
 //heroku run rails console
 export default function (){
     return (
@@ -14,7 +14,6 @@ export default function (){
           <MySkills/>
           <MyStack/>
           <Examples/>
-          <Questions/>
           <Form/>
         </React.Fragment>
     )

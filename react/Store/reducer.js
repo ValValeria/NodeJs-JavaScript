@@ -1,7 +1,7 @@
 const initialState = {
   examples:[
     {
-      title:"MyWebportfolio",url:"https://github.com/ValValeria/React_NodeJs_GraphQL",image:"https://github.com/ValValeria/React_NodeJs_GraphQL/raw/master/screen.png?raw=true",stack:["React","NodeJs","GraphQL"],
+      title:"Myportfolio",url:"https://github.com/ValValeria/React_NodeJs_GraphQL",image:"https://github.com/ValValeria/React_NodeJs_GraphQL/raw/master/screen.png?raw=true",stack:["React","NodeJs","GraphQL"],
     },
     {
       title:"SvgCreator",url:"https://github.com/ValValeria/VueJs_SVGCreator",image:"https://raw.githubusercontent.com/ValValeria/VueJs_SVGCreator/canvas/screen1.png",stack:["VueJs","NodeJs"],
@@ -27,9 +27,9 @@ const initialState = {
    {
     title:"NodeJs",description:`программная платформа, превращающая JavaScript из узкоспециализированного языка в язык общего назначения`,image:"/public/images/nodejs_logo.svg"
   },
-  {
+ /* {
     title:"PHP",description:"скриптовый язык общего назначения, интенсивно применяемый для разработки веб-приложений",image:"/public/images/php-logo.png"
-  },
+  },*/
   ]
 };
 
