@@ -1,7 +1,7 @@
 # My portfolio
 
 ## Folders
-- /react - react app
+- /react - react app. To view the react app, open browser on https://guarded-garden-20402.herokuapp.com/aboutme
 - /views - html templates
 - /server - the server script
 
